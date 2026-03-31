@@ -1,0 +1,1440 @@
+Evaluating Large Language Models for Public Health
+Classification and Extraction Tasks
+Joshua Harris1,†, Timothy Laurence1, Leo Loman1, Fan Grayson1, Toby Nonnenmacher1, Harry
+Long1, Loes WalsGriffith1, Amy Douglas1, Holly Fountain1, Stelios Georgiou1, Jo Hardstaff1,
+Kathryn Hopkins1, Y-Ling Chi1, Galena Kuyumdzhieva1, Lesley Larkin1, Samuel Collins1, Hamish
+Mohammed1, Thomas Finnie1, Luke Hounsome1, Michael Borowitz1, and Steven Riley1
+1. UK Health Security Agency
+Abstract
+Advances in Large Language Models (LLMs) have led to significant interest in
+their potential to support human experts across a range of domains, including public
+health. In this work we present automated evaluations of LLMs for public health tasks
+involving the classification and extraction of free text. We combine six externally
+annotated datasets with seven new internally annotated datasets to evaluate LLMs for
+processing text related to: health burden, epidemiological risk factors, and public health
+interventions. We evaluate eleven open-weight LLMs (7-123 billion parameters) across
+all tasks using zero-shot in-context learning. We find that Llama-3.3-70B-Instruct is
+the highest performing model, achieving the best results on 8/16 tasks (using micro-F1
+scores). We see significant variation across tasks with all open-weight LLMs scoring
+below 60% micro-F1 on some challenging tasks, such as Contact Classification , while
+all LLMs achieve greater than 80% micro-F1 on others, such as GI Illness Classification .
+For a subset of 11 tasks, we also evaluate three GPT-4 and GPT-4o series models and
+find comparable results to Llama-3.3-70B-Instruct. Overall, based on these initial
+results we find promising signs that LLMs may be useful tools for public health experts
+to extract information from a wide variety of free text sources, and support public health
+surveillance, research, and interventions.
+Figure 1: Public Health Large Language Model (LLM) Evaluation Areas [Number of Evalua-
+tions] and Task Evaluation Micro-F1 Scores by Model . (Left) We divide public health free text
+processing into three sub-domains: (1) burden, such as reports of disease symptoms, cases, morbidity,
+or mortality; (2) risk factors, such as environmental, behavioural, or biological contributors; (3)
+interventions, pharmaceutical and non-pharmaceutical. (Right) Evaluation results (micro-F1 scores)
+for seven open-weight LLM architectures (highest performing model evaluated from each) across the
+16 tasks using zero-shot prompting.
+†Corresponding author: joshua.harris@ukhsa.gov.uk
+1arXiv:2405.14766v2  [cs.CL]  19 Feb 2025
+1 Introduction
+There have been rapid improvements in the ability of Large Language Models (LLMs)1
+to perform a broad range of text processing tasks [ 3,4,5]. This has led to significant
+interest in applying them to support experts across a range of domains [ 6], including public
+health [7, 8, 9].
+Previous work has often demonstrated considerable variation in how different LLMs perform
+on a given task, and that a given LLM’s performance is highly dependent on the type and
+nature of the task involved [ 10,11,12,13,14]. Therefore, to understand the potential
+effective application of LLMs within public health an important prerequisite is developing
+domain specific evaluations that are representative of the tasks, free text, and knowledge
+that human experts regularly come across. Here, our overarching aim is to understand what
+factors determine variations in performance, whether that be: the LLM, the nature of the
+task, the type of free text, or the specific implementation details.
+We evaluate LLMs across a wide range of public health tasks and free text. In this initial
+work, using the definitions provided by Chang et al. [15], we focus on Automated Evaluation
+(excluding LLM-as-a-Judge [ 16]) of Natural Language Understanding (NLU) tasks (e.g
+classification and inference). We also focus solely on evaluating LLM in-context learning
+(prompting) approaches.
+These initial evaluations enable us to start assessing LLMs for potential use in public health
+in an automated way, including: (1) continually assessing new and existing private and
+open-weight LLMs for their potential applicability to public health, (2) identifying specific
+areas of public health where LLMs could potentially be applied, (3) providing a baseline for
+fine-tuning public health specific LLMs in the future.
+We see this work as an important first step to understanding the potential of LLMs to perform
+public health free text processing tasks. Further research is needed to investigate long form
+Natural Language Generation (NLG) [ 15] tasks, with evaluation by public health experts, as
+well as in-depth studies on specific use-cases and potential issues such bias.
+2 Methods
+Evaluation of LLMs is a broad and rapidly growing field of research [ 15] ranging from
+very general assessments of capabilities or intelligence [ 3] to very task specific performance
+results [ 17] (Fig. 5). We focus on domain and task specific evaluations of LLMs within
+public health and provide a review of the relevant literature in Sec. 6.
+The appropriate evaluation methodology largely depends on three factors: level of generality
+(see Sec. 6.1.1), types of task (see Sec. 6.1.2), and outcome of interest (see Sec. 6.1.3).
+For our initial evaluations of LLMs within public health, we aim to provide a high level
+1For background, Zhao et al. [1] and Kaddour et al. [2] are recent surveys on LLMs and their applications.
+2
+assessment of LLM performance over a broad range of tasks, models, and sub-domains. To
+enable this we focus on classification and extraction NLU tasks that can be assessed using
+automated evaluation approaches. By collecting representative internal data and annotations
+in collaboration with public health experts, we aim to also provide early evidence of potential
+task specific performance in individual areas. Specifically we use:
+1.7 New Annotated Datasets - We collect and manually annotate seven datasets with public
+health specific annotations using a combination of internal, synthetic, and external free
+text sources.
+2.Existing Datasets and Literature - We identify and include six evaluation datasets from
+existing work that are applicable to public health. To inform and develop our public
+health evaluations we also review the literature on relevant evaluations in related domains,
+such as Medicine. We provide a detailed overview of these external results and datasets
+in Sec. 6.2 and Sec. 2.1.
+3.16 Public Health Specific Evaluation Tasks - In total we bring together 16 classification
+and extraction evaluation tasks across three sub-domains of public health, see Fig. 1.
+4.11 Open-weight LLMs Evaluated and GPT-4 Series Comparisons - We deploy and assess
+eleven open-weight models ranging from 7-123 billion parameters across all tasks. For a
+subset of 11 tasks, we also evaluate three GPT-4 series models (turbo, 4o, and 4o-mini)
+in order to understand how open-weight model performance compares to some of the
+highest performing private models on our public health tasks.
+2.1 Public Health Evaluation Tasks and Datasets
+Public health is a broad field, intersecting with many different fields and issues in addition
+to conditions treated within healthcare settings [ 18,19,20,21]. Therefore, to ensure our
+evaluations are representative, the 16 classification and extraction tasks we bring together
+target a commensurately broad range of tasks within three key sub-domains of public health:
+burden (2.1.1), risk factors (2.1.2), and interventions (2.1.3), as shown in Fig. 2.
+The range of data used in our evaluation is also broad, because potentially relevant health
+information is found in a diverse range of sources: academic literature, electronic health
+records, public health guidance, social media, news articles, and questionnaire responses
+[22]. Details of all the tasks, datasets, and annotations are shown in Table 1.
+Figure 2: Evaluation Tasks by Public Health Area. A summary of different tasks which we use to
+evaluate the LLMs, grouped by public health area. See 2.1.1, 2.1.2, and 2.1.3 for full descriptions.
+3
+2.1.1 Burden
+Public health aims to mitigate adverse health outcomes in the population, which requires
+gathering information on health burden such as reports of symptoms, injuries, cases, mor-
+bidity, or mortality [ 23]. Systematic data collection on burden is critical for developing
+evidence-based public health measures [ 24,25,26]. We use the following tasks to evaluate
+LLMs in this sub-domain:
+1.NCBI Disease Extraction: To evaluate an LLM’s ability to identify and extract diseases
+from free text, we use the NCBI disease corpus [ 27] of PubMed article abstracts annotated
+with the diseases mentioned and their associated MeSH (Medical Subject Headings)
+and OMIM (genes and genetic disorders) codes. This task involves prompting the LLM
+to extract a structured comma separated list of diseases from the free text. In order to
+relieve some of the issues observed in the literature around exact matching of output
+strings [28, 29, 30], we first map all extracted disease mentions to their respective codes
+and assess performance on the de-duplicated set of MeSH and OMIM codes.
+2.Gastrointestinal Illness Classification: To evaluate an LLM’s ability to identify potential
+illness or disease within non-technical social media free text, we use the Yelp Open
+Dataset [ 31] of restaurant reviews. To annotate the dataset, we first filter to those reviews
+that contain at least one of a comprehensive list of GI illness related keywords. We
+then take a random sample of approximately 3000 restaurant reviews and manually
+annotate (Sec. 7) whether they refer to an instance of possible GI illness using an agreed
+epidemiological protocol.
+The LLM is prompted to provide a binary classification of GI illness ("yes" or "no") for
+each review. This is an adversarial task as all reviews manually annotated as "no" do
+contain at least one keyword associated with possible GI illness.
+3.Gastrointestinal Illness Symptom Extraction: To evaluate an LLM’s ability to extract
+possible symptoms from non-technical social media free text, we use the same annotated
+Yelp review dataset as in 2.but filter to only those annotated as referring to possible GI
+illness. We then annotate (Sec. 7) these reviews with all symptoms mentioned within
+the free text. The LLM is then prompted to extract all symptoms as a structured comma
+separated list.
+4.ICD-10 Description Classification: In order to evaluate an LLM’s ability to identify
+infections and conditions attributed to infections, we use descriptions of abnormal find-
+ings,signs of illness andsymptoms from the International Statistical Classification of
+Diseases and Related Health Problems (ICD) [ 32] classification system. Using a protocol,
+two research analysts with relevant expertise separately annotate ICD-10 Version:2019
+descriptions (Sec. 7) with whether they directly refer to an infection or to a disease with a
+primarily infectious aetiology. We use a balanced sample of infection and non-infection
+disease descriptions. The LLM is then prompted to provide a binary classification of
+whether an ICD-10 code description relates to an infection, using the description and a
+4
+summary of the classification protocol.
+5.News Headline Classification: We evaluate an LLM’s ability to identify references to
+infectious diseases within non-technical free text using a manually annotated (Sec. 7)
+dataset of news headlines with possible references to avian influenza collected from the
+GDELT Project [33]. The LLM is prompted with a set of 5 news headlines and asked to
+provide a structured JSON output with its classifications. A secondary purpose of this task
+is to evaluate the LLM’s ability to generate correctly formatted JSON strings consistently.
+6.**Removed** - MMLU Virology: In our initial evaluations we used the MMLU Virol-
+ogy [ 34] subset to assess an LLM’s basic knowledge of virology. However, subsequent
+research into the error rate and quality of this subset [35] means we no longer include it.
+Task Name Dataset Task TypeTest Set SizeText Type Text Len Example Labels Public
+Rows Labels (Avg char)
+NCBI Disease Extraction NCBI Disease Cor-
+pusExtraction 475 907 Academic 1276 ["non-hereditary
+(sporadic) breast
+cancer", "br...Yes
+Gastro-intestinal Illness Classifi-
+cationYelp Open Dataset Classification 2456 2456 Social Media 635 "Yes" No
+Gastro-intestinal Illness Symp-
+tom ExtractionYelp Open Dataset Extraction 400 461 Social Media 464 ["nausea"] No
+ICD-10 Description Classifica-
+tionICD-10 Classification 2226 2226 Academic 36 "Yes" No
+News Headline Classification GDELT Classification 353 353 News Articles 70 "Yes" No
+Contact Type Classification Synthetic Question-
+nairesClassification 254 254 Questionnaire 86 "Rule 2" No
+Country Disambiguation GP Registration
+FormsClassification 8000 8000 Questionnaire 14 "Brazil" No
+Food Extraction Yelp Open Dataset Extraction 400 602 Social Media 464 ["fish", "fruit"] No
+MMLU Genetics MMLU Classification 93 93 Multiple Choice - "C" Yes
+MMLU Nutrition MMLU Classification 276 276 Multiple Choice - "C" Yes
+Guidance Topic Classification UKHSA Classification 265 265 Guidance 456 "4" No
+Guidance Recommendation Clas-
+sificationUKHSA Classification 392 392 Guidance 794 "Yes" No
+Health Advice Classification HealthAdvice Classification 8676 8676 Academic 144 "2" Yes
+Health Causal Claims Classifica-
+tionCausalRelation Classification 2448 2448 Academic 125 "1" Yes
+PubMedQA PubMedQA Classification 800 800 Academic 1330 "Yes" Yes
+BioDex Drugs Extraction BioDex Extraction 1247 4429 Academic c.6000 ["flucloxacillin",
+"midazolam"]Yes
+Table 1: Overview of Public Health Evaluation Tasks . In order to capture a broad range of free
+text, the 16 tasks we use draw on 13 distinct datasets from internal and external sources. "Text
+length" refers to the average number of characters in the free text (excluding the prompt template and
+question). "Public" refers to whether the annotations are available online.
+2.1.2 Risk Factors
+Epidemiological risk factors are environmental, behavioral, or biological factors that increase
+a person’s likelihood of developing disease or injury [ 36]. Risk factor surveillance is essential
+for quantifying these risks and developing evidence-based interventions to reduce them [ 37].
+Addressing risk factors directly may provide a more effective strategy than treating diseases
+once they arise [38, 39]. We use the following tasks to evaluate LLMs in this sub-domain:
+1.Contact Type Classification: A key challenge during outbreak and pandemic response is
+5
+often rapidly implementing and scaling contact tracing [ 40]. One important aspect of this
+is identifying the type of contact that has occurred in order to assess the risk of onward
+transmission. To evaluate an LLM’s ability to identify contact types from representative
+free text, we generate and manually annotate (Sec. 7) an entirely new synthetic dataset
+created using GPT-4 via the OpenAI API [ 41], designed to reflect the style, content and
+structure of the answers provided within the enhanced surveillance questionnaires for
+contacts submitted during the mpox outbreak response [ 42]. We prompt the LLM to
+classify the type of contact based on an epidemiological protocol.
+This task is challenging for two reasons. First, it requires the LLM to apply a detailed
+protocol provided within the prompt, rather than drawing on existing knowledge pro-
+vided during pre-training. Second, this particular dataset was chosen because the text
+often contains discussion of sexual activity, which is an important risk factor for certain
+infections [ 43]. However, many LLM pre-training [ 44] and fine-tuning datasets [ 45] are
+designed to avoid text about sexual activity and so evaluating performance on this type of
+free text is essential if using LLMs for certain disease areas in public health.
+2.Country Disambiguation: Different pathogens are endemic to different regions of the
+world [ 36]. As such, understanding the risk profile of an individual often requires
+understanding their recent travel history or previous countries where they have lived.
+Identifying geographies within free text is often an important task to help determine an
+individual’s risk of infection or other exposure [ 46]. To evaluate an LLM’s knowledge
+and understanding of geographic locations, we use a manually annotated dataset (Sec. 7)
+of anonymised free text responses from GP registration form place of birth fields where
+the location cannot be identified using existing automated matching. The main reasons
+matches fail is people supply place names within countries (without reporting the country)
+and typographical errors. The LLM is prompted to either disambiguate the country the
+free text refers to or identify it as unknown. The LLM response is then post-processed to
+a standardised list of countries using the country-converter Python package [47].
+3.Food Extraction: To evaluate an LLM’s ability to generate structured data on risk factors
+from social media free text, we use the same filtered annotated Yelp review dataset as
+inGastrointestinal Illness Symptom Extraction (3.). We then manually annotate these
+reviews with all the foods mentioned within the free text. The LLM is prompted to extract
+all references to food or meals as a structured comma separated list. Foods are very
+challenging to disambiguate, so we use a large lookup table of foods based on the FoodEx
+2 database [ 48] to disambiguate the foods the LLM extracts into a list of 27 potential
+labels that are relevant to public health foodborne illness investigation.
+4.MMLU Genetics: To evaluate an LLM’s basic knowledge of genetics, we use the Medical
+Genetics subset of the MMLU benchmark [ 34] (Sec. 6.2.3). The LLM is prompted to
+provide the answer to multiple choice questions on a range of topics within medical
+genetics.
+6
+5.MMLU Nutrition: Similarly, to evaluate an LLM’s basic knowledge of nutrition, we use
+the Nutrition subset of the MMLU benchmark [ 34] (Sec. 6.2.3). The LLM is prompted to
+provide the answer to multiple choice questions on a range of topics within nutrition.
+2.1.3 Interventions
+Public health interventions can take many forms [ 21] [49]. One common way to classify
+them is into pharmaceutical and non-pharmaceutical interventions [ 50]. Pharmaceutical
+interventions predominantly use medical technologies to prevent, diagnose or treat disease.
+Vaccination is one particularly common public health pharmaceutical intervention. Public
+health non-pharmaceutical interventions generally aim to reduce behavioural risk factors
+and so mitigate various forms of disease. These include nutrition advice or infection control
+through hand hygiene.
+Public health guidance is one of the primary ways public health interventions can be commu-
+nicated and implemented. Therefore, we introduce four initial guidance related evaluations
+of increasing difficulty to assess LLMs. We also evaluate LLMs for processing text related
+to pharmaceutical interventions and biomedical reasoning.
+1.Guidance Topic Classification: To evaluate an LLM’s ability to identify the relevant topics
+to which a piece of guidance relates, we used 331 UKHSA guidance publication summary
+pages from the gov.uk web page. The text was extracted and manually categorised
+(Sec. 7) into one of eight broad health topics based on which team wrote the guidance
+(e.g. Radiation, Sexually Transmitted Infections, etc.). The LLM is prompted with the
+summary page and the list of possible health topics and asked to return the single health
+topic that is most suitable for the text.
+2.Guidance Recommendation Classification: Recommendations are a crucial component
+of public health guidance. Demonstrating an LLM’s ability to identify recommendations
+is an essential prerequisite to other processing of public health guidance. To evaluate
+this we use UKHSA publications on gov.uk. Each publication is split into subsections
+(chunks) and we manually annotate a random sample of 489 chunks of text, with one
+of two labels: 1 (contains recommendations – defined as a statement containing a clear,
+specific actionable instruction, request, or advice in the event of a given public health
+scenario), or 0 (does not contain any recommendations). The LLM is prompted with the
+text chunk and asked to answer "yes" or "no" (corresponding to class 1 or 0) to whether it
+contains any recommendations.
+3.Health Advice Classification: To further evaluate an LLM’s ability to understand rec-
+ommendations, we adopt the HealthAdvice dataset from Chen et al. [51] (Sec. 6.2.2),
+which includes 10,845 manually annotated sentences from the abstract and discussion
+sections of PubMed articles. Each sentence has one of three labels: 0 (no advice), 1 (weak
+advice – statement hints that a behaviour or practice may require changing, or that an
+alternative approach for existing clinical or medical practice may be required), 2 (strong
+7
+advice – statement makes a clear and straightforward recommendation for a change in
+behaviour or practice) [ 52]. The LLM is prompted with the sentence and asked to assign
+the sentence a label of 0, 1, or 2, corresponding to the levels of health advice described.
+This extends 2.to a different corpus (biomedical literature as opposed to public health
+guidance), shorter text (sentences rather than chunks), and advice slightly differing in
+definition from recommendation.
+4.Health Causal Claims Classification: The final guidance-related task we consider is
+evaluating an LLM’s understanding of the types of claims that can be found within guid-
+ance and broader biomedical text. To do this, we use the Causal-Relation dataset [ 51]
+(Sec. 6.2.2), which consists of annotated biomedical text from PubMed article conclusions.
+Each sentence is labelled as one of the following classes: 0 (no relationship), 1 (corre-
+lational relationship – association between variables are described, but causation is not
+explicitly stated), 2 (conditional causal relationship – suggestion that one variable directly
+changes the other, with an element of doubt), or 3 (direct causal – explicit statement that
+one variable directly changes the other) [ 53]. The LLM is prompted with the sentence
+and asked to assign a label of 0, 1, 2, or 3, based on the relationship described.
+5.BioDex Drugs Extraction: To evaluate an LLM’s ability to extract information on
+pharmaceutical interventions we use 1,558 randomly sampled entries from the BioDex
+dataset [ 29] (Sec. 6.2.2) of annotated Adverse Drug Event reports and corresponding
+PubMed articles. To account for different model context windows we first chunk each
+article into sets of contiguous paragraphs of no more than 6000 characters. The LLM
+is prompted to extracted the drugs involved in the ADE from each of the raw PubMed
+article free text chunks.
+6.PubMedQA: Text regarding guidance and interventions often includes supporting ev-
+idence and relevant academic findings. Therefore, we also evaluate an LLM’s ability
+to understand and reason about biomedical evidence. To evaluate an LLM on this task
+we use the PubMedQA [ 54] benchmark in the "reasoning-required setting". The LLM
+is prompted with a PubMed abstract (excluding any concluding sections) and asked to
+answer the question ("yes", "no", or "maybe") that is posed in the title of the article. The
+LLM’s performance is evaluated against expert human annotator answers.
+2.1.4 Summary
+In constructing these evaluations we have balanced general public health text processing
+(such as drugs and disease extraction) with specific public health tasks (such as contact and
+guidance classification). We also combine external evaluation datasets for comparability and
+diversity of text with internal datasets that are more representative of public health specific
+tasks and free text.
+8
+2.2 Evaluation Methodology
+Our aim is to provide a consistent assessment of LLMs across tasks, rather than attempt
+to achieve the highest possible performance for any given model and task combination.
+Therefore, in this paper we focus on implementing simple but standardised prompting, post-
+processing, and sampling across all models. As discussed in Sec. 3, this means our zero-shot
+prompt2evaluations should provide a reasonable lower bound for each model’s performance,
+with potentially significant gains possible from more advanced pipelines.
+Model Name Base Model PrecisionModel SizeAuthor Host
+Params (bn) Context (toks)
+Flan-T5-xxl [55] Flan-T5-xxl FP16 11 2048 Google Internal API
+Mistral-7B-Instruct-v0.2 [56] Mistral-7B FP16 7 32768 Mistral Internal API
+Mistral-Large-Instruct Mistral-Large INT4-AWQ 123 128000 Mistral Internal API
+Stable-Beluga-2 [57] Llama-2-70B [45] FP16 70 4096 Stability-AI + Meta Internal API
+Llama-3-70B-Instruct [58] Llama-3-70B FP16 70 8192 Meta Internal API
+Llama-3-8B-Instruct [58] Llama-3-8B FP16 8 8192 Meta Internal API
+Llama-3-1-70B-Instruct [59] Llama-3-1-70B FP16 70 128000 Meta Internal API
+Llama-3-1-70B-Instruct [59] Llama-3-1-70B INT4-AWQ 70 128000 Meta Internal API
+Llama-3-1-8B-Instruct [59] Llama-3-1-8B FP16 8 128000 Meta Internal API
+Llama-3-1-8B-Instruct [59] Llama-3-1-8B INT4-AWQ 8 128000 Meta Internal API
+Llama-3-3-70B-Instruct [60] Llama-3-1-70B FP16 70 128000 Meta Internal API
+Llama-3-3-70B-Instruct [60] Llama-3-1-70B INT4-AWQ 70 128000 Meta Internal API
+Gemma-2-27b-it [61] Gemma-2-27b FP16 27 8192 Google Internal API
+Command-R [62] Command-R FP16 32 128000 Cohere Internal API
+gpt-4-turbo-2024-04-09 GPT-4 - - 128000 OpenAI OpenAI API
+gpt-4o-mini-2024-07-18 GPT-4o-mini - - 128000 OpenAI OpenAI API
+gpt-4o-2024-11-20 GPT-4o - - 128000 OpenAI OpenAI API
+Table 2: Overview of Large Language Models Evaluated. We focus on evaluating open-
+source/weight LLMs that we host internally to ensure comparability of results, as well as for data
+protection. We run all models in FP16 precision where feasible. We include the latest GPT-4 models
+for comparison on a subset of tasks.
+2.2.1 Large Language Models
+In our initial evaluations we assess eleven open-weight LLMs ranging from 7 billion to 123
+billion parameters (including the Llama-2 and 3, Mistral, Command-R, Gemma, and Flan-T5
+base models), see Table 2. We also investigate the performance impact of INT-4 quantization
+across the Llama-3 family of models.
+To run the evaluations, we have developed an internal LLM API on UKHSA High Perfor-
+mance Computing (HPC) resources [ 7] using models from the HuggingFace repository [ 63]
+and open-source packages such as transformers [64] and vLLM [65]. This enables us to
+securely use datasets where data governance and security mean they are not authorised
+to leave UKHSA systems. It also allows us to control implementation details, such as
+model quantisation, prompt templates, model versions, and generation configurations, that
+have been shown to have potentially significant impacts on performance [ 66], allowing for
+comparable and reproducible results.
+In addition to evaluating internally hosted models, we also access some of the highest
+performing private models (GPT-4 Turbo and GPT-4o), via the OpenAI API [ 41]. While
+2The number of "shots" refers to how many example question-answer pairs are provided in the prompt, in
+addition to the question being asked.
+9
+we do not run GPT-4 series models for all evaluations primarily due to data restrictions, we
+provide results for GPT-4-Turbo, GPT-4o, and GPT-4o-Mini on a subset of 11 tasks across
+the three areas for comparison.
+2.2.2 Prompting
+For all tasks, we report zero-shot prompting results. Additionally, for a subset of more
+complex tasks we also investigate few-shot prompting results.
+We use the prompt templates provided by the model authors where available. This leads to
+some variation in prompt content due to the availability of system prompts in some templates.
+However, we aim to keep the informational content consistent across prompts as far as
+possible.
+2.2.3 Sampling
+For all tasks, we use greedy decoding in order to generate reproducible results.
+2.2.4 Dataset Splits
+We use a 20-80 validation-test split for all tasks, where only the validation set is used for
+prompt development; this avoids overfitting the prompt to the test set, which we use to
+quantify performance in this paper.
+2.2.5 Evaluation Metrics
+In this paper we primarily report the micro and macro F1 scores for each task. The F1
+score is calculated as the harmonic mean of precision3(positive predictive value) and recall4
+(sensitivity). The micro-F1 score is calculated by weighting each label according to its
+frequency in the dataset, while the macro-F1 score is calculated weighting each label equally.
+It is also important to note that for single label classification tasks the micro-F1 score is
+equivalent to accuracy.
+Our headline measure of performance is micro-F1, as we are assessing raw performance
+rather than accounting for potentially heterogeneous public health significance of different
+labels.
+For extraction tasks, we use exact matching of output strings. We treat extracted outputs not
+found in the ground-truth label set as valid (i.e included in result calculations) but incorrect
+classifications (because they are not one of the ground-truth label options).
+For classification tasks, we also use exact matching but with simple post-processing to clean
+outputs (e.g we would convert "Rule 1" -> "rule 1", and "1." -> 1).
+3True Positives divided by the total number of True Positives and False Positives
+4True Positives divided by the total number of True Positives and False Negatives
+10
+However, for some tasks with large numbers of possible labels and where it is feasible,
+we implement more advanced post-processing to standardise outputs, such as for Country
+Disambiguation ,NCBI Disease Extraction , and Food Extraction .
+3 Results
+We primarily discuss results for internally hosted open-weight models as they can be eval-
+uated for all tasks. We compare these results with GPT-4 series model performance on a
+subset of tasks in Sec. 3.4.
+Mistral
+7BLlama-3
+8BLlama-3.1
+8BFlan-T5
+XXLGemma-2
+27B-ItCommand
+RStable
+Beluga-2Llama-3
+70BLlama-3.1
+70BLlama-3.3
+70BMistral
+Large*
+Task Name
+NCBI Disease Extraction 0.63 0.80 0.87 0.72 0.83 0.83 0.82 0.84 0.83 0.88 0.83
+GI Classification 0.86 0.82 0.84 0.89 0.82 0.91 0.90 0.92 0.94 0.94 0.94
+GI Symptom Extraction 0.58 0.87 0.71 0.76 0.90 0.87 0.90 0.91 0.90 0.90 0.90
+ICD-10 Description Classification 0.94 0.93 0.85 0.92 0.94 0.87 0.94 0.95 0.94 0.94 0.94
+News Headline Classification 0.90 0.95 0.95 0.44 0.95 0.97 0.95 0.93 0.93 0.94 0.90
+Guidance Topic Classification 0.73 0.87 0.82 0.94 0.91 0.87 0.91 0.94 0.93 0.96 0.89
+BioDex Drugs Extraction 0.25 0.32 0.32 0.33 0.36 0.30 0.30 0.33 0.35 0.34 0.33
+Health Advice 0.75 0.68 0.78 0.77 0.74 0.78 0.66 0.78 0.81 0.82 0.82
+Guidance Recommendations 0.75 0.83 0.86 0.83 0.82 0.88 0.82 0.87 0.86 0.86 0.87
+Causal Relations 0.38 0.26 0.39 0.50 0.45 0.42 0.35 0.51 0.53 0.62 0.58
+PubMedQA 0.33 0.74 0.76 0.76 0.49 0.73 0.73 0.75 0.77 0.77 0.59
+Contact Classification 0.24 0.23 0.26 0.28 0.42 0.36 0.46 0.48 0.49 0.53 0.22
+Country Disambiguation 0.82 0.86 0.89 0.83 0.91 0.92 0.86 0.92 0.93 0.92 0.90
+Food Extraction 0.87 0.87 0.88 0.83 0.88 0.88 0.88 0.88 0.88 0.89 0.87
+MMLU Genetics 0.59 0.70 0.72 0.59 0.90 0.78 0.68 0.91 0.91 0.86 0.90
+MMLU Nutrition 0.60 0.68 0.72 0.60 0.81 0.74 0.71 0.85 0.88 0.86 0.88
+Mean Task Rank 9.50 8.44 6.56 7.75 5.75 5.88 7.31 3.12 2.94 2.50 5.31
+Table 3: Zero-shot Results (Micro-F1 Scores) for Open-Weight Models. Bold indicates the highest
+open-weight model micro-F1 score on a given task. Underlined indicates the highest micro-F1 score
+across all models evaluated (inc. GPT-4 series for a subset of tasks). Mean Task Rank is calculated as
+the rank of the open-weight model on each task averaged over all tasks. Models ordered by number
+of parameters. *Mistral-Large was run in INT-4 AWQ
+3.1 Model Results
+Table 3 shows the performance of models on different tasks. Llama-3.3-70B-Instruct is the
+highest scoring open-weight model (or equal highest) across 8 of the 16 tasks according to
+micro-F1.
+Flan-T5-xxl, Llama-3-8B-Instruct, Llama-3.1-8B-Instruct, and Mistral-7B-Instruct-v0.2
+were each the worst performing model on at least one task. The authors note that smaller
+models appear to have outputs that are more fragile with respect to the exact wording of the
+prompt. This means that particularly low performance on a given task may be more related
+to a failure of the model to understand the prompter’s intentions, rather than the model not
+being capable of performing the task with optimised prompts.
+On some tasks the difference in performance between models is very considerable. For
+instance, scaling parameter size from the Llama-3-8B-Instruct to the Llama-3-70B-Instruct
+leads to greater than 10 percentage point increases in micro-F1 on tasks such as MMLU
+Genetics, MMLU Nutrition, Health Advice, and Causal Relation classification (smaller gains
+are observed for the 3.1 series models). Similarly, moving from a Llama-2-70B base model
+to a Llama-3-70B base model also considerably improves performance on the same tasks.
+11
+We observe incremental gains across the Llama 3 70bn model family with each version
+having a higher mean task rank than the previous. We also note that Mistral-Large’s relatively
+poor performance for its size may be due to our implementation using INT-4 quantization vs
+FP16 for the other models, due to compute constraints.
+3.2 Task Results
+We find significant variability in performance across tasks. For tasks like ICD-10 Description
+Classification all of the models classify text with a high level of accuracy, with the minimum
+micro-F1 score achieved 85%. Similarly, for other tasks like Gastrointestinal Illness Classifi-
+cation ,Country Disambiguation , and Food Extraction , all models achieve micro-F1 scores
+above 80%.
+However, some tasks still appear challenging for the LLMs evaluated, with no LLM getting
+over 60% micro-F1 on any of BioDex Drugs Extraction , and Contact Classification using
+zero-shot prompts.
+3.3 Few-shot Prompting
+To investigate the potential impact of using more advanced prompting techniques on chal-
+lenging tasks, we evaluate the impact of few-shot prompting on the hardest internal and
+external classification tasks.
+For the hardest of our internally annotated tasks, Contact Classification , we use a 10-shot
+prompt illustrating how to apply the protocol in difficult edge cases. We find substantial
+improvements across models, see Fig. 3. With the exception of Flan-T5-xxl and Llama-3.1-
+8B, all other models see greater than 10 percentage point increases in micro-F1 scores over
+the zero-shot setting.
+Figure 3: Comparison of zero-shot and few-shot prompting on challenging tasks (Contact Clas-
+sification). We compare the baseline zero-shot prompt to a 10-shot prompt for Contact Classification .
+12
+Figure 4: Comparison of zero-shot and few-shot prompting on challenging tasks (Health Causal
+Claims Classification). We compare the baseline zero-shot prompt to a 7-shot prompt for Health
+Causal Claims Classification .
+Similarly, for the hardest of the externally annotated classification tasks, Health Causal
+Claims Classification , we use a 7-shot prompt demonstrating the application of the definitions
+to example sentences (see Fig. 7). Again with the notable exception of Flan-T5-xxl (which
+performs strongly in the zero-shot setting), we also see a generally greater than 10 percentage
+point increase in micro-F1 scores over the zero-shot baseline across models, see Fig. 4. Large
+improvements in performance from few-shot prompting on this task were also found for
+GPT-4 and GPT-3.5 in the original work by Chen et al. [51].
+The relative performance of models also changes between the zero-shot and few-shot settings
+for the two tasks. For example, Llama-3-8B-Instruct is the lowest performing model with
+a zero-shot prompt but outperforms the Flan-T5-xxl and Mistral-7B-Instruct-v0.2 models
+when using few-shot prompting.
+An interesting feature of both of these classification tasks, and potentially why there are
+significant gains from few-shot prompting, is that they require the LLM to make nuanced
+distinctions between complex labels that are defined by the user within the prompt. This type
+of task is particularly relevant for public health given the regular use of specific definitions
+and protocols that often change over time.
+3.4 GPT-4 and GPT-4o Comparison
+Finally, to understand how current open-weight models compare on extraction and classifica-
+tion tasks to some of the highest performing private models, we evaluate three GPT-4 and
+GPT-4o models on 11 of the 16 tasks, see Table 4.
+We find GPT-4-Turbo, GPT-4o, and GPT-4o-Mini perform well across all tasks and are
+the highest scoring models overall on 5 of the 11. The GPT-4 series models particularly
+13
+Llama-3.3
+70BGPT-4o
+MiniGPT-4
+TurboGPT-4o
+Task Name
+NCBI Disease Extraction 0.88 0.79 0.83 0.85
+GI Classification 0.94 0.92 0.84 0.87
+GI Symptom Extraction 0.90 0.90 0.89 0.86
+BioDex Drugs Extraction 0.34 0.33 0.33 0.34
+Health Advice 0.82 0.81 0.83 0.85
+Guidance Recommendations 0.86 0.86 0.85 0.87
+Causal Relations 0.62 0.60 0.64 0.57
+PubMedQA 0.77 0.67 0.75 0.54
+Food Extraction 0.89 0.91 0.89 0.91
+MMLU Genetics 0.86 0.91 0.96 0.98
+MMLU Nutrition 0.86 0.80 0.88 0.91
+Table 4: Zero-shot GPT-4 Results. Bold indicates the highest open-weight model micro-F1 score on
+a given task. Underlined indicates the highest micro-F1 score across all models.
+outperforms open-weight models on MMLU Genetics . However, looking across all tasks,
+the best GPT-4 models perform comparably to the most recent Llama-3.3-70B-Instruct
+open-weight model.
+3.5 Quantization Performance Impact
+The significant memory requirements of LLMs means a range of model quantization methods
+have been explored to reduce the total footprint of a model with a given number of parameters.
+These approaches change the format and precision in which the model parameters are stored
+to reduce the number of bits required for each parameter. However, the trade-off is that
+quantization will also impact model behavior, potentially degrading performance when
+compared to the model in its original format.
+Llama-3.1-8B diff (ppts) Llama-3.1-70B diff (ppts) Llama-3.3-70B diff (ppts)
+Task Name
+NCBI Disease Extraction 1.4 -1.2 1.0
+GI Classification 2.5 0.0 0.0
+GI Symptom Extraction 0.0 -0.8 -0.4
+ICD-10 Description Classification -4.1 0.2 -0.2
+News Headline Classification -0.9 -0.2 -0.5
+Guidance Topic Classification -4.2 1.5 0.3
+BioDex Drugs Extraction -0.4 0.6 0.3
+Health Advice -0.6 -1.5 -0.5
+Guidance Recommendations 2.0 0.0 -1.3
+Causal Relations -8.8 -1.7 -2.4
+PubMedQA 0.6 0.0 0.1
+Contact Classification -4.3 0.8 -1.6
+Country Disambiguation -1.3 0.1 0.0
+Food Extraction 0.8 -0.1 0.4
+MMLU Genetics -2.1 -1.1 2.2
+MMLU Nutrition -1.5 -0.3 0.0
+Avg INT-4 A WQ vs FP16 Diff -1.3 -0.2 -0.2
+Table 5: INT-4 A WQ Quantization Impact on Micro-F1 Scores. All numbers are the percentage
+point difference between the micro F1 score for the FP16 model and the INT-4 AWQ quantized model
+on the given task.
+To understand this trade-off on our tasks, we explore the performance impact of INT-4
+Activation Aware Quantization (AWQ) [ 67] on three of the Llama 3 family of models.
+14
+This quantization approach reduces the memory requirement for model parameters by
+approximately 70%.
+As shown in 5, despite the large reduction in model size, we find limited impact of INT-4
+AWQ quantization across Llama 3.1 8bn, Llama 3.1 70bn, and Llama 3.3 70bn. The largest
+performance degradation was found for Llama 3.1 8bn with an average reduction in Micro-F1
+score of 1.3% percentage points across the 16 tasks.
+4 Discussion
+We see research developing automated evaluations of LLMs on representative public health
+free text, tasks, and knowledge as crucial for future successful deployment in real world use
+cases. This work introduces a set of these evaluations for Natural Language Understanding
+tasks in order to provide an initial assessment of both LLMs’ applicability in general and to
+compare the performance of individual LLMs.
+Overall, we find LLMs of all sizes perform strongly on the simpler public health classification
+tasks across all three areas (burden, risk factors, and interventions) and types of free text
+(academic, news, social media, and questionnaires). This is a promising sign that LLMs may
+already be useful tools for processing some public health text to support with real world
+tasks. It also demonstrates that LLMs can generate responses requiring domain-specific
+information about a range of public health topics, without which they could not achieve these
+results.
+This promising performance suggests that public health professionals and LLM specialists
+should explore the potential benefits these models can offer in controlled deployments on
+simpler tasks. We see significant opportunities for LLMs to systematically structure free text,
+converting vital public health information embedded in text into novel structured datasets.
+Additionally, in situations where the sheer volume of data renders manual review impractical,
+LLMs could provide a scalable solution, especially during events like pandemics where data
+volumes grow exponentially along with case counts. Furthermore, LLMs could be employed
+to enhance the quality assurance of existing manual annotation processes, as a particularly
+low-risk way to incorporate this technology.
+However, for some public health tasks where very specific knowledge ( Contact Type Classi-
+fication ) is required, or where it requires extracting structured data from long pieces of free
+text (e.g BioDex Drugs Extraction ) LLMs perform poorly at all model sizes in the zero-shot
+setting. Therefore, continued model improvement and assessment may be needed before
+LLMs can reliably support human experts on advanced public health text processing tasks.
+These evaluations also highlight a number of specific considerations for LLMs within public
+health:
+Gains from advanced prompting. For some of the hardest tasks in the evaluation, such
+asContact Type Classification andHealth Causal Claims Classification , we find few-shot
+15
+prompting significantly improves performance. The literature [ 68,51,69] also suggests
+potential further gains from Chain-of-Thought (CoT) prompting techniques. Therefore,
+more complex LLM pipelines may improve the reliability of results even on these more
+challenging tasks.
+Weaker long form extraction performance. The weakest performance across LLMs is
+observed on long document extraction tasks, such as BioDex Drugs Extraction . A particular
+challenge of these tasks is the LLM identifying the correct span of text to extract along with
+applying the correct definition of the target. We find this often results in the LLM extracting
+too many spans or the LLM extracting the incorrect sized span for the ground-truth label.
+Variable benchmark applicability. We find some public LLM benchmarks, which use data
+that often was not explicitly designed for public health evaluation, have some limitations.
+A particular common issue is the lack of a well defined annotation protocol (often because
+the data was annotated for a different purpose). This means a prompt may lead an LLM to
+generate labels following a different "definition" of the labels or tasks than those used when
+the data was originally annotated. This may lead to LLMs that are potentially capable of
+performing a task generating incorrect labels. While reviewing outputs of LLMs we also
+noted some potentially anomalous ground truth labels in some datasets.
+Output fragility. Anecdotally, we observe weak performance is often due in part to either
+the LLM failing to generate the requested output format (e.g providing an explanation instead
+of simply "yes" or "no") or output structure (e.g outputting an invalid JSON). For example,
+Flan-5-xxl performs poorly on News Headline Classification largely due to it not being able
+to generate consistently well-formatted JSON outputs, rather than incorrect classifications.
+These issues can often be solved via more advanced prompting or post processing [ 28] and
+so our evaluations likely underestimate what could be achieved with bespoke pipelines.
+Best open-weight models are increasingly comparable to private models. We find the
+latest Llama-3.3-70b model performs comparably to GPT-4 and GPT-4o series models on
+the 11 tasks assessed. This is one indication that the latest open-weight models are becoming
+competitive with private models for these types of classification and extraction tasks in public
+health.
+Limited performance loss with INT-4 quantization. We evaluate the performance impact
+of quantization on three Llama 3 family models across our tasks. We find limited impact
+for both the 8bn and 70bn model sizes, suggesting quantization is a promising avenue for
+reducing the memory footprint of open-weight LLMs for our public health tasks.
+Task specific fine-tuning approaches. Whilst this paper focuses on evaluating LLM
+in-context learning capabilities, it is important to note that literature finds that for many
+applications specific fine-tuned models often perform competitively [29, 51, 70].
+Benefits of domain specific annotation protocols. Methodologically, a crucial part of
+successful LLM NLU evaluations is having rigorous and consistently applied annotations,
+16
+particularly in complex and subjective areas such as health. Epidemiologists have significant
+expertise in dealing with these issues within public health. We have found drawing on
+this expertise to develop detailed definitions and protocols for our evaluation datasets to
+be valuable. We find this approach to codifying information has been helpful both to align
+experts providing manual annotation, and also often incorporating these definitions into the
+LLM prompts leads to outputs that more closely match the prompter’s intention. Descriptions
+of our annotation approaches can be found in Sec. 7 and we will share more details of the
+protocols developed in these projects in use-case specific public health papers.
+5 Conclusion
+Whilst the general capability of LLMs has grown rapidly [ 3,4,5], assessing their performance
+on public health specific knowledge, tasks, and free text is an important prerequisite for
+successful real-world applications. In this work we take a first step towards evaluating and
+understanding the applicability of LLMs to public health via a broad range of automated
+LLM evaluations on representative tasks and anonymised or synthetic free-text.
+Our initial results suggest that LLMs may already be useful tools to support public health
+experts extract information from a wide variety of free text sources. This ability in turn can
+potentially support and scale public health surveillance, intervention, and research activities.
+We note that while some LLMs can process public health related text with a relatively
+high degree of accuracy, there is variable performance between models and across tasks.
+Appropriate validation is essential for any task, because even highly capable models can
+generate labels or extract data that do not match the prompt author’s intentions. Some
+real-world applications are also likely to need assessments of context specific risks for a
+given LLM, task, and dataset combination, as well as approaches to testing known limitations
+such as output fragility or bias.
+Future research is needed particularly to understand LLMs’ applicability to more complex
+long form public health generation tasks, as well as evaluate the performance of fine-tuned
+domain or task specific LLMs. We also aim to continue extending public health automated
+evaluations for novel types of tasks and data, as well as new LLMs.
+Acknowledgements
+This work was enabled by UKHSA HPC Cloud & DevOps Technology colleagues developing
+and maintaining internal HPC resources. We would also like to thank our UKHSA colleagues
+in Clinical and Public Health for their support and expertise in developing this work.
+Ethical Considerations
+To avoid potential detrimental impacts of text processing on individuals, we employ only
+public, synthetic, or anonymous data, with some datasets spanning multiple categories. We
+17
+also prioritise research on less sensitive data sources and lower risk tasks, especially in
+comparison to others in healthcare settings.
+It is important to mitigate potential risks within public health text processing in order to
+avoid errors causing harm to individuals or communities. In this paper we have provided
+initial results to assist researchers in understanding potential LLM performance on public
+health tasks. This assessment is important, because it helps set out the potential opportunities
+to use LLMs to generate public health insight and support public health action; however,
+future application should be done with sufficient mitigation measures in place.
+In terms of mitigation, for real-world deployments it is imperative that any LLM-based
+software be evaluated within its specific context. The results reported herein are not sufficient
+to endorse the deployment of software for these public health tasks, without in-context
+assessments. For further discussion of these issues and other wider evaluation that is
+important to consider for real-world deployments see Sec. 6.1.3.
+18
+References
+[1]Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian
+Min, Beichen Zhang, Junjie Zhang, Zican Dong, Yifan Du, Chen Yang, Yushuo Chen, Zhipeng
+Chen, Jinhao Jiang, Ruiyang Ren, Yifan Li, Xinyu Tang, Zikang Liu, Peiyu Liu, Jian-Yun Nie,
+and Ji-Rong Wen. A survey of large language models. arXiv preprint arXiv:2303.18223 , 2023.
+[2]Jean Kaddour, Joshua Harris, Maximilian Mozes, Herbie Bradley, Roberta Raileanu, and
+Robert McHardy. Challenges and applications of large language models. arXiv preprint
+arXiv:2307.10169 , 2023.
+[3]Sébastien Bubeck, Varun Chandrasekaran, Ronen Eldan, Johannes Gehrke, Eric Horvitz, Ece
+Kamar, Peter Lee, Yin Tat Lee, Yuanzhi Li, Scott Lundberg, Harsha Nori, Hamid Palangi,
+Marco Tulio Ribeiro, and Yi Zhang. Sparks of artificial general intelligence: Early experiments
+with gpt-4. arXiv preprint arXiv:2303.12712 , 2023.
+[4] OpenAI. Gpt-4 technical report. arXiv preprint arXiv:2303.08774 , 2023.
+[5]Karan Singhal, Tao Tu, Juraj Gottweis, Rory Sayres, Ellery Wulczyn, Le Hou, Kevin Clark,
+Stephen Pfohl, Heather Cole-Lewis, Darlene Neal, et al. Towards expert-level medical question
+answering with large language models. arXiv preprint arXiv:2305.09617 , 2023.
+[6]Tyna Eloundou, Sam Manning, Pamela Mishkin, and Daniel Rock. Gpts are gpts: An early look
+at the labor market impact potential of large language models. arXiv preprint arXiv:2303.10130 ,
+2023.
+[7]UKHSA. Ukhsa advisory board - artificial intelligence discovery exercise, 2023. UKHSA
+Advisory Board: Artificial Intelligence Discovery Exercise, Accessed: 09/05/2024.
+[8]CDC. Artificial Intelligence and Machine Learning | Technologies | CDC — cdc.gov, 2023.
+Artificial Intelligence and Machine Learning: Applying Advanced Tools for Public Health,
+Accessed: 15/05/2024.
+[9]Oliver Baclic, Matthew Tunis, Kelsey Young, Coraline Doan, Howard Swerdfeger, and Justin
+Schonfeld. Artificial intelligence in public health: Challenges and opportunities for public
+health made possible by advances in natural language processing. Canada Communicable
+Disease Report , 46(6):161, 2020.
+[10] Xuanzhong Chen, Xiaohao Mao, Qihan Guo, Lun Wang, Shuyang Zhang, and Ting Chen.
+Rarebench: Can llms serve as rare diseases specialists? arXiv preprint arXiv:2402.06341 ,
+2024.
+[11] Hanjie Chen, Zhouxiang Fang, Yash Singla, and Mark Dredze. Benchmarking large lan-
+guage models on answering and explaining challenging medical questions. arXiv preprint
+arXiv:2402.18060 , 2024.
+[12] Qianqian Xie, Weiguang Han, Zhengyu Chen, Ruoyu Xiang, Xiao Zhang, Yueru He, Mengxi
+Xiao, Dong Li, Yongfu Dai, Duanyu Feng, Yijing Xu, Haoqiang Kang, Ziyan Kuang, Chenhan
+Yuan, Kailai Yang, Zheheng Luo, Tianlin Zhang, Zhiwei Liu, Guojun Xiong, Zhiyang Deng,
+Yuechen Jiang, Zhiyuan Yao, Haohang Li, Yangyang Yu, Gang Hu, Jiajia Huang, Xiao-
+Yang Liu, Alejandro Lopez-Lira, Benyou Wang, Yanzhao Lai, Hao Wang, Min Peng, Sophia
+Ananiadou, and Jimin Huang. The finben: An holistic financial benchmark for large language
+models. arXiv preprint arXiv:2402.12659 , 2024.
+[13] Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Songyang Zhang, Kai Chen,
+Zongwen Shen, and Jidong Ge. Lawbench: Benchmarking legal knowledge of large language
+models. arXiv preprint arXiv:2309.16289 , 2023.
+[14] Stanford University. Holistic evaluation of langauge models results page, 2024. HELM:
+A reproducible and transparent framework for evaluating foundation models., Accessed:
+15/05/2024.
+19
+[15] Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen,
+Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu,
+Qiang Yang, and Xing Xie. A survey on evaluation of large language models. arXiv preprint
+arXiv:2307.03109 , 2023.
+[16] Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao
+Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric P. Xing, Hao Zhang, Joseph E. Gonzalez,
+and Ion Stoica. Judging llm-as-a-judge with mt-bench and chatbot arena. arXiv preprint
+arXiv:2306.05685 , 2023.
+[17] Jamil S Samaan, Yee Hui Yeo, Nithya Rajeev, Lauren Hawley, Stuart Abel, Wee Han Ng,
+Nitin Srinivasan, Justin Park, Miguel Burch, Rabindra Watson, et al. Assessing the accuracy
+of responses by the language model chatgpt to questions regarding bariatric surgery. Obesity
+surgery , 33(6):1790–1796, 2023.
+[18] C-EA Winslow. The untilled fields of public health. Science , 51(1306):23–33, 1920.
+[19] Göran Dahlgren and Margaret Whitehead. Policies and strategies to promote social equity.
+Health Institute of Future Studies, Stockholm , 1991.
+[20] Margaret Whitehead. The concepts and principles of equity and health. International journal
+of health services , 22(3):429–445, 1992.
+[21] David A Ross, Peter G Smith, and Richard H Morrow. Chapter 2 Types of Intervention and
+Their Development . Oxford University Press, 2015.
+[22] Effy Vayena, Joan Dzenowagis, John S Brownstein, and Aziz Sheikh. Policy implications of
+big data in the health sector. Bulletin of the World Health Organization , 96(1):66, 2018.
+[23] Theo V os, Stephen S Lim, Cristiana Abbafati, Kaja M Abbas, Mohammad Abbasi, Mitra
+Abbasifard, Mohsen Abbasi-Kangevari, Hedayat Abbastabar, Foad Abd-Allah, Ahmed Ab-
+delalim, et al. Global burden of 369 diseases and injuries in 204 countries and territories,
+1990–2019: a systematic analysis for the global burden of disease study 2019. The lancet , 396
+(10258):1204–1222, 2020.
+[24] Peter Nsubuga, Mark E White, Stephen B Thacker, Mark A Anderson, Stephen B Blount,
+Claire V Broome, Tom M Chiller, Victoria Espitia, Rubina Imtiaz, Dan Sosin, et al. Public
+health surveillance: a tool for targeting and monitoring interventions. 2011.
+[25] WHO. Action plan for the prevention and control of noncommunicable diseases in the who
+european region 2016–2025, 2016.
+[26] UN General Assembly. Political declaration of the third high-level meeting of the general
+assembly on the prevention and control of non-communicable diseases. Resolution adopted by
+the General Assembly October , 2018.
+[27] Rezarta Islamaj Do ˘gan, Robert Leaman, and Zhiyong Lu. Ncbi disease corpus: a resource for
+disease name recognition and concept normalization. Journal of biomedical informatics , 47:
+1–10, 2014.
+[28] Monica Agrawal, Stefan Hegselmann, Hunter Lang, Yoon Kim, and David Sontag. Large
+language models are few-shot clinical information extractors. arXiv preprint arXiv:2205.12689 ,
+2022.
+[29] Karel D’Oosterlinck, François Remy, Johannes Deleu, Thomas Demeester, Chris Develder,
+Klim Zaporojets, Aneiss Ghodsi, Simon Ellershaw, Jack Collins, and Christopher Potts. Biodex:
+Large-scale biomedical adverse drug event extraction for real-world pharmacovigilance. arXiv
+preprint arXiv:2305.13395 , 2023.
+[30] Cathy Shyr, Yan Hu, Paul A. Harris, and Hua Xu. Identifying and extracting rare disease
+phenotypes with large language models. arXiv preprint arXiv:2306.12656 , 2023.
+[31] Yelp. Yelp open dataset, 2023. Yelp Open Dataset - An all-purpose dataset for learning.
+20
+[32] International Classification of Diseases Tenth Revision (ICD-10) . World Health Organization,
+Geneva, 2019. International Statistical Classification of Diseases and Related Health Problems
+10th Revision.
+[33] GDELT. Gdelt project. GDELT Project - Watching Our World Unfold.
+[34] Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and
+Jacob Steinhardt. Measuring massive multitask language understanding, 2021.
+[35] Aryo Pradipta Gema, Joshua Ong Jun Leang, Giwon Hong, Alessio Devoto, Alberto
+Carlo Maria Mancino, Rohit Saxena, Xuanli He, Yu Zhao, Xiaotang Du, Mohammad
+Reza Ghasemi Madani, Claire Barale, Robert McHardy, Joshua Harris, Jean Kaddour,
+Emile van Krieken, and Pasquale Minervini. Are we done with mmlu?, 2024. URL
+https://arxiv.org/abs/2406.04127 .
+[36] Christopher JL Murray, Aleksandr Y Aravkin, Peng Zheng, Cristiana Abbafati, Kaja M Abbas,
+Mohsen Abbasi-Kangevari, Foad Abd-Allah, Ahmed Abdelalim, Mohammad Abdollahi,
+Ibrahim Abdollahpour, et al. Global burden of 87 risk factors in 204 countries and territories,
+1990–2019: a systematic analysis for the global burden of disease study 2019. The lancet , 396
+(10258):1223–1249, 2020.
+[37] Michael A McGeehin, Judith R Qualters, and Amanda Sue Niskar. National environmen-
+tal public health tracking program: bridging the information gap. Environmental Health
+Perspectives , 112(14):1409–1413, 2004.
+[38] who. Global action plan for the prevention and control of noncommunicable diseases 2013–
+2020. World Health Organization , 102, 2013.
+[39] Stephen Martin, James Lomas, and Karl Claxton. Is an ounce of prevention worth a pound
+of cure? a cross-sectional study of the impact of english public health grant on mortality and
+morbidity. BMJ open , 10(10):e036411, 2020.
+[40] Chris Whitty, Gregor Smith, Frank Atherton, Michael McBride, Patrick Vallance, Jenny
+Harries, Stephen Powis, Jonathan Van-Tam, Nicola Steedman, Graham Ellis, Marion Bain,
+Lourda Geoghegan, Naresh Chada, Chris Jones, Aidan Fowler, and Thomas Waite. Technical
+report on the covid-19 pandemic in the uk, 2022. Technical report on the COVID-19 pandemic
+in the UK, Accessed: 17/04/2024.
+[41] OpenAI, 2024. OpenAI developer platform.
+[42] UKHSA. Mpox: contact tracing, 2023. Mpox: contact tracing - Classification of contacts and
+follow-up advice for non-HCID strains of mpox., Accessed: 17/04/2024.
+[43] Pam Sonnenberg, Soazig Clifton, Simon Beddows, Nigel Field, Kate Soldan, Clare Tanton,
+Catherine H Mercer, Filomeno Coelho Da Silva, Sarah Alexander, Andrew J Copas, et al.
+Prevalence, risk factors, and uptake of interventions for sexually transmitted infections in
+britain: findings from the national surveys of sexual attitudes and lifestyles (natsal). The
+Lancet , 382(9907):1795–1806, 2013.
+[44] Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena,
+Yanqi Zhou, Wei Li, and Peter J. Liu. Exploring the limits of transfer learning with a unified
+text-to-text transformer, 2023.
+[45] Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei,
+Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, Dan Bikel, Lukas
+Blecher, Cristian Canton Ferrer, Moya Chen, Guillem Cucurull, David Esiobu, Jude Fernandes,
+Jeremy Fu, Wenyin Fu, Brian Fuller, Cynthia Gao, Vedanuj Goswami, Naman Goyal, Anthony
+Hartshorn, Saghar Hosseini, Rui Hou, Hakan Inan, Marcin Kardas, Viktor Kerkez, Madian
+Khabsa, Isabel Kloumann, Artem Korenev, Punit Singh Koura, Marie-Anne Lachaux, Thibaut
+Lavril, Jenya Lee, Diana Liskovich, Yinghai Lu, Yuning Mao, Xavier Martinet, Todor Mi-
+haylov, Pushkar Mishra, Igor Molybog, Yixin Nie, Andrew Poulton, Jeremy Reizenstein, Rashi
+21
+Rungta, Kalyan Saladi, Alan Schelten, Ruan Silva, Eric Michael Smith, Ranjan Subramanian,
+Xiaoqing Ellen Tan, Binh Tang, Ross Taylor, Adina Williams, Jian Xiang Kuan, Puxin Xu,
+Zheng Yan, Iliyan Zarov, Yuchen Zhang, Angela Fan, Melanie Kambadur, Sharan Narang,
+Aurelien Rodriguez, Robert Stojnic, Sergey Edunov, and Thomas Scialom. Llama 2: Open
+foundation and fine-tuned chat models, 2023.
+[46] Victoria Ng, Erin E Rees, Jingcheng Niu, Abdelhamid Zaghool, Homeira Ghiasbeglou, and
+Adrian Verster. Application of natural language processing algorithms for extracting informa-
+tion from news articles in event-based surveillance. Canada Communicable Disease Report=
+Releve des Maladies Transmissibles au Canada , 46(6):186–191, 2020.
+[47] Konstantin Stadler. The country converter coco - a python package for converting country
+names between different classification schemes. Journal of Open Source Software , 2(16):332,
+2017. doi: 10.21105/joss.00332. URL https://doi.org/10.21105/joss.00332 .
+[48] European Food Safety Authority (EFSA). The food classification and description system
+foodex 2 (revision 2). Technical report, Wiley Online Library, 2015.
+[49] Nicola Fortune, Richard Madden, Therese Riley, and Stephanie Short. The international
+classification of health interventions: an ‘epistemic hub’for use in public health. Health
+promotion international , 36(6):1753–1764, 2021.
+[50] Alba Mendez-Brito, Charbel El Bcheraoui, and Francisco Pozo-Martin. Systematic review
+of empirical studies comparing the effectiveness of non-pharmaceutical interventions against
+covid-19. Journal of Infection , 83(3):281–293, 2021.
+[51] Shan Chen, Yingya Li, Sheng Lu, Hoang Van, Hugo J W L Aerts, Guergana K Savova, and
+Danielle S Bitterman. Evaluating the chatgpt family of models for biomedical reasoning
+and classification. Journal of the American Medical Informatics Association , 31(4):940–948,
+January 2024. ISSN 1527-974X. doi: 10.1093/jamia/ocad256. URL http://dx.doi.
+org/10.1093/jamia/ocad256 .
+[52] Bei Yu, Yingya Li, and Jun Wang. Detecting causal language use in science findings. In Pro-
+ceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and
+the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP) ,
+pages 4656–4666, 2019. URL https://www.aclweb.org/anthology/D19-1473.
+pdf.
+[53] Yingya Li, Jun Wang, and Bei Yu. Detecting health advice in medical research literature. In
+Proceedings of EMNLP’2021 , 2021.
+[54] Qiao Jin, Bhuwan Dhingra, Zhengping Liu, William W. Cohen, and Xinghua Lu. Pubmedqa:
+A dataset for biomedical research question answering, 2019.
+[55] Hyung Won Chung, Le Hou, Shayne Longpre, Barret Zoph, Yi Tay, William Fedus, Yunxuan
+Li, Xuezhi Wang, Mostafa Dehghani, Siddhartha Brahma, Albert Webson, Shixiang Shane Gu,
+Zhuyun Dai, Mirac Suzgun, Xinyun Chen, Aakanksha Chowdhery, Alex Castro-Ros, Marie
+Pellat, Kevin Robinson, Dasha Valter, Sharan Narang, Gaurav Mishra, Adams Yu, Vincent
+Zhao, Yanping Huang, Andrew Dai, Hongkun Yu, Slav Petrov, Ed H. Chi, Jeff Dean, Jacob
+Devlin, Adam Roberts, Denny Zhou, Quoc V . Le, and Jason Wei. Scaling instruction-finetuned
+language models, 2022. URL https://arxiv.org/abs/2210.11416 .
+[56] Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh
+Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile
+Saulnier, Lélio Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven Le Scao, Thibaut
+Lavril, Thomas Wang, Timothée Lacroix, and William El Sayed. Mistral 7b, 2023.
+[57] Dakota Mahan, Ryan Carlow, Louis Castricato, Nathan Cooper, and Christian Laforte. Stable
+beluga models, 2024. StableBeluga2.
+[58] AI@Meta. Llama 3 model card. 2024. Llama 3 Model Card.
+22
+[59] Meta. Introducing llama 3.1: Our most capable models to date, 2024. Introducing Llama 3.1:
+Our most capable models to date, Accessed: 02/01/2025.
+[60] Meta. Llama 3.3 model card, 2024. Llama 3.3 Model Information, Accessed: 02/01/2025.
+[61] Gemma Team, Morgane Riviere, Shreya Pathak, Pier Giuseppe Sessa, Cassidy Hardin, Surya
+Bhupatiraju, Léonard Hussenot, Thomas Mesnard, Bobak Shahriari, Alexandre Ramé, Johan
+Ferret, Peter Liu, Pouya Tafti, Abe Friesen, Michelle Casbon, Sabela Ramos, Ravin Kumar,
+Charline Le Lan, Sammy Jerome, Anton Tsitsulin, Nino Vieillard, Piotr Stanczyk, Sertan
+Girgin, Nikola Momchev, Matt Hoffman, Shantanu Thakoor, Jean-Bastien Grill, Behnam
+Neyshabur, Olivier Bachem, Alanna Walton, Aliaksei Severyn, Alicia Parrish, Aliya Ahmad,
+Allen Hutchison, Alvin Abdagic, Amanda Carl, Amy Shen, Andy Brock, Andy Coenen,
+Anthony Laforge, Antonia Paterson, Ben Bastian, Bilal Piot, Bo Wu, Brandon Royal, Char-
+lie Chen, Chintu Kumar, Chris Perry, Chris Welty, Christopher A. Choquette-Choo, Danila
+Sinopalnikov, David Weinberger, Dimple Vijaykumar, Dominika Rogozi ´nska, Dustin Herbi-
+son, Elisa Bandy, Emma Wang, Eric Noland, Erica Moreira, Evan Senter, Evgenii Eltyshev,
+Francesco Visin, Gabriel Rasskin, Gary Wei, Glenn Cameron, Gus Martins, Hadi Hashemi,
+Hanna Klimczak-Pluci ´nska, Harleen Batra, Harsh Dhand, Ivan Nardini, Jacinda Mein, Jack
+Zhou, James Svensson, Jeff Stanway, Jetha Chan, Jin Peng Zhou, Joana Carrasqueira, Joana Il-
+jazi, Jocelyn Becker, Joe Fernandez, Joost van Amersfoort, Josh Gordon, Josh Lipschultz, Josh
+Newlan, Ju yeong Ji, Kareem Mohamed, Kartikeya Badola, Kat Black, Katie Millican, Keelin
+McDonell, Kelvin Nguyen, Kiranbir Sodhia, Kish Greene, Lars Lowe Sjoesund, Lauren Usui,
+Laurent Sifre, Lena Heuermann, Leticia Lago, Lilly McNealus, Livio Baldini Soares, Logan
+Kilpatrick, Lucas Dixon, Luciano Martins, Machel Reid, Manvinder Singh, Mark Iverson, Mar-
+tin Görner, Mat Velloso, Mateo Wirth, Matt Davidow, Matt Miller, Matthew Rahtz, Matthew
+Watson, Meg Risdal, Mehran Kazemi, Michael Moynihan, Ming Zhang, Minsuk Kahng,
+Minwoo Park, Mofi Rahman, Mohit Khatwani, Natalie Dao, Nenshad Bardoliwalla, Nesh
+Devanathan, Neta Dumai, Nilay Chauhan, Oscar Wahltinez, Pankil Botarda, Parker Barnes,
+Paul Barham, Paul Michel, Pengchong Jin, Petko Georgiev, Phil Culliton, Pradeep Kuppala,
+Ramona Comanescu, Ramona Merhej, Reena Jana, Reza Ardeshir Rokni, Rishabh Agarwal,
+Ryan Mullins, Samaneh Saadat, Sara Mc Carthy, Sarah Cogan, Sarah Perrin, Sébastien M. R.
+Arnold, Sebastian Krause, Shengyang Dai, Shruti Garg, Shruti Sheth, Sue Ronstrom, Susan
+Chan, Timothy Jordan, Ting Yu, Tom Eccles, Tom Hennigan, Tomas Kocisky, Tulsee Doshi,
+Vihan Jain, Vikas Yadav, Vilobh Meshram, Vishal Dharmadhikari, Warren Barkley, Wei Wei,
+Wenming Ye, Woohyun Han, Woosuk Kwon, Xiang Xu, Zhe Shen, Zhitao Gong, Zichuan Wei,
+Victor Cotruta, Phoebe Kirk, Anand Rao, Minh Giang, Ludovic Peran, Tris Warkentin, Eli
+Collins, Joelle Barral, Zoubin Ghahramani, Raia Hadsell, D. Sculley, Jeanine Banks, Anca
+Dragan, Slav Petrov, Oriol Vinyals, Jeff Dean, Demis Hassabis, Koray Kavukcuoglu, Clement
+Farabet, Elena Buchatskaya, Sebastian Borgeaud, Noah Fiedel, Armand Joulin, Kathleen
+Kenealy, Robert Dadashi, and Alek Andreev. Gemma 2: Improving open language models at a
+practical size, 2024. URL https://arxiv.org/abs/2408.00118 .
+[62] Cohere For AI. c4ai-command-r-08-2024, 2024. URL https://huggingface.co/
+CohereForAI/c4ai-command-r-08-2024 .
+[63] Hugging Face. Hugging face model respository, 2024. Hugging Face.
+[64] Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony
+Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, Joe Davison, Sam Shleifer,
+Patrick von Platen, Clara Ma, Yacine Jernite, Julien Plu, Canwen Xu, Teven Le Scao, Syl-
+vain Gugger, Mariama Drame, Quentin Lhoest, and Alexander M. Rush. Huggingface’s
+transformers: State-of-the-art natural language processing, 2020.
+[65] Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu,
+Joseph E. Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large
+language model serving with pagedattention. In Proceedings of the ACM SIGOPS 29th
+Symposium on Operating Systems Principles , 2023.
+[66] Wei Huang, Xudong Ma, Haotong Qin, Xingyu Zheng, Chengtao Lv, Hong Chen, Jie Luo,
+23
+Xiaojuan Qi, Xianglong Liu, and Michele Magno. How good are low-bit quantized llama3
+models? an empirical study, 2024.
+[67] Ji Lin, Jiaming Tang, Haotian Tang, Shang Yang, Wei-Ming Chen, Wei-Chen Wang, Guangx-
+uan Xiao, Xingyu Dang, Chuang Gan, and Song Han. Awq: Activation-aware weight quan-
+tization for llm compression and acceleration, 2024. URL https://arxiv.org/abs/
+2306.00978 .
+[68] Jingqing Zhang, Kai Sun, Akshay Jagadeesh, Mahta Ghahfarokhi, Deepa Gupta, Ashok Gupta,
+Vibhor Gupta, and Yike Guo. The potential and pitfalls of using a large language model such
+as chatgpt or gpt-4 as a clinical assistant, 2023.
+[69] Aleksa Bisercic, Mladen Nikolic, Mihaela van der Schaar, Boris Delibasic, Pietro Lio, and
+Andrija Petrovic. Interpretable medical diagnostics with structured data extraction by large
+language models, 2023.
+[70] Yuting Guo, Anthony Ovadje, Mohammed Ali Al-Garadi, and Abeed Sarker. Evaluating large
+language models for health-related text classification tasks with public social media data, 2024.
+[71] Yeganeh Madadi, Mohammad Delsoz, Priscilla A. Lao, Joseph W. Fong, TJ Hollingsworth,
+Malik Y . Kahook, and Siamak Yousefi. Chatgpt assisting diagnosis of neuro-ophthalmology
+diseases based on case reports, 2023.
+[72] Tiffany H. Kung, Morgan Cheatham, Arielle Medenilla, Czarina Sillos, Lorie De Leon, Camille
+Elepaño, Maria Madriaga, Rimel Aggabao, Giezel Diaz-Candido, James Maningo, and Victor
+Tseng. Performance of chatgpt on usmle: Potential for ai-assisted medical education using
+large language models. PLOS Digital Health , 2(2):1–12, 02 2023. doi: 10.1371/journal.pdig.
+0000198. URL https://doi.org/10.1371/journal.pdig.0000198 .
+[73] Valentin Liévin, Christoffer Egeberg Hother, and Ole Winther. Can large language models
+reason about medical questions? arXiv preprint arXiv:2207.08143 , 2022.
+[74] Karan Singhal, Shekoofeh Azizi, Tao Tu, S. Sara Mahdavi, Jason Wei, Hyung Won Chung,
+Nathan Scales, Ajay Tanwani, Heather Cole-Lewis, Stephen Pfohl, Perry Payne, Martin
+Seneviratne, Paul Gamble, Chris Kelly, Nathaneal Scharli, Aakanksha Chowdhery, Philip
+Mansfield, Blaise Aguera y Arcas, Dale Webster, Greg S. Corrado, Yossi Matias, Katherine
+Chou, Juraj Gottweis, Nenad Tomasev, Yun Liu, Alvin Rajkomar, Joelle Barral, Christopher
+Semturs, Alan Karthikesalingam, and Vivek Natarajan. Large language models encode clinical
+knowledge, 2022. URL https://arxiv.org/abs/2212.13138 .
+[75] Zeming Chen, Alejandro Hernández Cano, Angelika Romanou, Antoine Bonnet, Kyle Matoba,
+Francesco Salvi, Matteo Pagliardini, Simin Fan, Andreas Köpf, Amirkeivan Mohtashami,
+Alexandre Sallinen, Alireza Sakhaeirad, Vinitra Swamy, Igor Krawczuk, Deniz Bayazit,
+Axel Marmet, Syrielle Montariol, Mary-Anne Hartley, Martin Jaggi, and Antoine Bosselut.
+Meditron-70b: Scaling medical pretraining for large language models, 2023.
+[76] Michael Bommarito II and Daniel Martin Katz. Gpt takes the bar exam. arXiv preprint
+arXiv:2212.14402 , 2022.
+[77] Daniel Martin Katz, Michael James Bommarito, Shang Gao, and Pablo Arredondo. Gpt-4
+passes the bar exam. Available at SSRN 4389233 , 2023.
+[78] Arun James Thirunavukarasu, Refaat Hassan, Shathar Mahmood, Rohan Sanghera, Kara
+Barzangi, Mohanned El Mukashfi, and Sachin Shah. Trialling a large language model (chatgpt)
+in general practice with the applied knowledge test: Observational study demonstrating
+opportunities and limitations in primary care. JMIR Medical Education , 9:e46599, Apr 2023.
+ISSN 2369-3762. doi: 10.2196/46599. URL http://dx.doi.org/10.2196/46599 .
+[79] Jillian Bommarito, Michael Bommarito, Daniel Martin Katz, and Jessica Katz. Gpt as knowl-
+edge worker: A zero-shot evaluation of (ai) cpa capabilities. arXiv preprint arXiv:2301.04408 ,
+2023.
+24
+[80] Jonathan H Choi, Kristin E Hickman, Amy Monahan, and Daniel Schwarcz. Chatgpt goes to
+law school. Available at SSRN , 2023.
+[81] Raj Sanjay Shah, Kunal Chawla, Dheeraj Eidnani, Agam Shah, Wendi Du, Sudheer Chava, Na-
+traj Raman, Charese Smiley, Jiaao Chen, and Diyi Yang. When flue meets flang: Benchmarks
+and large pre-trained language model for financial domain, 2022.
+[82] Taicheng Guo, Kehan Guo, Bozhao Nan, Zhenwen Liang, Zhichun Guo, Nitesh V . Chawla,
+Olaf Wiest, and Xiangliang Zhang. What can large language models do in chemistry? a
+comprehensive benchmark on eight tasks, 2023.
+[83] Xi Chen, MingKe You, Li Wang, WeiZhi Liu, Yu Fu, Jie Xu, Shaoting Zhang, Gang Chen,
+Kang Li, and Jian Li. Evaluating and enhancing large language models performance in
+domain-specific medicine: Osteoarthritis management with docoa, 2024.
+[84] Zhuo Wang, Rongzhen Li, Bowen Dong, Jie Wang, Xiuxing Li, Ning Liu, Chenhui Mao, Wei
+Zhang, Liling Dong, Jing Gao, and Jianyong Wang. Can llms like gpt-4 outperform traditional
+ai tools in dementia diagnosis? maybe, but not today, 2023.
+[85] Dat Duong and Benjamin D Solomon. Analysis of large-language model versus human
+performance for genetics questions. European Journal of Human Genetics , pages 1–3, 2023.
+[86] Jaromir Savelka, Kevin D. Ashley, Morgan A. Gray, Hannes Westermann, and Huihui Xu.
+Explaining legal concepts with augmented large language models (gpt-4), 2023.
+[87] Andrew Blair-Stanek, Nils Holzenberger, and Benjamin Van Durme. Can gpt-3 perform
+statutory reasoning? arXiv preprint arXiv:2302.06100 , 2023.
+[88] Fangyi Yu, Lee Quartey, and Frank Schilder. Legal prompting: Teaching a language model to
+think like a lawyer. arXiv preprint arXiv:2212.01326 , 2022.
+[89] Liyan Tang, Zhaoyi Sun, Betina Idnay, Jordan G Nestor, Ali Soroush, Pierre A Elias, Ziyang
+Xu, Ying Ding, Greg Durrett, Justin F Rousseau, et al. Evaluating large language models on
+medical evidence summarization. npj Digital Medicine , 6(1):158, 2023.
+[90] Tanya Goyal, Junyi Jessy Li, and Greg Durrett. News summarization and evaluation in the era
+of gpt-3. arXiv preprint arXiv:2209.12356 , 2022.
+[91] Qingyu Chen, Jingcheng Du, Yan Hu, Vipina Kuttichi Keloth, Xueqing Peng, Kalpana Raja,
+Rui Zhang, Zhiyong Lu, and Hua Xu. Large language models in biomedical natural language
+processing: benchmarks, baselines, and recommendations, 2024.
+[92] Chin-Yew Lin. Rouge: A package for automatic evaluation of summaries. In Text summariza-
+tion branches out , pages 74–81, 2004.
+[93] Chantal Shaib, Millicent L Li, Sebastian Joseph, Iain J Marshall, Junyi Jessy Li, and Byron C
+Wallace. Summarizing, simplifying, and synthesizing medical evidence using gpt-3 (with
+varying success). arXiv preprint arXiv:2305.06299 , 2023.
+[94] Yushi Bai, Jiahao Ying, Yixin Cao, Xin Lv, Yuze He, Xiaozhi Wang, Jifan Yu, Kaisheng Zeng,
+Yijia Xiao, Haozhe Lyu, Jiayin Zhang, Juanzi Li, and Lei Hou. Benchmarking foundation
+models with language-model-as-an-examiner, 2023.
+[95] Cheng-Han Chiang and Hung yi Lee. Can large language models be an alternative to human
+evaluations?, 2023.
+[96] Alicia Parrish, Angelica Chen, Nikita Nangia, Vishakh Padmakumar, Jason Phang, Jana
+Thompson, Phu Mon Htut, and Samuel Bowman. BBQ: A hand-built bias benchmark for
+question answering. In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, editors,
+Findings of the Association for Computational Linguistics: ACL 2022 , pages 2086–2105,
+Dublin, Ireland, May 2022. Association for Computational Linguistics. doi: 10.18653/v1/2022.
+findings-acl.165. URL https://aclanthology.org/2022.findings-acl.165 .
+25
+[97] Anthropic. Claude 3 model family. Introducing the next generation of Claude, Accessed:
+23/04/2024.
+[98] Ross Taylor, Marcin Kardas, Guillem Cucurull, Thomas Scialom, Anthony Hartshorn, Elvis
+Saravia, Andrew Poulton, Viktor Kerkez, and Robert Stojnic. Galactica: A large language
+model for science. arXiv preprint arXiv:2211.09085 , 2022.
+[99] Gemini Team. Gemini: A family of highly capable multimodal models, 2024.
+[100] Lucas Dixon, John Li, Jeffrey Sorensen, Nithum Thain, and Lucy Vasserman. Measuring and
+mitigating unintended bias in text classification. 2018.
+[101] Isabel O. Gallegos, Ryan A. Rossi, Joe Barrow, Md Mehrab Tanjim, Sungchul Kim, Franck
+Dernoncourt, Tong Yu, Ruiyi Zhang, and Nesreen K. Ahmed. Bias and fairness in large
+language models: A survey. arXiv preprint arXiv:2309.00770 , 2024.
+[102] UK Government. Equality act 2010, 2010. Equality Act.
+[103] UKHSA. Ukhsa’s approach to delivering health equity for health security, 2023. UKHSA
+Advisory Board: UKHSA’s approach to delivering health equity for health security, Accessed:
+09/05/2024.
+[104] Claudia Martínez-deMiguel, Isabel Segura-Bedmar, Esteban Chacón-Solano, and Sara
+Guerrero-Aspizua. The raredis corpus: a corpus annotated with rare diseases, their signs
+and symptoms. arXiv preprint arXiv:2108.01204 , 2021.
+[105] Sungrim Moon, Serguei Pakhomov, Nathan Liu, James O Ryan, and Genevieve B Melton.
+A sense inventory for clinical abbreviations and acronyms created using clinical notes and
+medical dictionary resources. Journal of the American Medical Informatics Association , 21(2):
+299–307, 2014.
+[106] Xiang Yue, Yuansheng Ni, Kai Zhang, Tianyu Zheng, Ruoqi Liu, Ge Zhang, Samuel Stevens,
+Dongfu Jiang, Weiming Ren, Yuxuan Sun, Cong Wei, Botao Yu, Ruibin Yuan, Renliang Sun,
+Ming Yin, Boyuan Zheng, Zhenzhu Yang, Yibo Liu, Wenhao Huang, Huan Sun, Yu Su, and
+Wenhu Chen. Mmmu: A massive multi-discipline multimodal understanding and reasoning
+benchmark for expert agi. arXiv preprint arXiv:2311.16502 , 2023.
+26
+6 Appendix: Literature on Domain Specific Evaluations
+Evaluation of LLMs is a broad and rapidly growing field of research [ 15] ranging from very
+general assessments of capabilities or intelligence to very task specific performance results
+(Fig. 5).
+However, while researchers have developed evaluations for related fields, there is limited
+literature assessing open-weight LLMs in a standardised way across a variety of public health
+specific tasks and data.
+Figure 5: LLM Evaluation Spectrum. In this paper we focus on a combination of domain and
+task specific LLM evaluations within public health in order to inform our understanding of where
+LLMs may be successfully deployed within the field. The area marked by the (*)- denotes how our
+evaluations compare to others.
+6.1 Approaches to Domain Specific LLM Evaluations
+Domain specific evaluations of LLMs can take a number of forms depending on several
+factors: (1) level of generality, (2) types of task, and (3) outcome of interest.
+6.1.1 Level of Generality
+Domain specific evaluations often lie on a spectrum, from assessing the potential applicability
+of an LLM for a domain in general (e.g Medicine [ 5]) to assessing an LLM on a single
+specific task within a domain (e.g diagnosing neuro-ophthalmic diseases [71]).
+General domain evaluations often draw on existing human assessments and exams. For
+example, in Medicine using questions from (or in the style of) the US Medical Licensing
+Examination (USMLE) [ 72,73,74,75], in Law the US Bar Exam [ 76,77], or using human
+exams for given subjects [ 4,78,79,80]. However, bespoke domain evaluations for LLMs
+are increasingly being developed (often including aspects of the human assessments), such
+as LawBench (Legal) [ 13], MultiMedQA (Medical) [ 74], FinBen (Financial) [ 12], the
+Financial Language Understanding Evaluation (FLUE) benchmarks (Financial) [ 81], and
+ChemLLMBench (Chemistry) [82].
+In contrast, the more specific domain evaluations in the literature, which target either
+sub-fields or specific tasks, have often involved collecting and manually annotating new
+27
+evaluation datasets (or modified / filtered existing domain specific data). In Medicine this has
+commonly involved collecting data and evaluating LLMs for specific sub-fields, including,
+Neuro-ophthalmology (diagnosis) [ 71], Bariatric surgery (QA) [ 17], Osteoarthritis (case
+management) [ 83], Dementia (diagnosis) [ 84], and Genetics (QA) [ 85]. In Law, specific
+evaluations have generally been carried out for given tasks or abilities, including, generating
+explanations for legal terms [86], statutory reasoning [87], and legal entailment [88].
+The chosen level of generality for an evaluation is primarily determined by the overall
+aim. More general domain evaluations are most useful for understanding broad capabilities,
+developing or fine-tuning new LLMs, and prioritising existing LLMs for further assessment.
+More task specific domain evaluations are generally crucial when considering deploying
+LLMs for real world use cases or applying LLMs to unseen datasets and tasks (such as
+private organisational data).
+6.1.2 Types of Task
+In the literature, the approach adopted for a domain specific LLM evaluation is also signifi-
+cantly influenced by the type of task (or tasks) involved. As discussed by Chang et al. [15],
+a key factor is whether the task primarily involves classification or inference (Natural Lan-
+guage Understanding - NLU) or whether it involves generating free text (Natural Language
+Generation - NLG).
+Evaluation of LLMs for tasks focusing on classification or the extraction of structured data
+(NLU) utilises similar metrics and approaches to traditional data science. This involves
+collecting a representative dataset of free text, annotating with ground truth labels, and then
+evaluating the performance of the LLM using metrics such as accuracy, recall, precision, and
+F1 scores [29, 28, 30].
+In contrast, LLM tasks that generate unstructured free text (NLG), such as summarisation,
+have been shown to be hard to evaluate with traditional automated methods [ 89,90,15,91],
+such as ROUGE [ 92]. This has led many NLG task evaluations to adopt human evaluation
+approaches, particularly in domain specific or risk-averse fields, such as Medicine [ 74,5,
+93,91]. This usually involves human experts reading the LLM outputs and scoring them on
+absolute (rate out of 10) or relative (which response is better) metrics for a given criteria.
+However, human evaluation of NLG tasks brings a number of challenges, including: (1) cost,
+as expert annotation is time-consuming and experts’ time is valuable, (2) subjectivity, as
+there may be inconsistency in annotations between experts, and (3) scalability, as human
+evaluations must be repeated manually for every model (whereas annotated data can be
+used to evaluate all models). These issues, combined with the increasing capabilities of the
+state of the art LLMs, have led researchers to investigate replacing manual human review of
+generation tasks, with automated review by different, usually more capable LLMs [ 16,94,95].
+Whilst these approaches have seen some success [ 16,95] it remains unclear which domains
+or tasks LLMs are "qualified" to evaluate. This is a particular issue for risk-averse sectors
+28
+that involve specialised knowledge, such as public health.
+6.1.3 Outcome of Interest
+The appropriate methodology for domain specific evaluations is also strongly influenced
+by the exact outcome researchers are interested in assessing. For NLU tasks, the potential
+outcomes of interest can range from those focused on test set performance (e.g accuracy),
+which we look at in this paper, to broader considerations such as bias and robustness.
+For automated evaluations the literature largely uses performance metrics, with a particular
+focus on F1 scores [ 68,70,30,51,28]. For specific tasks these high level metrics are often
+supplemented with further class specific analysis [30].
+Some of the other key outcomes of interest for fields such as public health are assessments
+of software for bias and fairness, where this bias could be caused by bias in the LLM or
+other places in the input data or software. General assessments of LLM bias are often carried
+out during LLM training and benchmarking [ 45,96,97,98,99]. For specific NLU tasks,
+further bias evaluations often involve analysing label specific results to identify whether
+the predictions or errors deviate significantly based on individual characteristics or group
+characteristics [100, 15, 101].
+Evaluating bias and fairness is crucial for understanding the potential risks when deploying
+LLMs for real-world use cases, particularly those that involve text about certain communities.
+In a UK context, protected characteristics are enshrined in law as characteristics on which
+people cannot be discriminated against [ 102]. Specifically for public health, evaluations
+may also need to consider wider health equity frameworks, such as CORE20PLUS [ 103].
+Evaluations of bias and fairness can generally be most effectively carried out using the
+contents of the free-text (focusing on the specific protected characteristics that are relevant),
+task (assessing the risk of bias in the output), and deployment process (evaluating the software
+as a whole and how a human expert in the loop could mitigate or perpetuate risks) that would
+be used in production.
+6.1.4 Summary
+Overall, our aim with this work is to provide initial assessments of LLMs within public
+health. To cover the broadest range of models and areas, we focus on automated domain
+specific evaluations across a range of relevant NLU tasks, see Fig. 6.
+6.2 Existing Evaluations of LLMs in Public Health and Related Fields
+The literature contains a number of existing domain specific NLU LLM evaluations that are
+relevant for public health, some of which we adopt relevant sub-sets of within our evaluations.
+29
+Figure 6: Overview of Evaluations . We focus on automated evaluations of classification and
+extraction tasks.
+6.2.1 Disease and Health Issue Classification and Extraction
+Classifying and extracting potential diseases and health issues from free text is an important
+task within public health analysis and has significant overlap with the Medical domain.
+Zhang et al. [68] evaluate ChatGPT (GPT-3.5) and GPT-4 at the single label task of disease
+classification from electronic health records (EHRs). GPT-4 with zero-shot prompting was
+found to achieve between 0.75 and 0.96 F1 score across the 5 diseases and outperformed
+GPT-3.5 on 4 of the 5 diseases. Sensitivity analysis suggested few-shot with Chain of
+Thought (CoT) prompting improved GPT-4’s performance.
+Similarly, Guo et al. [70] evaluate GPT-4 and GPT-3.5 (along with fine-tuned classifiers)
+across six single label health information classification tasks using manually annotated
+Twitter (now called X) data and data from the Social Media Mining for Health Applications
+(SMM4H) datasets. As found in other work, GPT-4 outperforms GPT-3.5 using zero-shot
+prompting but with a high variance across tasks, with F1 scores ranging from 0.35 and 0.8.
+Finally, due to the importance of novel pathogens within public health, the literature dealing
+with rare diseases (where information in the LLM pre-training data is likely to be more
+limited) is particularly interesting for LLM evaluation.
+Chen et al. [10] introduce RareBench to evaluate LLMs’ (including GPT-4, GPT-3.5, Gemini,
+Llama-2-7b and Mistral-1-7b) ability to perform rare disease phenotype extraction, screening,
+and diagnosis. GPT-4 is found to have the highest performance across all tasks using zero-
+shot prompting while the smaller 7b parameter open-weight Llama-2 and Mistral-1 models
+have the lowest scores.
+Shyr et al. [30] evaluate ChatGPT for extracting rare diseases, signs and symptoms using
+the the RareDis corpus [ 104]. ChatGPT with zero-shot prompting and relaxed matching
+achieves overall F1 scores of 0.41 to 0.47, but with significant variation across types from
+0.15 (symptoms) to 0.76 (rare diseases). Few-shot prompting was generally found to lead to
+better performance. The complexity of the labels meant that evaluation approaches requiring
+exact matching of outputs and labels had significantly worse results.
+30
+6.2.2 Drug and Intervention Extraction
+Extracting relevant Pharmaceutical interventions from free text is another common task in
+public health free text processing.
+D’Oosterlinck et al. [29] propose BioDEX, a dataset of PubMed articles about Adverse Drug
+Events (ADE) and their corresponding ground truth ADE extractions. BioDEX is used to
+evaluate GPT-3.5 and GPT-4 LLMs with few-shot prompting, this achieves an overall F1
+score of approximately 0.5 at extracting the 4 core ADE report attributes (patient sex, serious
+event, reactions and drugs), currently well below expert level. Due to the length of the papers
+the few-shot prompts are constructed using abstracts, and the input paper is truncated to fit
+the context window, potentially limiting the information available to the model.
+Agrawal et al. [28] add new annotations to the Clinical Acronym Sense Inventory (CASI)
+dataset [ 105] to evaluate GPT-3 for the task of extracting medical interventions from clinical
+notes and medical acronym disambiguation. Combining GPT-3 with a resolver to form
+structured outputs along with zero-shot and one-shot prompting is shown to have fairly
+strong results across tasks, generally achieving F1 scores >0.6. However, as in other studies,
+the authors note the difficulty of generating exact matches for complex ground truth labels.
+Similarly, Bisercic et al. [69] evaluate InstructGPT for the task of generating structured
+JSON data from medical reports within their TEMED-LLM approach. Using medical reports
+on patient treatments, psychologist notes, strokes, hepatitis, and heart disease, InstructGPT
+with one-shot and CoT prompting combined with additional output validation (e.g correcting
+JSON formatting errors) achieves over 90% accuracy for 4 / 5 tasks and outperforms one-shot
+prompting.
+Finally, identifying and understanding relevant medical and health recommendations is a key
+capability for interpreting public health guidance. Related to this, Chen et al. [51] evaluate
+GPT-4 and GPT-3.5 on single label Biomedical classification tasks using the HealthAd-
+vice [ 53] and CausalRelation [ 52] datasets. The HealthAdvice dataset is used to evaluate
+the LLMs’ ability to identify whether a given sentence contains no, weak, or strong health
+advice. The CausalRelation reasoning evaluation tests the LLMs’ ability to identify casual
+and correlation claims in PubMed conclusion sentences. Testing a range of prompts from
+zero-shot to few-shot with CoT, GPT-4 is shown to slightly outperform GPT-3.5 with 0.65-
+0.77 macro-F1 scores across the tasks using the highest performing prompt (few-shot with
+CoT).
+6.2.3 Relevant Sub-sets of General Evaluations
+In addition to these domain specific evaluations in the literature, it is also important to note
+that there are subsets of general LLM evaluations that are relevant for public health (although
+detailed breakdowns of subset results often are not reported).
+The Massive Multitask Language Understanding (MMLU) benchmark [ 34] has subsets
+31
+covering general medical and scientific knowledge. More importantly, it also contains
+subsets relating to virology, genetics, and nutrition, that are particularly relevant for some
+public health sub-fields.
+Also relevant for public health is the PubMedQA [ 54] Biomedical question answering
+benchmark now included in the broader MultiMedQA [ 74] medical benchmark. The labelled
+subset of PubMedQA consists of 1000 PubMed articles that have questions in the title,
+combined with the manually annotated answer (yes, no, maybe) to the question based on a
+review of the abstract (with and without concluding sections). This is particularly relevant for
+assessing the ability of LLMs to infer conclusions to scientific questions based on a summary
+of the evidence.
+More recently, the Massive Multi-discipline Multimodal Understanding and Reasoning
+(MMMU) [ 106] benchmark has a specific subset for public health. However, due to the
+multi-modal nature of the benchmark it currently sits outside the scope of this paper.
+32
+7 Appendix: Annotations
+Seven of the datasets we use to evaluate LLM performance are datasets annotated in col-
+laboration with public health specialists in the relevant sub-fields of public health. Given
+the comprehensive nature of this evaluation, the detail of the exact approach to manual
+annotation is left for future public health specific papers. However, this appendix provides
+a summary of the level of rigour used to ensure high quality annotations that would be
+reproducible by other human experts (in order to give LLMs a chance at producing similar
+results).
+Dataset Origin Annotation approach Annotation confidence
+Gastrointestinal
+Illness Classifi-
+cationBespoke for
+LLM evalu-
+ationA forthcoming publication will set out
+the methodology in more detail. A de-
+tailed protocol was honed by several
+public health specialists. The protocol
+was independently applied by at least
+two reviewers on a sample of 200. This
+confirmed greater than 90% agreement
+between reviewers, and each discrep-
+ancy was re-reviewed and resolved by
+agreement between all reviewers. The
+rest of the 3000 sample was assigned to
+a single reviewer who had the opportu-
+nity to check uncertain examples with
+other reviewers.User-generated online restau-
+rant reviews contain highly vari-
+able information, making it hard
+to apply a protocol. However,
+the considerable degree of con-
+sistency between human review-
+ers gives more confidence.
+Gastrointestinal
+Illness Symp-
+tom ExtractionBespoke for
+LLM evalu-
+ationA forthcoming publication will set out
+the methodology in more detail. A de-
+tailed protocol was honed by several
+public health specialists. The protocol
+was then applied by a reviewer involved
+in the GI Classification task, uncertain
+classifications were shared with a sec-
+ond reviewer to check.User-generated online restau-
+rant reviews contain highly vari-
+able information, making it hard
+to apply a protocol. However,
+the considerable degree of con-
+sistency between human review-
+ers gives more confidence.
+ICD-10 De-
+scription
+ClassificationPre-
+existing
+organisa-
+tionalA forthcoming publication will set out
+the methodology in more detail. The
+assignment of annotations is based on:
+public health experts in the a given dis-
+ease area, review of the literature, and
+other pre-existing labels by public health
+experts.Some of the labels in this dataset
+are assigned trivially, where a
+description clearly relates to an
+infection. Other labels, where a
+disease is labelled infection re-
+lated, because the disease has
+an infectious aetiology can be
+considerably harder. Consider-
+able validation with subject mat-
+ter experts and triangulation be-
+tween approaches leads to con-
+siderably higher confidence.
+News Headline
+ClassificationBespoke for
+LLM evalu-
+ationA detailed protocol was honed by sev-
+eral public health specialists. A single
+reviewer then assigned labels based on
+the protocol, spot checking was done by
+another reviewer who confirmed a high
+degree of agreement.The headlines in this work are
+relatively easy to annotate. How-
+ever, using a single reviewer
+with spot checking is a less rig-
+orous process than the double
+blind review used for some of
+the other datasets.
+Table 6: Manual Annotation. Summary of the approach to manual annotation for each task.
+33
+Dataset Origin Annotation approach Annotation confidence
+Contact Type
+ClassificationBespoke for
+LLM evalu-
+ationA detailed protocol was honed by sev-
+eral public health specialists. The data
+was generated by GPT-4, which was
+prompted to generate text and assign a
+label on generation. Two independent
+reviewers then also manually annotated
+their label. Over 90% agreement was
+confirmed and any discrepancies recon-
+ciled.The independent annotation by
+two human experts and GPT-
+4, where discrepancies were re-
+solved, leads to high confidence
+that the protocol (also provided
+to the LLM in the prompt) was
+followed.
+Country Disam-
+biguationPre-
+existing
+organisa-
+tionalCountry labels were manually assigned
+to ambiguous free text (that could not be
+matched to a country through key word
+searches) by single reviewers, with spot
+checking by a second reviewer. The ap-
+proach to assigning labels also involved
+reviewers using search engines to try to
+ascertain the country of sub-country ge-
+ographical units mentioned in the free
+text.Some of the labels are inher-
+ently uncertain (for instance, the
+text only refers to a location that
+exists in several countries, or
+a spelling mistake like Nigeri
+means Nigeria and Niger are
+both possible countries). How-
+ever, spot checking reveals a low
+error rate, with disagreements in
+labels largely relating to inher-
+ent uncertainty.
+Food Extraction Bespoke for
+LLM evalu-
+ationA forthcoming publication will set out
+the methodology in more detail. A de-
+tailed protocol was honed by several
+public health specialists. The protocol
+was then applied by a reviewer involved
+in the GI Classification task, uncertain
+classifications were shared with a sec-
+ond reviewer to check.User-generated online restau-
+rant reviews contain highly vari-
+able information, making it hard
+to apply a protocol. However,
+the considerable degree of con-
+sistency between human review-
+ers gives more confidence.
+Guidance Topic
+ClassificationPre-
+existing
+organisa-
+tionalThe Topic labels were assigned based
+on which team in UKHSA wrote the
+piece of guidance. Pieces of guidance
+were included only if teams have a clear
+remit in a specific sub-field of public
+health (e.g. Sexual Transmitted Infec-
+tions) rather than an organisational remit
+that would be less relevant to LLMs (e.g.
+Health Protection Operations).Teams in UKHSA only publish
+guidance within their team re-
+mit, so there is a very high de-
+gree of confidence in the labels
+assigned. Some pieces of guid-
+ance are more uncertain where
+they related to topics that fall at
+the intersection of two teams’ re-
+mits.
+Guidance Rec-
+ommendation
+ClassificationBespoke for
+LLM evalu-
+ationA detailed protocol was honed by sev-
+eral public health specialists. The proto-
+col was applied by at least two review-
+ers for a sample of 100 examples. >90%
+agreement was confirmed before a sin-
+gle reviewer was assigned the remaining
+labels with the option to send uncertain
+labels to a second reviewer.Recommendations are an ab-
+stract concept, which makes
+them more challenging to define.
+However, the detailed protocol
+and considerable inter-reviewer
+agreement leads to more confi-
+dence that the annotation is cor-
+rect.
+Table 7: Manual Annotation continued. Summary of the approach to manual annotation for each
+task
+34
+8 Appendix: Example Prompts
+Figure 7: Example Few Shot Prompt for Health Causal Claims Classification . This is an example
+of the 7 shot prompt used in the Health Causal Claims Classification task structured with the Stable-
+Beluga-2 prompt template. Few-shot examples taken from Yu et al. [52].
+35
+Figure 8: Example Zero Shot Prompt for NCBI Disease Extraction . This is an example of the zero
+shot prompt used in the NCBI Disease Extraction task structured with the Stable-Beluga-2 prompt
+template.
+36
