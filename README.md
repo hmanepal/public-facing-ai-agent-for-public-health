@@ -1,20 +1,6 @@
 # public-facing-ai-agent-for-public-health
-Public Facing AI Agent for Public Health AI Knowledge
-# public-facing-ai-agent-for-public-health
 
 A RAG (Retrieval-Augmented Generation) pipeline for querying a corpus of public health documents — speeches, papers, transcripts, Wikipedia articles, and more — through a conversational AI agent.
-
----
-
-## Project Status
-
-| Stage | Description | Status |
-|-------|-------------|--------|
-| 1 | Text extraction (Wikipedia, PDF) | ✅ Done |
-| 2 | Preprocessing & chunking | ✅ Done |
-| 3 | Vectorization (embeddings) | ✅ Done |
-| 4 | Vector search / retrieval | 🔲 Not started |
-| 5 | RAG agent / query interface | 🔲 Not started |
 
 ---
 
@@ -22,80 +8,127 @@ A RAG (Retrieval-Augmented Generation) pipeline for querying a corpus of public 
 
 ```
 public-facing-ai-agent-for-public-health/
-├── 01_extract_text.py        # Stage 1: Pull text from Wikipedia & arXiv PDFs
-├── 02_preprocess.py          # Stage 2: Clean, chunk, and structure passages
-├── 03_vectorize.py           # Stage 3: Generate sentence embeddings
-├── data/                     # Place raw PDFs here 
+├── ingest.py                 # Incremental ingest pipeline (Stages 1–3 combined)
+├── 01_extract_text.py        # Stage 1 standalone: extract text from Wikipedia & PDFs
+├── 02_preprocess.py          # Stage 2 standalone: clean, chunk, and structure passages
+├── 03_vectorize.py           # Stage 3 standalone: generate sentence embeddings
+├── 04_build_index.py         # Stage 4: validate embeddings matrix, write manifest
+├── 05_rag_query.py           # Stage 5: RAG query interface (retrieval + generation)
+├── requirements.txt          # Python dependencies
+├── data/                     # Drop PDF files here (not committed)
 ├── raw_text/                 # Output of Stage 1 — raw .txt files (not committed)
-└── processed/                # Output of Stages 2–3 — DataFrames & embeddings (not committed)
+└── processed/                # Output of Stages 2–4 — DataFrames, embeddings, manifest (not committed)
 ```
 
 ---
 
-## Running the Pipeline
+## Setup
 
-Run the three stages in order.
+**Python 3.10+ recommended.**
 
-### Stage 1 — Extract Text
+```bash
+git clone https://github.com/<org>/public-facing-ai-agent-for-public-health.git
+cd public-facing-ai-agent-for-public-health
+pip install -r requirements.txt
+```
 
-Fetches Wikipedia articles and extracts text from local arXiv PDFs.
+If you hit torch/torchvision version conflicts, install them as a matched set first:
 
-- Configure which Wikipedia articles and PDFs to pull at the top of the script (`WIKIPEDIA_ARTICLES`, `ARXIV_PDFS`)
-- Output: `.txt` files saved to `raw_text/`
+```bash
+pip uninstall torch torchvision -y
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pip install sentence-transformers --force-reinstall
+pip install --upgrade peft
+```
 
-### Stage 2 — Preprocess & Structure
+---
 
-Cleans the raw text and chunks it into passages of ~150 words.
+## Quickstart
 
-- Strips citation brackets, PDF artefacts, unicode punctuation, extra whitespace
-- Splits on paragraph boundaries; subdivides long paragraphs by sentence grouping
-- Output: `processed/passages.csv` and `processed/passages.pkl`
+### Adding documents and building the corpus
 
-DataFrame schema:
+Drop any PDFs into `data/` and run:
+
+```bash
+python ingest.py
+```
+
+`ingest.py` combines Stages 1–3 into a single incremental pipeline. It skips any source that has already been processed and only extracts, chunks, and embeds new documents, merging them into the existing corpus. Re-run it any time you add new files.
+
+To add Wikipedia articles, update the `WIKIPEDIA_ARTICLES` dict at the top of `ingest.py`:
+
+```python
+WIKIPEDIA_ARTICLES = {
+    "wikipedia_who":     "World Health Organization",
+    "wikipedia_covid19": "COVID-19 pandemic",
+    # add more here...
+}
+```
+
+### Validating the index
+
+After ingesting, optionally run:
+
+```bash
+python 04_build_index.py
+```
+
+This checks that the embeddings matrix and DataFrame are aligned, normalizes vectors if needed, prints a passage breakdown by source, and writes `processed/index_manifest.json`.
+
+### Querying
+
+**Interactive REPL:**
+```bash
+python 05_rag_query.py
+```
+
+**Single query:**
+```bash
+python 05_rag_query.py --query "What are the WHO guidelines on vaccine distribution?"
+```
+
+**Options:**
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--query` | None | Single query string; omit for interactive mode |
+| `--top-k` | 5 | Number of passages retrieved per query |
+| `--model` | `google/flan-t5-base` | HuggingFace generator model |
+
+---
+
+## How It Works
+
+**Retrieval** — At query time, the question is embedded using the same SentenceTransformer model used during ingestion (`all-MiniLM-L6-v2`). Cosine similarity is computed against every passage vector via dot product (embeddings are unit-normalized), and the top-k passages are returned.
+
+**Generation** — The retrieved passages are assembled into a prompt with source attribution and passed to Flan-T5, a free open-source instruction-tuned model that runs locally with no API key required. The model generates a grounded answer from the provided context only.
+
+**Output** — Each response includes the generated answer and a list of retrieved passages with their source document and similarity score.
+
+---
+
+## DataFrame Schema
 
 | Column | Type | Description |
 |--------|------|-------------|
 | `passage_id` | int | Unique passage identifier |
 | `passage_text` | str | Cleaned text chunk (~150 words) |
 | `source_doc` | str | Source filename (without extension) |
-
-### Stage 3 — Vectorize
-
-Generates a sentence embedding for each passage using `all-MiniLM-L6-v2`.
-
-
-- Embeddings are L2-normalized (cosine similarity = dot product)
-- Output: `processed/passages_with_embeddings.pkl` (DataFrame + embedding column) and `processed/embeddings_matrix.npy` (raw matrix for FAISS etc.)
-
----
-
-## Adding New Sources
-
-**Wikipedia articles** — add entries to `WIKIPEDIA_ARTICLES` in `01_extract_text.py`:
-```python
-WIKIPEDIA_ARTICLES = {
-    "wikipedia_who.txt": "World Health Organization",
-    "wikipedia_my_topic.txt": "Your Article Title Here",
-}
-```
-
-**PDFs** (arXiv papers, reports, transcripts) — drop the PDF into `data/` and add an entry to `ARXIV_PDFS`:
-```python
-ARXIV_PDFS = {
-    "my_paper.txt": "data/my_paper.pdf",
-}
-```
+| `embedding` | np.ndarray | Unit-normalized embedding vector (384-dim) |
 
 ---
 
 ## Key Configuration Options
 
-| Script | Variable | Default | Notes |
-|--------|----------|---------|-------|
-| `02_preprocess.py` | `TARGET_WORDS` | `150` | Target chunk size in words |
-| `02_preprocess.py` | `MIN_WORDS` | `20` | Minimum passage length; shorter chunks are discarded |
-| `03_vectorize.py` | `MODEL_NAME` | `all-MiniLM-L6-v2` | Swap for `all-mpnet-base-v2` (higher quality) or `pritamdeka/S-PubMedBert-MS-MARCO` (biomedical domain) |
-| `03_vectorize.py` | `BATCH_SIZE` | `64` | Reduce if hitting memory issues on CPU |
+| File | Variable | Default | Notes |
+|------|----------|---------|-------|
+| `ingest.py` | `TARGET_WORDS` | `150` | Target passage size in words |
+| `ingest.py` | `MIN_WORDS` | `20` | Passages shorter than this are discarded |
+| `ingest.py` | `MODEL_NAME` | `all-MiniLM-L6-v2` | Swap for `all-mpnet-base-v2` (higher quality) or `pritamdeka/S-PubMedBert-MS-MARCO` (biomedical domain) |
+| `ingest.py` | `BATCH_SIZE` | `64` | Reduce if hitting memory issues on CPU |
+| `05_rag_query.py` | `DEFAULT_TOP_K` | `5` | Default number of passages retrieved |
+| `05_rag_query.py` | `GENERATOR_MODEL` | `google/flan-t5-base` | Swap for `flan-t5-large` for better quality |
+| `05_rag_query.py` | `MAX_NEW_TOKENS` | `256` | Max tokens in generated answer |
 
 ---
 
@@ -106,15 +139,31 @@ See `requirements.txt`. Key packages:
 - `wikipedia-api` — Wikipedia text fetching
 - `PyPDF2` — PDF text extraction
 - `pandas` — passage DataFrame
-- `sentence-transformers` — embedding model
-- `torch` — backend for sentence-transformers
+- `sentence-transformers` — embedding model (`all-MiniLM-L6-v2`)
+- `transformers` — Flan-T5 generator
+- `torch` — backend for both models
+- `sentencepiece` — Flan-T5 tokenizer
 
 ---
 
-## Notes & Known Limitations
+## Known Limitations
 
-- **Scanned PDFs** — PyPDF2 cannot extract text from image-based pages. If a PDF is scanned, you'll see a warning and that page will be skipped. OCR support (e.g. `pytesseract`) is not yet implemented.
-- **Wikipedia API rate limits** — fetching many articles in quick succession may get throttled. Add a short `time.sleep()` between calls if needed.
-- **No chunking overlap** — current chunking has no sliding window overlap between passages, which may hurt retrieval on queries that span chunk boundaries. Worth revisiting in Stage 4.
+- **Scanned PDFs** — PyPDF2 cannot extract text from image-based pages. Affected pages are skipped with a warning. OCR support (`pytesseract`) is not yet implemented.
+- **No chunking overlap** — passages are non-overlapping, which may hurt retrieval on queries that span chunk boundaries.
+- **Flan-T5 answer quality** — the local model is fast and free but produces shorter, less nuanced answers than a frontier model. Swap in the Anthropic or OpenAI API for production-quality generation.
+- `data/`, `raw_text/`, and `processed/` are not committed to the repo.
 
-*Last updated: March 2026*
+---
+
+## Roadmap
+
+- [ ] OCR support for scanned PDFs
+- [ ] Chunking with sliding window overlap
+- [ ] FAISS index for large-scale retrieval
+- [ ] Swap Flan-T5 for API-backed LLM (Claude / GPT-4)
+- [ ] Support for additional source types (HTML, `.docx`, RSS feeds)
+- [ ] Web UI / API wrapper for the query interface
+
+---
+
+*Last updated: April 2026*

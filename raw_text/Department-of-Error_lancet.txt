@@ -1,0 +1,23 @@
+Correspondence1730  www.thelancet.com   Vol 406   October 18, 20253 SoSTART Collaboration. Effects of oral 
+anticoagulation for atrial fibrillation after 
+spontaneous intracranial haemorrhage in the UK: a randomised, open-label, assessor-masked, pilot-phase, non-inferiority trial. Lancet Neurol 2021; 20: 842–53.
+4 Korompoki E, Filippidis FT, Nielsen PB, et al. 
+Long-term antithrombotic treatment in intracranial hemorrhage survivors with atrial fibrillation. Neurology 2017; 89: 687–96.Bayer and AstraZeneca. EK has received honoraria 
+from Amgen, AstraZeneca, Bayer, Elpen, Innovis, Pfizer, and Sanofi; and support for attending meetings or travel from AstraZeneca, Bayer, and Pfizer. PUH has received institutional support from the EU, the German Parkinson Society, University Hospital Würzburg, the German Heart Foundation, the Federal Joint Committee (G-BA) within the Innovation Fund, the German Research Foundation, the Bavarian State, German Cancer Aid, Charité–Universitätsmedizin Berlin (within Mondafis; supported by an unrestricted research grant to the Charité from Bayer), University Göttingen (within the FIND-AF-Randomised trial supported by an unrestricted research grant to University Göttingen from Boehringer Ingelheim), and University Hospital Heidelberg (within the RASUNOA-Prime observational registry; supported by an unrestricted research grant to the University Hospital Heidelberg from Bayer, BMS, Boehringer Ingelheim, and Daiichi Sankyo); and has participated on data safety and monitoring boards for publicly funded studies by the German Research Foundation and German Ministry of Research. CF declares no competing interests. The PRESTIGE-AF trial has been supported by the German Parkinson Society, University Hospital Würzburg, the German Heart Foundation, G-BA within the Innovationfond, the German Research Foundation, the Bavarian State, German Cancer Aid, Charité–Universitätsmedizin Berlin (within Mondafis; supported by an unrestricted research grant to the Charité from Bayer), University Göttingen (within FIND-AF randomised; supported by an unrestricted research grant to University Göttingen from Boehringer Ingelheim), and University Hospital Heidelberg (within RASUNOA-prime; supported by an unrestricted research grant to the University Hospital Heidelberg from Bayer, BMS, Boehringer Ingelheim, and Daiichi Sankyo). PRESTIGE-AF was supported by the European Commission in the Horizon 2020 framework under grant agreement 754517 .
+*Roland Veltkamp, Eleni Korompoki, 
+Cornelia Fießler, Peter U Heuschmann
+r.veltkamp@imperial.ac.uk
+Department of Brain Sciences, Imperial College 
+London, London W6 8RP, UK (RV, EK); Department of Neurology, Alfried-Krupp Krankenhaus, Essen, Germany (RV); Department of Neurology, Heidelberg University Hospital, Heidelberg, Germany (RV); Department of Clinical Therapeutics, National and Kapodistrian University of Athens, Alexandra Hospital, Athens, Greece
+ (EK) ; Clinical 
+Trial Center Würzburg, University Hospital Würzburg, Würzburg, Germany
+ (CF, PUH); Institute 
+of Clinical Epidemiology and Biometry, University of Würzburg, Würzburg, Germany (PUH)
+1 Veltkamp R, Korompoki E, Harvey KH, et al. 
+Direct oral anticoagulants versus no 
+anticoagulation for the prevention of stroke in survivors of intracerebral haemorrhage with atrial fibrillation (PRESTIGE-AF): a multicentre, open-label, randomised, phase 3 trial. Lancet 2025; 405: 927–36.
+2 Schreuder FHBM, van Nieuwenhuizen KM, 
+Hofmeijer J, et al. Apixaban versus no anticoagulation after anticoagulation-associated intracerebral haemorrhage in patients with atrial fibrillation in the Netherlands (APACHE-AF): a randomised, open-label, phase 2 trial. Lancet Neurol 2021; 20: 907–16.Department of Error
+Philis-Tsimikas A, Bergenstal RM, Bailey TS, et al. 
+Once-weekly insulin efsitora alfa versus once-daily insulin degludec in adults with type 2 diabetes currently treated with basal insulin (QWINT-3): a phase 3, randomised, non-inferiority trial. Lancet 2025; 405: 2279–89—In 
+this Article, the third sentence of the third paragraph of the Discussion should have read “Medication errors of interest…occurred in 15 (2%) participants in the efsitora group…”. Additionally, the appendix has been updated to include the amended trial protocol, and the following sentence has been added to the first paragraph of the Methods section: “The protocol was amended on May 13, 2022, after study initiation, to include specific details for participants who enter the study using personal continuous glucose monitoring.” These corrections have been made to the online version as of Oct 16, 2025. 

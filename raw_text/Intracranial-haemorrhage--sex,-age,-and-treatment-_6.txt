@@ -1,0 +1,50 @@
+Correspondencewww.thelancet.com   Vol 406   October 18, 2025  1729Authors’ reply
+We appreciate the Correspondence by 
+Kuan-Yu Chi and colleagues regarding the PRESTIGE-AF trial,
+1 which 
+addresses potential age-related and sex-related differences in the bleeding risk of direct oral anticoagulants (DOACs) in patients with intracerebral haemorrhage and atrial fibrillation. Two pilot-phase, randomised controlled trials reported numerically higher rates of intracranial bleeding in men than in women.
+2,3 In PRESTIGE-AF, 
+7 (6%) of 113 females versus 9 (4%) of 206 males had intracranial bleeding. In addition, the risk of intracerebral haemorrhage increases with age. We agree that predictors of bleeding and ischaemic events are desirable to improve the selection of patients for anticoagulation. The ongoing trials ENRICH-AF (NCT03950076) and ASPIRE (NCT03907046) and the pre-planned COCROACH individual participant data meta-analysis (PROSPERO, CRD42021246133) might provide more evidence. 
+We also thank Joshua Kandiah and 
+Joshua Solomon for raising the question 4 Al-Shahi Salman R, Stephen J, Tierney JF, et al. 
+Effects of oral anticoagulation in people with 
+atrial fibrillation after spontaneous intracranial haemorrhage (COCROACH): prospective, individual participant data meta-analysis of randomised trials. Lancet Neurol 2023; 
+22: 1140–49.
+5 Hayes KN, Zhang T, Kim DH, et al. Benefits and 
+harms of standard versus reduced -dose direct 
+oral anticoagulant therapy for older adults with multiple morbidities and atrial fibrillation. J Am Heart Assoc 2023; 12: e029865.that might  benefit from cardioembolic 
+protective therapy?
+We thank the authors for their 
+contributions in investigating novel 
+management strategies in adults with atrial fibrillation and intracerebral haemorrhage.
+We declare no competing interests.
+*Joshua Kandiah,   Joshua Solomon
+joshua.kandiah@mail.mcgill.ca
+  Department of Cardiology, Faculty of Medicine, McGill 
+University, Montreal, QC H4A 3T2, Canada (JK, JS)
+1 Veltkamp R, Korompoki E, Harvey KH, et al, and 
+the PRESTIGE-AF Consortium. Direct oral 
+anticoagulants versus no anticoagulation for the 
+prevention of stroke in survivors of intracerebral haemorrhage with atrial fibrillation (PRESTIGE-AF): a multicentre, open-label, randomised, phase 3 trial. Lancet 2025; 405: 927–36.
+2 Gabet A, Olié V , Béjot Y. Atrial fibrillation in 
+spontaneous intracerebral hemorrhage, Dijon Stroke Registry (2006–2017). J Am Heart Assoc 2021; 10: e020040.
+3 Seiffge DJ, Cancelloni V , Räber L, et al. 
+Secondary stroke prevention in people with atrial fibrillation: treatments and trials. Lancet Neurol 2024; 23: 404–17 .We commend Roland Veltkamp 
+and colleagues for addressing a knowledge gap in the  PRESTIGE-AF trial
+1 by assessing the 
+effects of oral anticoagulants in adults with atrial fibrillation who have survived intracerebral haemorrhage. A quarter of patients who have had intracerebral haemorrhage have atrial fibrillation and have an ongoing risk of ischaemic stroke, but have historically been excluded in oral anticoagulant trials.
+2,3 The PRESTIGE-AF trial design 
+was pragmatic and represent s clinical 
+practice well. Still, the Article raises some questions.
+First, we wonder if the severity and 
+volume of an intracerebral haemorrhage might be important in identifying those who would benefit from antithrombotic therapy. Would stratifying based on  
+intracerebral haemorrhage volume or neurological disability better guide clinicians in patient selection for antithrombotic therapy? Furthermore, given the spectrum of disabling sequelae from ischaemic and haemorrhagic strokes, we ask the authors if a post-hoc analysis of events based on  
+neurological disability might  provide 
+a more meaningful understanding of the effects of oral anticoagulants in this population?
+Second, a substantial number 
+of patients who did not receive therapeutic anticoagulants received antiplatelet therapy, raising a concern that a protective effect could have biased harm in this trial, namely via the fixed sequence hierarchical analysis. Do the authors expect that a three-armed trial (oral anticoagulants vs antiplatelet therapy vs no therapy) 
+could better identify at-risk patients of whether the severity and volume of an intracerebral haemorrhage is important for selection of patients for anticoagulation. In PRESTIGE-AF, there was a similar risk of ischaemic stroke after smaller and larger haemorrhages. The risk of recurrent intracerebral haemorrhage was higher in participants with smaller haematoma volumes compared to those with larger volumes. In view of the opposing effects of anticoagulation on ischaemic and haemorrhagic outcomes in patients with intracerebral haemorrhage in PRESTIGE-AF, Kandiah and Solomon suggest to weigh the putatively different effects of ischaemic stroke and intracerebral haemorrhage on disability. Unfortunately, this information was not captured systematically at a defined timepoint after incident events in PRESTIGE-AF. Kandiah and Solomon are concerned that the heterogeneity of antithrombotic therapy in the control group (antiplatelet or no antiplatelet) in PRESTIGE-AF might have biased harm. A systematic review of observational studies investigating the effects of antiplatelet medication versus no antithrombotic therapy in patients with intracerebral haemorrhage and atrial fibrillation found no reduction of ischaemic events in patients receiving antiplatelets compared with no antithrombotic therapy, and the rate ratio for intracerebral haemorrhage recurrence did not differ statistically significantly.
+4 In PRESTIGE-AF, only 
+one first recurrent intracerebral haemorrhage occurred in the control group. There was no evidence for a better preventive effect of antiplatelets compared with no antiplatelet in an exploratory analysis. Therefore, we do not think that the available evidence suggests a strong preventive effect of antiplatelets that would warrant a three-armed trial comparing DOACs versus antiplatelets versus no antiplatelet.
+RV reports research support from Bayer, BMS/Pfizer, 
+Boehringer Ingelheim, Daiichi Sankyo, and Medtronic (institutional); consulting fees from Bayer and AstraZeneca; personal honoraria from AstraZeneca; stocks in Bayer and Novartis; and participation on a data safety monitoring board or advisory board for 

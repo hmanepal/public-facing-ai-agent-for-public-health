@@ -1,0 +1,1151 @@
+Comprehensive Mental Health Action Plan 2013–2030
+ISBN 978-92-4-003102-9 (electronic version)
+ISBN 978-92-4-003103-6 (print version)
+© World Health Organization 2021
+Some rights reserved. This work is available under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO licence (CC BY-
+NC-SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo). 
+Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes, provided the work is 
+appropriately cited, as indicated below. In any use of this work, there should be no suggestion that WHO endorses any specific organization, 
+products or services. The use of the WHO logo is not permitted. If you adapt the work, then you must license your work under the same 
+or equivalent Creative Commons licence. If you create a translation of this work, you should add the following disclaimer along with the 
+suggested citation: “This translation was not created by the World Health Organization (WHO). WHO is not responsible for the content or 
+accuracy of this translation. The original English edition shall be the binding and authentic edition” . 
+Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation rules of the World 
+Intellectual Property Organization.
+Suggested citation. Comprehensive mental health action plan 2013–2030. Geneva: World Health Organization; 2021. Licence:
+CC BY-NC-SA 3.0 IGO.
+Cataloguing-in-Publication (CIP) data. CIP data are available at http://apps.who.int/iris.
+Sales, rights and licensing. To purchase WHO publications, see http://apps.who.int/bookorders. To submit requests for commercial use 
+and queries on rights and licensing, see http://www.who.int/about/licensing. 
+Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such as tables, figures or images, it is 
+your responsibility to determine whether permission is needed for that reuse and to obtain permission from the copyright holder. The risk 
+of claims resulting from infringement of any third-party-owned component in the work rests solely with the user.
+General disclaimers. The designations employed and the presentation of the material in this publication do not imply the expression 
+of any opinion whatsoever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or 
+concerning the delimitation of its frontiers or boundaries. Dotted and dashed lines on maps represent approximate border lines for which 
+there may not yet be full agreement.
+The mention of specific companies or of certain manufacturers’ products does not imply that they are endorsed or recommended by WHO 
+in preference to others of a similar nature that are not mentioned. Errors and omissions excepted, the names of proprietary products are 
+distinguished by initial capital letters.
+All reasonable precautions have been taken by WHO to verify the information contained in this publication. However, the published 
+material is being distributed without warranty of any kind, either expressed or implied. The responsibility for the interpretation and use of 
+the material lies with the reader. In no event shall WHO be liable for damages arising from its use. 
+Design and layout by Guillaume Tiravy
+iiiContents
+Foreword  v 
+Setting the scene  1 
+Overview of the global situation  2 
+Structure of the Comprehensive Mental Health Action Plan 2013–2030 4 
+Proposed actions for Member States and international and national partners  
+and actions for the Secretariat   6
+ 
+Annex 1: Indicators for measuring progress towards defined targets 
+of the Comprehensive Mental Health Action Plan 2013–2030 16 
+ 
+Annex 2: Options for the implementation of the Comprehensive Mental Health  
+Action Plan 2013–2030 20 
+ 
+vForeword
+Good mental health and well-being are essential for all of us to lead fulfilling 
+lives, to realize our full potential, to participate productively in our communities, 
+and to demonstrate resilience in the face of stress and adversity.
+Likewise, mental health services are an essential component of health care 
+and universal health coverage. Mental health has been identified as an area for 
+accelerated implementation in WHO’s Thirteenth General Programme of Work 
+(GPW13). Yet, there remains much to be done to ensure all people achieve the 
+highest standard of mental health and well-being. Action must be taken to address 
+decades of inattention to and underdevelopment of mental health services and systems, human rights abuses and 
+discrimination against people with mental disorders and psychosocial disabilities.
+This updated comprehensive mental health action plan, endorsed by the Seventy-fourth World Health Assembly in decision 
+WHA74(14), builds upon its predecessor, the Comprehensive Mental Health Action Plan 2013–2020, by including revised 
+indicators and options for implementation as well as updated global targets. The plan retains the emphasis on a life-course 
+approach and on actions to promote mental health and well-being for all, to prevent mental health conditions for those 
+at-risk and to achieve universal coverage for mental health services.
+The original four major objectives remain unchanged: more effective leadership and governance for mental health;  
+the provision of comprehensive, integrated mental health and social care services in community-based settings; 
+implementation of strategies for promotion and prevention; and strengthened information systems, evidence and research.
+Although the targets in this action plan are ambitious, the WHO Secretariat and Member States remain committed to 
+reaching them. To do so, we must act together to address mental health needs, now and for the future – because there is 
+no health without mental health.
+Dr Tedros Adhanom Ghebreyesus
+Director-General
+World Health Organization 
+
+1Setting the scene
+01 In May 2012, the Sixty-fifth World Health Assembly adopted resolution WHA65.4 on the global burden of mental disorders 
+and the need for a comprehensive, coordinated response from health and social sectors at the country level. It requested 
+the Director-General, inter alia, to develop a comprehensive mental health action plan, in consultation with Member States, 
+covering services, policies, legislation, plans, strategies and programmes.
+02 This comprehensive action plan has been elaborated through consultations with Member States, civil society and 
+international partners. It takes a comprehensive and multisectoral approach, through coordinated services from the health 
+and social sectors, with an emphasis on promotion, prevention, treatment, rehabilitation, care and recovery. It also sets out 
+clear actions for Member States, the Secretariat and international, regional and national level partners, and proposes key 
+indicators and targets that can be used to evaluate levels of implementation, progress and impact. The action plan has, at its 
+core, the globally accepted principle that there is “no health without mental health.”
+03 The action plan has close conceptual and strategic links to other global action plans and strategies endorsed by the 
+Health Assembly, including the Global strategy to reduce the harmful use of alcohol, the Global plan of action for workers’ 
+health 2008–2017, the Action plan for the global strategy for the prevention and control of noncommunicable diseases 
+2008–2013, and the Global action plan for the prevention and control of noncommunicable diseases 2013–2030. It also 
+draws on WHO’s regional action plans and strategies for mental health and substance abuse that have been adopted or are 
+being developed. The action plan has been designed to create synergy with other relevant programmes of organizations in 
+the United Nations system, United Nations interagency groups and intergovernmental organizations.
+04 The action plan builds upon, but does not duplicate, the work of WHO’s Mental Health Gap Action Programme (mhGAP). 
+The focus of the latter was to expand services for mental health in low resource settings. The action plan is global in its scope 
+and is designed to provide guidance for national action plans. It addresses, for all resource settings, the response of social 
+and other relevant sectors, as well as promotion and prevention strategies.
+05 In this action plan, the term “mental disorders” is used to denote a range of mental and behavioural disorders that fall 
+within the International Statistical Classification of Diseases and Related Health Problems, Tenth revision (ICD-10). These 
+include disorders that cause a high burden of disease such as depression, bipolar affective disorder, schizophrenia, anxiety 
+disorders, dementia, substance use disorders, intellectual disabilities, and developmental and behavioural disorders 
+with onset usually occurring in childhood and adolescence, including autism. For dementia and substance use disorders, 
+additional prevention strategies may also be required (as described, for example, in a WHO report on dementia issued in 
+early 20121 and in the Global strategy to reduce the harmful use of alcohol). Furthermore, the plan covers suicide prevention 
+and many of the actions are also relevant to conditions such as epilepsy. The term “vulnerable groups” is used in the action 
+plan to refer to individuals or groups of individuals who are made vulnerable by the situations and environments that they 
+are exposed to (as opposed to any inherent weakness or lack of capacity). The term “vulnerable groups” should be applied 
+within countries as appropriate to the national situation.
+06 The action plan also covers mental health, which is conceptualized as a state of well-being in which the individual realizes 
+his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make 
+a contribution to his or her community. With respect to children, an emphasis is placed on the developmental aspects, for 
+instance, having a positive sense of identity, the ability to manage thoughts, emotions, as well as to build social relationships, 
+and the aptitude to learn and to acquire an education, ultimately enabling their full active participation in society.
+1 Dementia: a public health priority. Geneva: World Health Organization; 2012 (https://apps.who.int/iris/handle/10665/75263).
+Comprehensive Mental Health Action Plan 2013–2030207 In the light of widespread human rights violations and discrimination experienced by people with mental disorders, a 
+human rights perspective is essential in responding to the global burden of mental disorders. The action plan emphasizes 
+the need for services, policies, legislation, plans, strategies and programmes to protect, promote and respect the rights of 
+persons with mental disorders in line with the International Covenant on Civil and Political Rights, the International Covenant 
+on Economic, Social and Cultural Rights, the Convention on the Rights of Persons with Disabilities, the Convention on the 
+Rights of the Child and other relevant international and regional human rights instruments.
+Overview of the global situation
+08 Mental health is an integral part of health and well-being, as reflected in the definition of health in the Constitution of the 
+World Health Organization: “Health is a state of complete physical, mental and social well-being and not merely the absence 
+of disease or infirmity.” Mental health, like other aspects of health, can be affected by a range of socioeconomic factors 
+(described below) that need to be addressed through comprehensive strategies for promotion, prevention, treatment and 
+recovery in a whole-of-government approach.
+Mental health and disorders: determinants and consequences
+09 Determinants of mental health and mental disorders include not only individual attributes such as the ability to 
+manage one’s thoughts, emotions, behaviours and interactions with others, but also social, cultural, economic, political 
+and environmental factors such as national policies, social protection, living standards, working conditions, and community 
+social supports. Exposure to adversity at a young age is an established preventable risk factor for mental disorders.
+10 Depending on the local context, certain individuals and groups in society may be placed at a significantly higher risk of 
+experiencing mental health problems. These vulnerable groups may (but do not necessarily) include members of households 
+living in poverty, people with chronic health conditions, infants and children exposed to maltreatment and neglect, 
+adolescents first exposed to substance use, minority groups, indigenous populations, older people, people experiencing 
+discrimination and human rights violations, lesbian, gay, bisexual, and transgender persons, prisoners, and people exposed 
+to conflict, natural disasters or other humanitarian emergencies. The current global financial crisis provides a powerful 
+example of a macroeconomic factor leading to cuts in funding despite a concomitant need for more mental health and 
+social services because of higher rates of mental disorders and suicide as well as the emergence of new vulnerable groups 
+(for example, the young unemployed). In many societies, mental disorders related to marginalization and impoverishment, 
+domestic violence and abuse, and overwork and stress are of growing concern, especially for women’s health.
+11 People with mental disorders experience disproportionately higher rates of disability and mortality. For example, 
+persons with major depression and schizophrenia have a 40% to 60% greater chance of dying prematurely than the general 
+population, owing to physical health problems that are often left unattended (such as cancers, cardiovascular diseases, 
+diabetes and HIV infection) and suicide. Suicide is the second most common cause of death among young people worldwide.
+12 Mental disorders often affect, and are affected by, other diseases such as cancer, cardiovascular disease and HIV infection/
+AIDS, and as such require common services and resource mobilization efforts. For example, there is evidence that depression 
+predisposes people to myocardial infarction and diabetes, both of which conversely increase the likelihood of depression. 
+Many risk factors such as low socioeconomic status, alcohol use and stress are common to both mental disorders and other 
+noncommunicable diseases. There is also substantial concurrence of mental disorders and substance use disorders. Taken 
+together, mental, neurological and substance use disorders exact a high toll, accounting for 13% of the total global burden 
+3Overview of the global situation
+of disease in the year 2004. Depression alone accounts for 4.3% of the global burden of disease and is among the largest 
+single causes of disability worldwide (11% of all years lived with disability globally), particularly for women. The economic 
+consequences of these health losses are equally large: a recent study estimated that the cumulative global impact of mental 
+disorders in terms of lost economic output will amount to US$ 16.3 trillion between 2011 and 2030.1
+13 Mental disorders frequently lead individuals and families into poverty.2 Homelessness and inappropriate incarceration 
+are far more common for people with mental disorders than for the general population and exacerbate their marginalization 
+and vulnerability. Because of stigmatization and discrimination, persons with mental disorders often have their human rights 
+violated and many are denied economic, social and cultural rights, with restrictions on the rights to work and education, as 
+well as reproductive rights and the right to the highest attainable standard of health. They may also be subject to unhygienic 
+and inhuman living conditions, physical and sexual abuse, neglect, and harmful and degrading treatment practices in health 
+facilities. They are often denied civil and political rights such as the right to marry and found a family, personal liberty, the 
+right to vote and to participate effectively and fully in public life, and the right to exercise their legal capacity on other issues 
+affecting them, including their treatment and care. As such, persons with mental disorders often live in vulnerable situations 
+and may be excluded and marginalized from society, which constitutes a significant impediment to the achievement of 
+national and international development goals. The Convention on the Rights of Persons with Disabilities, which is binding 
+on States Parties that have ratified or acceded to it, protects and promotes the rights of all persons with disabilities, including 
+persons with mental and intellectual impairments, and also promotes their full inclusion in international cooperation 
+including international development programmes.
+Health system resources and responses
+14 Health systems have not yet adequately responded to the burden of mental disorders; as a consequence, the gap 
+between the need for treatment and its provision is large all over the world. Between 76% and 85% of people with severe 
+mental disorders receive no treatment for their disorder in low-income and middle-income countries; the corresponding 
+range for high-income countries is also high: between 35% and 50%. A further compounding problem is the poor quality of 
+care for those receiving treatment. WHO’s Mental Health Atlas 2011 provides data that demonstrate the scarcity of resources 
+within countries to meet mental health needs, and underlines the inequitable distribution and inefficient use of such 
+resources. Globally, for instance, annual spending on mental health is less than US$ 2 per person and less than US$ 0.25 per 
+person in low-income countries, with 67% of these financial resources allocated to stand-alone mental hospitals, despite 
+their association with poor health outcomes and human rights violations. Redirecting this funding towards community-
+based services, including the integration of mental health into general health care settings, and through maternal, sexual, 
+reproductive and child health, HIV/AIDS and chronic noncommunicable disease programmes, would allow access to better 
+and more cost-effective interventions for many more people.
+15 The number of specialized and general health workers dealing with mental health in low-income and middle-income 
+countries is grossly insufficient. Almost half the world’s population lives in countries where, on average, there is one psychiatrist 
+to serve 200 000 or more people; other mental health care providers who are trained in the use of psychosocial interventions 
+are even scarcer. Similarly, a much higher proportion of high-income countries than low-income countries reports having a 
+policy, plan and legislation on mental health; for instance, only 36% of people living in low-income countries are covered by 
+mental health legislation compared with 92% in high-income countries.
+1  World Economic Forum, Harvard School of Public Health. The global economic burden of non-communicable diseases. Geneva: World Economic 
+Forum; 2011 (https://www.weforum.org/reports/global-economic-burden-non-communicable-diseases).
+2  Mental health and development: targeting people with mental health conditions as a vulnerable group. Geneva: World Health Organization; 2010 
+(https://www.who.int/publications/i/item/9789241563949).
+Comprehensive Mental Health Action Plan 2013–2030416 Civil society movements for mental health in low-income and middle-income countries are not well developed.  
+Organizations of people with mental disorders and psychosocial disabilities are present in only 49% of low-income countries 
+compared with 83% of high-income countries; for family associations the respective figures are 39% and 80%.
+17 Finally, the availability of basic medicines for mental disorders in primary health care is notably low (in comparison to 
+medicines available for infectious diseases and even other noncommunicable diseases), and their use restricted because of 
+the lack of qualified health workers with the appropriate authority to prescribe medications. In addition, the availability of 
+non-pharmacological approaches and trained personnel to deliver these interventions is also lacking. Such factors act as 
+important barriers to appropriate care for many persons with mental disorders.
+18 To improve the situation, and in addition to the data on mental health resources in countries (from WHO’s Mental Health 
+Atlas 2011, as well as the more detailed profiling obtained through use of WHO’s assessment instrument for mental health 
+systems),1 information is available on cost-effective and feasible mental health interventions that can be expanded to a larger 
+scale to strengthen mental health care systems in countries. WHO’s Mental Health Gap Action Programme, launched in 2008, 
+uses evidence-based technical guidance, tools and training packages to expand service provision in countries, especially in 
+resource-poor settings. It focuses on a prioritized set of conditions and, importantly, directs its capacity-building towards 
+non-specialized health care providers in an integrated approach that promotes mental health at all levels of care.
+19 The Secretariat has elaborated other technical tools and guidance in support of countries in developing comprehensive 
+mental health policies, plans and laws that promote improved quality and availability of mental health care (such as the WHO 
+mental health policy and service guidance package);2 in improving quality and respecting the rights of persons with mental 
+disorders in health services (the WHO Quality Rights toolkit);3 and for disaster relief and post-disaster mental health system 
+reconstruction (including the Inter-Agency Standing Committee Guidelines on mental health and psychosocial support 
+in emergency settings).4 Knowledge, information and technical tools are necessary but not sufficient; strong leadership, 
+enhanced partnerships and the commitment of resources towards implementation are also required in order to move 
+decisively from evidence to action and evaluation.
+Structure of the Comprehensive Mental Health Action Plan 2013–2030
+20 The vision of the action plan is a world in which mental health is valued, promoted and protected, mental disorders are 
+prevented and persons affected by these disorders are able to exercise the full range of human rights and to access high 
+quality, culturally-appropriate health and social care in a timely way to promote recovery, in order to attain the highest 
+possible level of health and participate fully in society and at work, free from stigmatization and discrimination.
+21 Its overall goal  is to promote mental well-being, prevent mental disorders, provide care, enhance recovery, promote 
+human rights and reduce the mortality, morbidity and disability for persons with mental disorders.
+1  WHO-AIMS version 2.2: World Health Organization assessment instrument for mental health systems. Geneva: World Health Organization; 2005 (WHO/
+MSD/MER/05.2; https://apps.who.int/iris/handle/10665/70771).
+2  WHO mental health policy and service guidance package. Geneva: World Health Organization; 2004  (https://www.who.int/publications/i/
+item/9241546468).
+3  WHO QualityRights tool kit: assessing and improving quality and human rights in mental health and social care facilities. Geneva: World Health 
+Organization; 2012 (https://apps.who.int/iris/handle/10665/70927). 
+4  IASC guidelines on mental health and psychosocial support in emergency settings. Geneva: Inter-Agency Standing Committee; 2007 (https://
+interagencystandingcommittee.org/iasc-task-force-mental-health-and-psychosocial-support-emergency-settings/iasc-guidelines-mental-health-and-
+psychosocial-support-emergency-settings-2007).
+5Structure of the Comprehensive Mental Health Action Plan 2013–2030
+22 The action plan has the following objectives :
+1. to strengthen effective leadership and governance for mental health;
+2. to provide comprehensive, integrated and responsive mental health and social care services in community-based 
+settings;
+3. to implement strategies for promotion and prevention in mental health;
+4. to strengthen information systems, evidence and research for mental health.
+The global targets established for each objective provide the basis for measurable collective action and achievement by 
+Member States towards global goals and should not negate the setting of more ambitious national targets, particularly for 
+those countries that have already reached global ones. Indicators for measuring progress towards defined global targets are 
+provided in Annex 1.
+23 The action plan relies on six cross-cutting principles  and approaches .
+1. Universal health coverage. Regardless of age, sex, socioeconomic status, race, ethnicity or sexual orientation, 
+and following the principle of equity, persons with mental disorders should be able to access, without the risk 
+of impoverishing themselves, essential health and social services that enable them to achieve recovery and the 
+highest attainable standard of health.
+2. Human rights. Mental health strategies, actions and interventions for treatment, prevention and promotion must 
+be compliant with the Convention on the Rights of Persons with Disabilities and other international and regional 
+human rights instruments.
+3. Evidence-based practice. Mental health strategies and interventions for treatment, prevention and promotion 
+need to be based on scientific evidence and/or best practice, taking cultural considerations into account.
+4. Life-course approach. Policies, plans and services for mental health need to take account of health and social 
+needs at all stages of the life-course, including infancy, childhood, adolescence, adulthood and older age.
+5. Multisectoral approach. A comprehensive and coordinated response for mental health requires partnership with 
+multiple public sectors such as health, education, employment, judicial, housing, social and other relevant sectors 
+as well as the private sector, as appropriate to the country situation.
+6. Empowerment of persons with mental disorders and psychosocial disabilities. Persons with mental disorders 
+and psychosocial disabilities should be empowered and involved in mental health advocacy, policy, planning, 
+legislation, service provision, monitoring, research and evaluation.
+24 The framework provided in this action plan needs to be adapted at regional level in order to take into account region-
+specific situations. The actions proposed for Member States are to be considered and adapted, as appropriate, to national 
+priorities and specific national circumstances in order to accomplish the objectives. There is no blueprint action plan that 
+fits all countries, as countries are at different stages in developing and implementing a comprehensive response in the area 
+of mental health.
+Comprehensive Mental Health Action Plan 2013–20306Proposed actions for Member States and international and national partners and 
+actions for the Secretariat 
+25 To achieve the plan’s stated vision, goal and objectives, specific actions are proposed for Member States and for 
+international and national partners. In addition, actions for the Secretariat have been identified. Although actions are 
+specified separately for each objective, many of these will also contribute to the attainment of the other objectives of the 
+action plan. Some possible options to implement these actions are proposed in Annex 2.
+26 Effective implementation of the Comprehensive Mental Health Action Plan will require actions by international, regional 
+and national partners. These partners include but are not limited to:
+• development agencies including international multilateral agencies (for example, the World Bank and United 
+Nations development agencies), regional agencies (for example, regional development banks), subregional 
+intergovernmental agencies and bilateral development aid agencies;
+• academic and research institutions including the network of WHO collaborating centres for mental health, human 
+rights and social determinants of health and other related networks, within developing and developed countries;
+• civil society, including organizations of persons with mental disorders and psychosocial disabilities, service-user 
+and other similar associations and organizations, family member and carer associations, mental health and other 
+related nongovernmental organizations, community-based organizations, human rights-based organizations, 
+faith-based organizations, development and mental health networks and associations of health care professionals 
+and service providers.
+27 The roles of these three groups are often overlapping and can include multiple actions across the areas of governance, 
+health and social care services, promotion and prevention in mental health, and information, evidence and research (see 
+actions listed below). Country-based assessments of the needs and capacity of different partners will be essential to clarify 
+the roles and actions of key stakeholder groups.
+Objective 1. To strengthen effective leadership and governance for mental health
+28 Planning, organizing and financing health systems is a complex undertaking involving multiple stakeholders and different 
+administrative levels. As the ultimate guardian of a population’s mental health, governments have the lead responsibility to 
+put in place appropriate institutional, legal, financing and service arrangements to ensure that needs are met and the mental 
+health of the whole population is promoted.
+29 Governance is not just about government but extends to its relationship with nongovernmental organizations and civil 
+society. A strong civil society, particularly organizations of people with mental disorders and psychosocial disabilities and 
+families and carers, can help to create more effective and accountable policies, laws and services for mental health in a 
+manner consistent with international and regional human rights instruments.
+30 Among the key factors for developing effective policies and plans addressing mental health are strong leadership and 
+commitment by governments, involvement of relevant stakeholders, clear elaboration of areas for action, formulation of 
+financially informed and evidence-based actions, explicit attention to equity, respect for the inherent dignity and human 
+rights of people with mental disorders and psychosocial disabilities and the protection of vulnerable and marginalized groups.
+7Proposed actions for Member States and international and national partners and actions for the Secretariat  
+31 Responses will be stronger and more effective when mental health interventions are firmly integrated within the national 
+health policy and plan. In addition, often it is necessary to develop a dedicated mental health policy and plan in order to 
+provide more detailed direction.
+32 Mental health law, whether an independent legislative document or integrated into other health and capacity-related 
+laws, should codify the key principles, values and objectives of policy for mental health, for example by establishing legal and 
+oversight mechanisms to promote human rights and the development of accessible health and social services in the community.
+33 Policies, plans and laws for mental health should comply with obligations under the Convention on the Rights of Persons 
+with Disabilities and other international and regional human rights conventions.
+34 The inclusion and mainstreaming of mental health issues more explicitly within other priority health programmes and 
+partnerships (for instance, HIV/AIDS, women’s and children’s health, noncommunicable diseases and the global health work-
+force alliance), as well as within other relevant sectors’ policies and laws, for example, those dealing with education, employment, 
+disability, the judicial system, human rights protection, social protection, poverty reduction and development, are important 
+means of meeting the multidimensional requirements of mental health systems and should remain central to leadership efforts 
+of governments to improve treatment services, prevent mental disorders and promote mental health.
+Global target 1.1: 80% of countries will have developed or updated their policy or plan for mental health in line with 
+international and regional human rights instruments, by 2030.1
+Global target 1.2: 80% of countries will have developed or updated their law for mental health in line with international and 
+regional human rights instruments, by 2030. 
+Proposed actions for Member States
+35 Policy and law. Develop, strengthen, keep up to date and implement national policies, strategies, programmes, laws 
+and regulations relating to mental health within all relevant sectors, including codes of practice and mechanisms to monitor 
+protection of human rights and implementation of legislation, in line with evidence, best practice, the Convention on the Rights 
+of Persons with Disabilities and other international and regional human rights instruments.
+36 Resource planning. Plan according to measured need and allocate a budget across all relevant sectors that is commensurate 
+with identified human and other resources required to implement agreed upon evidence-based mental health plans and 
+actions.
+37 Stakeholder collaboration. Motivate and engage stakeholders from all relevant sectors, including persons with mental 
+disorders, carers and family members, in the development and implementation of policies, laws and services relating to mental 
+health, through a formalized structure and/or mechanism.
+38 Strengthening and empowerment of people with mental disorders and psychosocial disabilities and their  
+organizations. Ensure that people with mental disorders and psychosocial disabilities are given a formal role and authority to 
+influence the process of designing, planning and implementing policies, laws and services.
+1 All global targets have been updated in line with updates to Annexes 1 and 2 of this document in response to paragraph 3(a) of decision WHA72(11) 
+(2019).
+Comprehensive Mental Health Action Plan 2013–20308Actions for the Secretariat
+39 Policy and law. Compile knowledge and best practices for – and build capacity in – the development, multisectoral 
+implementation and evaluation of policies, plans and laws relevant to mental health, including codes of practice and 
+mechanisms to monitor protection of human rights and implementation of legislation, in line with the Convention on the 
+Rights of Persons with Disabilities and other international and regional human rights instruments.
+40 Resource planning. Offer technical support to countries in multisectoral resource planning, budgeting and expenditure 
+tracking for mental health.
+41 Stakeholder collaboration. Provide best practices and tools to strengthen collaboration and interaction at international, 
+regional and national levels between the stakeholders in the development, implementation and evaluation of policy, 
+strategies, programmes and laws for mental health, including the health, judicial and social sectors, civil society groups, 
+persons with mental disorders and psychosocial disabilities, carers and family members, and organizations in the United 
+Nations system and human rights agencies.
+42 Strengthening and empowerment of people with mental disorders and psychosocial disabilities and their 
+organizations. Engage organizations of people with mental disorders and psychosocial disabilities in policy-making at 
+international, regional and national levels within WHO’s own structures and provide support to organizations to design 
+technical tools for capacity-building, based on international and regional human rights instruments and WHO’s own human 
+rights and mental health tools.
+Proposed actions for international and national partners
+43 Mainstream mental health interventions into health, poverty reduction, development policies, strategies and 
+interventions.
+44 Include people with mental disorders as a vulnerable and marginalized group requiring prioritized attention and 
+engagement within development and poverty-reduction strategies, for example, in education, employment and livelihood 
+programmes, and the human rights agenda.
+45 Explicitly include mental health within general and priority health policies, plans and research agenda, including 
+noncommunicable diseases, HIV/AIDS, women’s health, child and adolescent health, as well as through horizontal programmes 
+and partnerships, such as the Global Health Workforce Alliance, and other international and regional partnerships.
+46 Support opportunities for exchange between countries on effective policy, legislative and intervention strategies for 
+promoting mental health, preventing mental disorders and promoting recovery from disorders based on the international 
+and regional human rights framework.
+47 Support the creation and strengthening of associations and organizations of people with mental disorders and 
+psychosocial disabilities as well as families and carers, and their integration into existing disability organizations, and 
+facilitate dialogue between these groups, health workers and government authorities in health, human rights, disability, 
+education, employment, the judiciary and social sectors.
+9Objective 2. To provide comprehensive, integrated and responsive mental health and social care 
+services in community-based settings
+48 In the context of improving access to care and service quality, WHO recommends the development of comprehensive 
+community-based mental health and social care services; the integration of mental health care and treatment into general 
+hospitals and primary care; continuity of care between different providers and levels of the health system; effective 
+collaboration between formal and informal care providers; and the promotion of self-care, for instance, through the use of 
+electronic and mobile health technologies.
+49 Developing mental health services of good quality requires the use of evidence-based protocols and practices, including 
+early intervention, incorporation of human rights principles, respect for individual autonomy and the protection of people’s 
+dignity. Furthermore, health workers must not limit intervention to improving mental health but also attend to the physical 
+health care needs of children, adolescents and adults with mental disorders, and vice versa, because of the high rates of 
+co-morbid physical and mental health problems and associated risk factors, for example, high rates of tobacco consumption, 
+that go unaddressed.
+50 Community-based service delivery for mental health needs to encompass a recovery-based approach that puts the 
+emphasis on supporting individuals with mental disorders and psychosocial disabilities to achieve their own aspirations and 
+goals. The core service requirements include: listening and responding to individuals’ understanding of their condition and 
+what helps them to recover; working with people as equal partners in their care; offering choice of treatment and therapies, 
+and in terms of who provides care; and the use of peer workers and supports, who provide each other with encouragement 
+and a sense of belonging, in addition to their expertise. In addition, a multisectoral approach is required whereby services 
+support individuals, at different stages of the life-course and, as appropriate, facilitate their access to human rights such 
+as employment (including return-to-work programmes), housing and educational opportunities and participation in 
+community activities, programmes and meaningful activities.
+51 More active involvement and support of service users in the reorganization, delivery and evaluation and monitoring of 
+services is required so that care and treatment become more responsive to their needs. Greater collaboration with “informal” 
+mental health care providers, including families, as well as religious leaders, faith healers, traditional healers, school teachers, 
+police officers and local nongovernmental organizations, is also needed.
+52 Another essential requirement is for services to be responsive to the needs of vulnerable and marginalized groups in 
+society, including socioeconomically disadvantaged families, people living with HIV/AIDS, women and children living with 
+domestic violence, survivors of violence, lesbian, gay, bisexual and transgendered people, indigenous peoples, immigrants, 
+asylum seekers, persons deprived of liberty and minority groups among others within the national context.
+53 When planning for humanitarian emergency response and recovery, it is crucial to ensure that mental health services and 
+community psychosocial supports are widely available.
+54 Exposure to adverse life events or extreme stressors, such as natural disasters, isolated, repeated or continuing conflict 
+and civil unrest or ongoing family and domestic violence, may have serious health and mental health consequences that 
+require careful examination, particularly with regard to issues of diagnostic characterization (especially avoiding over-
+diagnosis and over-medicalization) and approaches to support, care and rehabilitation.
+55 Having the right number and equitable distribution of competent, sensitive and appropriately skilled health professionals 
+and workers is central to the expansion of services for mental health and the achievement of better outcomes. Integrating Proposed actions for Member States and international and national partners and actions for the Secretariat  
+Comprehensive Mental Health Action Plan 2013–203010mental health into general health, disease-specific and social care services and programmes (such as those on women’s 
+health and HIV/ AIDS) provides an important opportunity to manage mental health problems better, promote mental 
+health and prevent mental disorders. For example, health workers trained in mental health should be equipped not only to 
+manage mental disorders in the persons they see, but also to provide general wellness information and screening for related 
+health conditions, including noncommunicable diseases and substance use. Not only does service integration require the 
+acquisition of new knowledge and skills to identify, manage and refer people with mental disorders as appropriate, but also 
+the re-definition of health workers’ roles and changes to the existing service culture and attitudes of general health workers, 
+social workers, occupational therapists and other professional groups. Furthermore, in this context, the role of specialized 
+mental health professionals needs to be expanded to encompass supervision and support of general health workers in 
+providing mental health interventions.
+Global target 2.1:  Service coverage for mental health conditions will have increased at least by half, by 2030.
+Global target 2.2:  80% of countries will have doubled number of community-based mental health facilities, by 2030.
+Global target 2.3:  80% of countries will have integrated mental health into primary health care, by 2030.
+Proposed actions for Member States
+56 Service reorganization and expanded coverage. Systematically shift the locus of care away from long-stay mental  
+hospitals towards non-specialized health settings with increasing coverage of evidence-based interventions (including the use 
+of stepped care principles, as appropriate) for priority conditions and using a network of linked community-based mental health 
+services, including short-stay inpatient care, and outpatient care in general hospitals, primary care, comprehensive mental 
+health centres, day care centres, support of people with mental disorders living with their families, and supported housing.
+57 Integrated and responsive care. Integrate and coordinate holistic prevention, promotion, rehabilitation, care and support that 
+aims at meeting both mental and physical health care needs and facilitates the recovery of persons of all ages with mental disorders 
+within and across general health and social services (including the promotion of the right to employment, housing, and education) 
+through service user-driven treatment and recovery plans and, where appropriate, with the inputs of families and carers.
+58 Mental health in humanitarian emergencies (including isolated, repeated or continuing conflict, violence and 
+disasters). Work with national emergency committees and mental health providers in order to include mental health and 
+psychosocial support needs in emergency preparedness and enable access to safe and supportive services, including 
+services that address psychological trauma and promote recovery and resilience, for persons with mental disorders 
+(pre-existing as well as emergency-induced) or psychosocial problems, including services for health and humanitarian 
+workers, during and following emergencies, with due attention to the longer-term funding required to build or rebuild a 
+community-based mental health system after the emergency.
+59 Resource planning. Build the knowledge and skills of general and specialized health workers to deliver evidence-based, 
+culturally appropriate and human rights-oriented mental health and social care services, for children and adolescents, inter 
+alia, by introducing mental health into undergraduate and graduate curricula; and through training and mentoring health 
+workers in the field, particularly in non-specialized settings, in order to identify people with mental disorders and offer 
+appropriate treatment and support as well as to refer people, as appropriate, to other levels of care.
+60 Address disparities. Proactively identify and provide appropriate support for groups at particular risk of mental illness 
+who have poor access to services.
+11Actions for the Secretariat
+61 Service reorganization and expanded coverage. Provide guidance and evidence-based practices for deinstitutionalization 
+and service reorganization, and provide technical support for expanding treatment and support, prevention and mental 
+health promotion through recovery-oriented community-based mental health and social support services.
+62 Integrated and responsive care. Collate and disseminate evidence and best practices for the integration and 
+multisectoral coordination of holistic care, emphasizing recovery and support needs for persons with mental disorders, 
+including alternatives to coercive practices and strategies to engage service users, families and carers in service planning 
+and treatment decisions, and provide examples of financing mechanisms to facilitate multisectoral collaboration.
+63 Mental health in humanitarian emergencies (including isolated, repeated or continuing conflict, violence, and 
+disasters). Provide technical advice and guidance for policy and field activities related to mental health undertaken by 
+governmental, nongovernmental and intergovernmental organizations, including the building or rebuilding after an 
+emergency of a community-based mental health system that is sensitive to trauma-related issues.
+64 Resource planning. Support countries in the formulation of a human resource strategy for mental health, including the 
+identification of gaps, specification of needs, training requirements and core competencies for health workers in the field, as 
+well as for undergraduate and graduate educational curricula.
+65 Address disparities. Collect and disseminate evidence and best practices for reducing mental health and social service 
+gaps for marginalized groups.
+Proposed actions for international and national partners
+66 Use funds received for direct service delivery to provide community-based mental health care rather than institutional care.
+67 Assist the training of health workers in skills to identify mental disorders and provide evidence-based and culturally-
+appropriate interventions to promote the recovery of people with mental disorders.
+68 Support coordinated efforts to implement mental health programmes during and after humanitarian emergency 
+situations, including the training and capacity-building of health and social service workers.
+Objective 3. To implement strategies for promotion and prevention in mental health
+69 In the context of national efforts to develop and implement health policies and programmes, it is vital to meet not only 
+the needs of persons with defined mental disorders, but also to protect and promote the mental well-being of all citizens. 
+Mental health evolves throughout the life-cycle. Therefore, governments have an important role in using information on 
+risk and protective factors for mental health to put in place actions to prevent mental disorders and to protect and promote 
+mental health at all stages of life. The early stages of life present a particularly important opportunity to promote mental 
+health and prevent mental disorders, as up to 50% of mental disorders in adults begin before the age of 14 years. Children 
+and adolescents with mental disorders should be provided with early intervention through evidence-based psychosocial 
+and other non-pharmacological interventions based in the community, avoiding institutionalization and medicalization. 
+Furthermore, interventions should respect the rights of children in line with the United Nations Convention on the Rights of 
+the Child and other international and regional human rights instruments.Proposed actions for Member States and international and national partners and actions for the Secretariat  
+Comprehensive Mental Health Action Plan 2013–20301270 Responsibility for promoting mental health and preventing mental disorders extends across all sectors and all government 
+departments. This is because poor mental health is strongly influenced by a range of social and economic determinants 
+including income level, employment status, education level, material standard of living, physical health status, family cohesion, 
+discrimination, violations of human rights and exposure to adverse life events, including sexual violence, child abuse and 
+neglect. Mental health needs of children and adolescents who are exposed to natural disasters or civil conflict and unrest, 
+including those who have been associated with armed forces or armed groups, are very high and require special attention.
+71 Broad strategies for mental health promotion and the prevention of mental disorders across the life-course may focus 
+on: antidiscrimination laws and information campaigns that redress the stigmatization and human rights violations all too 
+commonly associated with mental disorders; promotion of the rights, opportunities and care of individuals with mental 
+disorders; the nurturing of core individual attributes in the formative stages of life (such as early childhood programmes, life 
+skills and sexuality education, programmes to support the development of safe, stable and nurturing relationships between 
+children, their parents and carers); early intervention through identification, prevention and treatment of emotional or 
+behavioural problems, especially in childhood and adolescence; provision of healthy living and working conditions (including 
+work organizational improvements and evidence-based stress management schemes in the public as well as the private sector); 
+protection programmes or community protection networks that tackle child abuse as well as other violence at domestic and 
+community levels and social protection for the poor.1
+72 Suicide prevention is an important priority. Many people who attempt suicide come from vulnerable and marginalized groups. 
+Moreover, young people and the elderly are among the most susceptible age groups to suicidal ideation and self-harm. Suicide 
+rates tend to be underreported owing to weak surveillance systems, a misattribution of suicide to accidental deaths, as well as its 
+criminalization in some countries. Nevertheless, most countries are showing either a stable or an increasing trend in the rate of suicide, 
+while several others are showing long-term decreasing trends. As there are many risk factors associated with suicide beyond mental 
+disorder, such as chronic pain or acute emotional distress, actions to prevent suicide must not only come from the health sector, but 
+also from other sectors simultaneously. Reducing access to means to cause self-harm or commit suicide (including firearms, pesticides 
+and availability of toxic medicines that can be used in overdoses), responsible reporting by the media, protecting persons at high risk 
+of suicide and early identification and management of mental disorder and of suicidal behaviours can be effective.
+Global target 3.1: 80% of countries will have at least two functioning national, multisectoral mental health promotion  
+and prevention programmes, by 2030. 
+Global target 3.2: The rate of suicide will be reduced by one-third, by 2030.
+Global target 3.3: 80% of countries will have a system in place for mental health and psychosocial preparedness for 
+emergencies and/or disasters, by 2030.
+Proposed actions for Member States
+73 Mental health promotion and prevention. Lead and coordinate a multisectoral strategy that combines universal 
+and targeted interventions for promoting mental health and preventing mental disorders; for reducing stigmatization,  
+discrimination and human rights violations; and which is responsive to specific vulnerable groups across the lifespan and 
+integrated within the national mental health and health promotion strategies.
+1  See Risks to mental health: An overview of vulnerabilities and risk factors. Background paper by WHO Secretariat for the development of a 
+comprehensive mental health action plan. Geneva: World Health Organization; 2019. (https://www.who.int/mental_health/mhgap/risks_to_mental_
+health_EN_27_08_12.pdf )
+1374 Suicide prevention. Develop and implement comprehensive national strategies for the prevention of suicide, with special 
+attention to groups identified as at increased risk of suicide, including lesbian, gay, bisexual and transgender persons, youth 
+and other vulnerable groups of all ages based on local context.
+Actions for the Secretariat
+75 Mental health promotion and prevention. Provide technical support to countries on the selection, formulation and 
+implementation of evidence-based and cost-effective best practices for promoting mental health, preventing mental disorders, 
+reducing stigmatization and discrimination, and promoting human rights across the lifespan.
+76 Suicide prevention. Provide technical support to countries in strengthening their suicide prevention programmes with 
+special attention to groups identified as at increased risk of suicide.
+Proposed actions for international and national partners
+77 Engage all stakeholders in advocacy to raise awareness of the magnitude of burden of disease associated with mental 
+disorders and the availability of effective intervention strategies for the promotion of mental health, prevention of mental 
+disorders and treatment, care and recovery of persons with mental disorders.
+78 Advocate the rights of persons with mental disorders and psychosocial disabilities to receive government disability benefits, 
+gain access to housing and livelihood programmes, and, more broadly, to participate in work and community life and civic 
+affairs.
+79 Ensure that people with mental disorders and psychosocial disabilities are included in activities of the wider disability 
+community, for example, when advocating for human rights and in processes for reporting on the implementation of the 
+Convention on the Rights of Persons with Disabilities and other international and regional human rights conventions.
+80 Introduce actions to combat stigmatization, discrimination and other human rights violations towards people with mental 
+disorders and psychosocial disabilities.
+81 Be partners in the development and implementation of all relevant programmes for mental health promotion and 
+prevention of mental disorders.
+Objective 4. To strengthen information systems, evidence and research for mental health
+82 Information, evidence and research are critical ingredients for appropriate mental health policy, planning and evaluation. 
+The generation of new knowledge through research enables policies and actions to be based on evidence and best practice, and 
+the availability of timely and relevant information or surveillance frameworks enables implemented actions to be monitored 
+and improvements in service provision to be detected. Currently, the research imbalance whereby most research is conducted 
+in and by high-income countries needs to be corrected in order to ensure that low-income and middle-income countries have 
+culturally appropriate and cost-effective strategies to respond to mental health needs and priorities.
+83 Although summary mental health profiles are available through periodic assessments such as WHO’s Project ATLAS, routine 
+information systems for mental health in most low-income and middle-income countries are rudimentary or absent, making it 
+difficult to understand the needs of local populations and to plan accordingly.Proposed actions for Member States and international and national partners and actions for the Secretariat  
+Comprehensive Mental Health Action Plan 2013–20301484 Crucial information and indicators that are needed for the mental health system include: the extent of the problem (the 
+prevalence of mental disorders and identification of major risk factors and protective factors for mental health and well-
+being); coverage of policies and legislation, interventions and services (including the gap between the number of people who 
+have a mental disorder and those who receive treatment and a range of appropriate services, such as social services); health 
+outcome data (including suicide and premature mortality rates at the population level as well as individual- or group-level 
+improvements related to clinical symptoms, levels of disability, overall functioning and quality of life) and social and economic 
+outcome data (including relative levels of educational achievement, housing, employment and income among persons with 
+mental disorders). These data need to be disaggregated by sex and age and reflect the diverse needs of subpopulations, 
+including individuals from geographically diverse communities (for instance, urban versus rural), and vulnerable populations. 
+Data will need to be collected through ad hoc periodic surveys in addition to the data collected through the routine health 
+information system. Valuable opportunities also exist to draw on existing data, for example, gathering information from the 
+reports submitted to treaty-monitoring bodies by governments and nongovernmental and other bodies as part of the periodic 
+reporting mechanisms.
+Global target 4.1: 80% of countries will be routinely collecting and reporting at least a core set of mental health indicators 
+every two years through their national health and social information systems, by 2030. 
+Global target 4.2: The output of global research on mental health doubles, by 2030. 
+Proposed actions for Member States
+85 Information systems. Integrate mental health into the routine health information system and identify, collate, routinely 
+report and use core mental health data disaggregated by sex and age (including data on completed and attempted suicides) in 
+order to improve mental health service delivery, promotion and prevention strategies and to provide data for the Global Mental 
+Health Observatory (as a part of WHO’s Global Health Observatory).
+86 Evidence and research. Improve research capacity and academic collaboration on national priorities for research in mental 
+health, particularly operational research with direct relevance to service development and implementation and the exercise of 
+human rights by persons with mental disorders, including the establishment of centres of excellence with clear standards, with 
+the inputs of all relevant stakeholders including persons with mental disorders and psychosocial disabilities.
+Actions for the Secretariat
+87 Information systems.  Develop a core set of mental health indicators and provide guidance, training and technical support 
+on the development of surveillance/information systems to capture information for the core mental health indicators, facilitate 
+the use of these data to monitor inequities and health outcomes, and augment the information collected by WHO’s Global 
+Mental Health Observatory (as a part of WHO’s Global Health Observatory) by establishing baseline data to monitor the global 
+mental health situation (including progress on reaching the targets laid out in this action plan).
+88 Evidence and research. Engage relevant stakeholders, including people with mental disorders and psychosocial disabilities 
+and their organizations, in the development and promotion of a global mental health research agenda, facilitate global networks 
+for research collaboration, and carry out culturally validated research related to burden of disease, advances in mental health 
+promotion, prevention, treatment, recovery, care, policy and service evaluation.
+15Proposed actions for international and national partners
+89 Provide support to Member States to set up surveillance/information systems that: capture core indicators on mental 
+health, health and social services for persons with mental disorders; enable an assessment of change over time; and provide an 
+understanding of the social determinants of mental health problems.
+90 Support research aimed at filling the gaps in knowledge about mental health, including the delivery of health and social 
+services for persons with mental disorders and psychosocial disabilities.Proposed actions for Member States and international and national partners and actions for the Secretariat  
+16
+Comprehensive Mental Health Action Plan 2013–2030Annex 1
+Indicators for measuring progress towards defined targets of the Comprehensive 
+Mental Health Action Plan 2013–2030
+1. The updated indicators for assessing progress towards meeting the global targets of the Comprehensive Mental Health 
+Action Plan 2013–2030 represent a subset of the information and the reporting needs that Member States require to be 
+able to monitor adequately their mental health policies and programmes. Given that targets are voluntary and global, 
+each Member State is not necessarily expected to achieve all the specific targets but can contribute to a varying extent 
+towards reaching them jointly. 
+2. The global targets established for each objective provide the basis for measurable collective action and progress by 
+Member States towards global goals and should not negate the setting of more ambitious national targets, particularly 
+for those countries that have already reached global ones.
+3. As indicated under Objective 4 of the plan, the Secretariat will continue providing guidance, training and technical 
+assistance to Member States, upon request, on the development of national information systems for capturing data on 
+indicators of mental health system inputs, activities and outcomes. The aim is to keep building on existing information 
+systems rather than creating new or parallel systems.
+Objective 1. To strengthen effective leadership and governance for mental health
+Global Target 1.1 80% of countries will have developed or updated their policy or plan for mental health in line 
+with international and regional human rights instruments, by 2030.
+Indicator Existence of a national policy or plan for mental health that is being implemented and in line 
+with international human rights instruments.
+Means of verification Physically available policy or plan; confirmation that it accords with international and regional 
+human rights standards; and assessment of implementation status.
+Comments/
+assumptions/
+rationaleFor countries with a federated system, the indicator will refer to policies or plans of most 
+states or provinces within the country. Policies or plans for mental health may be stand-alone 
+or integrated into other general health or disability policies or plans.
+Human rights standards include provisions for: (i) transition to mental health services based 
+in the community, (ii) respect of human rights, (iii) comprehensive support and services, (iv) 
+promotion of a recovery approach and (v) participation in decision making processes.
+Implementation status includes: (i) estimation and allocation of human resources, (ii) estimation 
+and allocation of financial resources, and (iii) monitoring and evaluation of specified indicators 
+or targets.
+Global Target 1.2 80% of countries will have developed or updated their law for mental health in line with 
+international and regional human rights instruments, by 2030.
+Indicator Existence of a national law covering mental health that is being implemented and in line with 
+international and regional human rights instruments.
+Means of verification Physically available law, confirmation that it accords with international and regional human 
+rights standards, and assessment of implementation status.
+17Annex 1
+Comments/
+assumptions/
+rationaleFor countries with a federated system, the indicator will refer to the laws of most states/
+provinces within the country. Laws for mental health may be stand-alone or integrated into 
+other general health or disability laws.
+Human rights standards include provisions for: (i) transition to mental health services based in 
+the community, (ii) promotion to exercise legal capacity, (iii) prevention of coercive practices, 
+(iv) procedures to file appeals and complaints and (v) regular inspections of mental health 
+services.
+Implementation status refers to: (i) existence of a dedicated authority or independent body 
+to assess compliance with human rights standards, (ii) regular inspection of mental health 
+services by the dedicated authority or body and (iii) systematic response to complaints and 
+reporting of its findings.
+Objective 2. To provide comprehensive, integrated and responsive mental health and social care 
+services in community-based settings
+Global Target 2.1 Service coverage for mental health conditions will have increased at least by half, by 2030.
+Indicator 2.1.1 Proportion of persons with psychosis who are using services over the past 12 months (%).
+Means of
+verificationNumerator:  number of people with psychosis in receipt of services, derived from routine 
+information systems or a baseline and follow-up survey of health facilities in one or more 
+defined geographical areas of a country. 
+Denominator:  total number of people with psychosis in the sample population, derived from 
+national surveys or, if unavailable, based on subregional prevalence estimates.
+Indicator 2.1.2 Proportion of people with depression who are using services over the past 12 months (%).
+Means of verification Numerator:  number of people with depression in receipt of services, derived from household 
+surveys or epidemiological studies or routine information systems, or a baseline and follow-
+up survey of health facilities in one or more defined geographical areas of a country. 
+Denominator:  Total number of people with depression in the sample population, derived from 
+national surveys or, if unavailable, based on subregional prevalence estimates.
+Comments/  
+assumptions/
+rationaleEstimates of service coverage are needed for all mental disorders, but are restricted here 
+to psychosis and depression as tracer indicators for severe and common mental disorders 
+respectively to limit measurement effort. 
+Health facilities range from primary care centres to general and specialized hospitals; they may 
+offer social care and support as well as psychosocial and/or pharmacological treatment on an 
+outpatient or inpatient basis. To limit measurement effort, and where needed, countries may 
+restrict the survey to hospital-based and overnight facilities only (with some loss of accuracy 
+due to omission of primary care and other service providers).
+Global Target 2.2 80% of countries will have doubled number of community-based mental health facilities, by 
+2030.
+Indicator Number of community-based mental health facilities.
+Means of
+verificationAvailability and number of community-based facilities that manage mental health conditions 
+and related clinical and social problems.
+18
+Comprehensive Mental Health Action Plan 2013–2030Comments/
+assumptions/
+rationaleIn the context of improving access to care and service quality, development of comprehensive 
+community-based mental health and social care services is recommended. Community-based 
+services can be outpatient or inpatient services as well as home help and support services.
+Global Target 2.3 80% of countries will have integrated mental health into primary health care, by 2030.
+Indicator Existence of a system in place for integration of mental health into primary health care.
+Means of
+verificationDescription from countries using the following criteria: guidelines for integration of mental 
+health into primary health care available and adopted, pharmacological and psychosocial 
+interventions provided at primary health care level, and training and supervision for non-
+specialized health workers at primary care level.
+Comments/
+assumptions/
+rationaleIntegration of mental health into primary health care is essential to ensure universal health 
+coverage. A range of mental health services including promotive, preventive, treatment and 
+care services can be provided when integrated into primary health care.
+Objective 3. To implement strategies for promotion and prevention in mental health
+Global Target 3.1 80% of countries will have at least two functioning national, multisectoral mental health 
+promotion and prevention programmes, by 2030.
+Indicator Functioning programmes of multisectoral mental health promotion and prevention in 
+existence.
+Means of verification Inventory or project-by-project description of currently implemented programmes.
+Comments/
+assumptions/
+rationaleProgrammes may – and preferably should – cover both universal, population-level promotion  
+or prevention strategies or locally-identified vulnerable groups. Examples include 
+programmes on: suicide prevention, mental health awareness/anti-stigmatization, mental 
+health promotion at the workplace, school-based mental health and maternal mental health 
+prevention and promotion.
+Criteria to identify functioning include dedicated financial and human resources, defined plan 
+of implementation and documented evidence of progress and/or impact.
+Global Target 3.2 The rate of suicide will be reduced by one-third, by 2030.
+Indicator Suicide mortality rate (per 100 000 population).
+Means of verification Routine annual registration of deaths due to suicide.
+Comments/
+assumptions/
+rationaleEffective action towards this target requires joint action from multiple sectors outside health/
+mental health sector. Obtaining accurate surveillance data is difficult and, because of more 
+accurate reporting of suicides, population ageing and other possible factors, total recorded 
+suicides may not decrease in some countries; however, the rate of suicide (as opposed to total 
+suicides) best reflects improved prevention efforts. 
+The target (and indicator) is aligned with those for Sustainable Development Goal 3 (target 
+3.4 and indicator 3.4.2).
+19Annex 1
+Global Target 3.3 80% of countries will have a system in place for mental health and psychosocial preparedness 
+for emergencies and/or disasters, by 2030.
+Indicator Existence of a system in place for mental health and psychosocial preparedness for 
+emergencies/disasters.
+Means of verification Description from countries for a system in place for mental health and psychosocial 
+preparedness using the following criteria: defined plan of implementation, dedicated financial 
+and human resources, and documented evidence of progress and/or impact.
+Comments/
+assumptions/
+rationalePlanning for disaster and/or emergency response is a priority as expressed in the Sendai 
+Framework for Disaster Risk Reduction (2015–2030) and in the Inter-agency Standing 
+Committee Guidelines for Mental Health and Psychosocial Support in Emergency Settings.
+Objective 4. To strengthen information systems, evidence and research for mental health
+Global Target 4.1 80% of countries will be routinely collecting and reporting at least a core set of mental health 
+indicators every two years through their national health and social information systems, by 
+2030.
+Indicator Core set of identified and agreed mental health indicators routinely collected and reported 
+every two years.
+Means of verification Reporting and submission of measurements against the core mental health indicator sent to 
+WHO every two years.
+Comments/
+assumptions/
+rationaleCore mental health indicators include those relating to specified targets of this action plan, 
+together with other essential indicators of health and social system actions (for example, 
+training and human resource levels, and service availability and utilization). The data need 
+to be disaggregated by sex and age groups. Where needed, surveys can also be used to 
+complement data from routine information systems. Data will be collected, analysed and 
+reported by WHO as part of its Mental Health Atlas.
+Global Target 4.2 The output of global research on mental health doubles, by 2030.
+Indicator Number of published articles on mental health research (defined as research articles published 
+in the databases).
+Means of verification Literature searches centrally-conducted every two years, stratified by country of origin, topics 
+and types of research, using bibliometric data sourced for the most recent calendar year.
+Comments/
+assumptions/
+rationaleThe indicator measures the output of mental health research as defined by national published 
+research studies. The annual published research output in peer-reviewed and indexed 
+journals is a proxy for the amount (and quality) of mental health research being conducted in 
+a country. It indirectly assesses a country’s commitment to mental health research, which will 
+ultimately have an impact on outcomes for people with mental health conditions.
+20
+Comprehensive Mental Health Action Plan 2013–2030Options for the implementation of the Comprehensive Mental Health Action Plan 
+2013–2030
+The actions proposed in this document for Member States convey what can be done to achieve the objectives of the action 
+plan. This annex sets out some options for how these actions could be realized, recognizing the diversity of countries, 
+particularly in terms of the level of development of mental health services and of health and social systems and the availability 
+of resources. These options are neither comprehensive nor prescriptive, but provide illustrative or indicative mechanisms 
+through which actions can be undertaken in countries.
+Objective 1. To strengthen effective leadership and governance for mental health
+Policy and law
+Actions
+Develop, strengthen, keep up-to-date and implement national policies, strategies, programmes, laws and regulations 
+relating to mental health within all relevant sectors, including protective monitoring mechanisms and codes of practice, 
+in line with evidence, best practice, the Convention on the Rights of Persons with Disabilities and other international and 
+regional human rights instruments.
+Options for implementation
+• Develop and implement a comprehensive mental health policy and plan that complies with international human rights 
+instruments, includes allocated human and financial resources and undergoes regular monitoring against indicators or 
+targets for implementation. 
+• Decriminalize suicide, suicide attempts and other acts of self-harm.
+• Set up a functional mental health unit or coordination mechanism(s) in the health ministry, with an allocated budget and 
+responsibility for strategic planning, coordination, needs assessment, interministerial and multisectoral collaboration and 
+service evaluation for mental health across the life-course. 
+• Ensure coordination of mental health and social care activities at all relevant subnational levels (for example, district, 
+municipality and community levels). 
+• Sensitize policy-makers to mental health and human rights issues through the preparation of policy briefs and scientific 
+publications and the provision of leadership courses and other learning and knowledge exchange opportunities in mental 
+health. 
+• Undertake capacity-building among stakeholders including policy-makers regarding strategies to promote respect for 
+people’s will and preference in mental health and related services. 
+• Mainstream mental health and the rights of persons with mental disorders and psychosocial disabilities into all sectoral 
+policies, laws and strategies (for example, health, social affairs, education, justice and labour/employment) including 
+emergency preparedness and response, poverty reduction and development. 
+• Improve accountability by setting up mechanisms, using independent bodies, to monitor, prevent and respond to torture 
+or cruel, inhuman and degrading treatment and other forms of ill-treatment and abuse; collect data on restrain and 
+seclusion and involuntary treatments; and involve appropriate stakeholder groups in these mechanisms, for example, 
+lawyers and people with mental disorders and psychosocial disabilities, in a manner consistent with international human 
+rights instruments. 
+• Amend or repeal legislation that perpetuates stigmatization, discrimination and human rights violations against people 
+with mental disorders and psychosocial disabilities.Annex 2
+21Annex 2
+• Monitor and evaluate the implementation of policies and legislation to ensure compliance with international human 
+rights conventions including the Convention on the Rights of Persons with Disabilities and the Convention on the Right of 
+the Child, as appropriate, and feed this information into the reporting mechanism of these conventions. 
+• Establish supported decision-making mechanisms; help people to develop advance plans that state their will and 
+preference should they experience a crisis in the future; and ensure that people have all the supports they require in order 
+to make a decision, including access to trusted persons and advocates and provision of valid information about all matters 
+relevant to their decision.
+ 
+Resource planning
+Actions
+Plan according to measured or systematically estimated need and allocate a budget, across all relevant sectors, that is 
+commensurate with identified human and other resources required to implement agreed-upon, evidence-based mental 
+health plans and actions.
+Options for implementation
+• Include mental health services, such as psychosocial and psychological interventions and basic medicines for mental 
+disorders, in universal health coverage and financial protection schemes and offer financial protection for socioeconomically 
+disadvantaged groups. 
+• Use – and if indicated, collect – data on epidemiology and resource needs in order to inform the development and 
+implementation of mental health plans, budgets and programmes. 
+• Set up mechanisms for tracking expenditures for different types of mental health services in health and other relevant 
+sectors such as education, employment, criminal justice and social services. 
+• Identify available funds at the planning stage for specific community-based, culturally-appropriate, cost-effective activities 
+so that implementation can be assured. 
+• Join with other stakeholders to effectively advocate increased resource allocation for mental health including through 
+investment cases for mental health.
+Stakeholder collaboration
+Actions
+Engage stakeholders from all relevant sectors, including persons with mental disorders, carers and family members, in the 
+development and implementation of policies, laws and services relating to mental health, through a formalized structure 
+and/or mechanism.
+Options for implementation
+• Convene, engage with, and solicit consensus from all relevant sectors and stakeholders when planning, developing and 
+implementing policies, laws and services relating to health, including sharing knowledge about effective mechanisms to 
+improve coordinated policy and care across formal and informal sectors. 
+• Build local capacity and raise awareness among relevant stakeholder groups about mental health, law and human rights, 
+including their responsibilities in relation to the implementation of policy, laws and regulations.
+22
+Comprehensive Mental Health Action Plan 2013–2030Strengthening and empowerment of people with mental disorders and psychosocial disabilities 
+and their organizations
+Actions
+Ensure that people with mental disorders and psychosocial disabil ities are given a formal role and authority to influence the 
+process of designing, planning and implementing policy, law and services.
+Options for implementation
+• Provide logistic, technical and financial support to build the capacity of people with mental disorders and psychosocial 
+disabilities and their organizations, including youth and carers, in understanding and advocating the realization of human 
+rights conventions, policy, law and services, based on their needs and preferences. 
+• Encourage and support the formation of independent national and local organizations of people with mental disorders 
+and psychosocial disabilities and establish formal mechanisms to ensure their full and effective participation in the 
+development and implementation of mental health policies, laws and services as well as their monitoring and evaluation. 
+• Involve people with mental disorders and psychosocial disabilities in the assessment and monitoring of all public and 
+private mental health services including psychiatric hospitals and social care homes. 
+• Include people with mental disorders and psychosocial disabilities and their organizations in capacity-building of 
+stakeholders, including policy-makers and health workers delivering mental health care.
+23Annex 2
+Objective 2. To provide comprehensive, integrated and responsive mental health and social care 
+services in community-based settings
+Service reorganization and expanded coverage
+Actions
+Systematically shift the locus of care away from long-stay mental hospitals towards non-specialized health settings with 
+increasing coverage of evidence-based interventions (including the use of stepped-care principles, as appropriate) for 
+priority conditions and using a network of linked community-based mental health services, including short-stay inpatient 
+and outpatient care in general hospitals, primary care, comprehensive mental health centres, day care centres, support of 
+people with mental disorders living with their families, and supported housing.
+Options for implementation
+• Develop a phased and budgeted plan for scaling down and closing long-stay psychiatric institutions and replacing them 
+with support for discharged residents to live in the community. 
+• Work towards a gradual shift of financial resources and staff towards community-based care, closing long-stay institutions 
+once there are adequate community alternatives. 
+• Accompany the process of scaling down long-stay psychiatric institutions with (a) human rights protection and 
+improvements in quality of life in institutions and (b) ensuring continuity of care and welfare provision for discharged 
+long-stay residents (for example, livelihoods and housing support, including places in small group homes). 
+• Provide outpatient mental health services and an inpatient mental health unit in general hospitals. 
+• Build up interdisciplinary community-based mental health services for people across the life-course, through for instance 
+outreach services, home care and support, primary health care, emergency care, community-based rehabilitation and 
+supported housing. 
+• Integrate mental health and social care into disease-specific programmes and services, such as those for HIV/AIDS, 
+tuberculosis, noncommunicable diseases and neglected tropical diseases, and into population-specific programmes and 
+services, such as maternal, sexual and reproductive health, child and adolescent health, gender-based violence and family 
+health and well-being programmes and services. 
+• Engage service users and family members and/or carers with practical experience as peer support workers. 
+• Support the establishment and implementation of community mental health services run by nongovernmental 
+organizations, faith-based organizations and other community groups, including self-help and family support groups, 
+which protect, respect and promote human rights and are subject to monitoring by government agencies. 
+• Consider the use of evidence-based innovative approaches to provide psychological support at scale (for example, guided 
+self-help, digital self-help, collaborative and stepped-care approaches). 
+• Develop and implement tools or strategies for self-help and care for persons with mental disorders, including strengthening 
+the use of electronic and mobile technologies, potentially as part of a stepped-care system. 
+• Develop capacity, policies and operational procedures for remote delivery of services (for example, telehealth) and use 
+digital health solutions to support practitioners in providing care where feasible. 
+• Provide in-home and other community-support services for carers of children and of adults with psychosocial disabilities 
+including carer skills training and other multidisciplinary services (for example, physical and occupational therapy, 
+nutritional support, housing, education support, and early childhood development).
+24
+Comprehensive Mental Health Action Plan 2013–2030Integrated and responsive care 
+Actions
+Integrate and coordinate holistic prevention, promotion, rehabilitation, care and support that aims at meeting both mental 
+and physical health care needs and facilitates the recovery of persons of all ages with mental disorders within and across 
+general health and social services (including the promotion of the right to employment, housing and education) through 
+service user-driven treatment and recovery plans and, where appropriate, with the inputs of families and carers.
+Options for implementation
+• Encourage health workers to initiate and support recovery plans and link people with services and resources based on 
+their needs and preferences including education, work, health care, and livelihood opportunities. 
+• Develop the planning and delivery of services jointly with people with mental health conditions and psychosocial 
+disabilities. 
+• Implement guidelines for the management of physical health in persons with severe mental health conditions. 
+• Advocate with other sectors (for example, livelihoods support, housing, education, vocational training, employment, 
+social welfare and legal support) the inclusion and support of people with mental disorders and psychosocial disabilities 
+in their services and programmes. 
+• Cultivate recovery-oriented and culturally-appropriate care and support through awareness-building opportunities and 
+training for health and social service providers. 
+• Provide information to people with mental disorders, their families and carers on causes and potential impacts of 
+disorders, treatment and recovery options, as well as on healthy lifestyle behaviours in order to improve overall health 
+and well-being. 
+• Foster the empowerment and involvement of persons with mental disorders, their families and caregivers in mental 
+health care. 
+• Procure and ensure the availability of basic medicines for mental disorders included in the WHO Model List of Essential 
+Medicines at all health system levels, ensure their rational use, and enable non-specialist health workers with adequate 
+training to prescribe such medicines. 
+• Build competencies of health professionals to provide accurate information about a range of feasible evidence-based 
+psychosocial and pharmacological interventions and to discuss benefits and risks, including possible side and withdrawal 
+effects of interventions. 
+• Address the mental well-being of children and carers when a family member with severe illnesses (including those with 
+mental disorders) presents for treatment at health services. 
+• Provide services and programmes to children and adults who have experienced adverse life events, including ongoing 
+domestic violence, civil unrest, conflict or disaster, that meet people’s mental health needs, promote recovery and 
+resilience, and prevent further distress for those who seek support. 
+• Implement interventions to manage family crises and provide care and support to families and carers in primary care and 
+other service levels. 
+• Provide early interventions for children and adolescents with mental health conditions through family-centred and child 
+and adolescent-responsive health care, at primary health care, school and community levels. 
+• Implement the use of WHO QualityRights standards to assess and improve quality and human rights conditions in 
+inpatient and outpatient mental health and social care facilities including policies and procedures to stop the use of 
+coercive practices in services. 
+25Annex 2
+Mental health in humanitarian emergencies (including isolated, repeated or continuing conflict, 
+violence and disasters) 
+Actions
+Work with national emergency committees to include mental health and psychosocial support needs in emergency 
+preparedness, and enable access to safe and supportive services, including services that address psychological trauma 
+and promote recovery and resilience, for persons with (pre-existing as well as emergency-induced) mental disorders or 
+psychosocial problems, including for health and humanitarian workers, during and following emergencies, with due attention 
+to the longer-term funding required to build or rebuild a community-based mental health system after the emergency.
+Options for implementation
+• Work across sectors with national and subnational actors on integrating mental health and psychosocial support in all 
+national and local emergency preparedness and response policies, plans, procedures and actions as outlined in the 
+Sphere Handbook’s minimum standards and the Inter-Agency Standing Committee Guidelines on Mental Health and 
+Psychosocial Support in Emergency Settings.
+• Prepare for emergencies by training health and community workers in basic psychosocial support, such as psychological 
+first aid. 
+• During emergencies, ensure coordination with partners across health, protection, nutrition and education sectors on the 
+application of the Sphere Handbook’s relevant minimum standards and the Inter-Agency Standing Committee guidelines 
+mentioned above. 
+• Include mental health and psychosocial support as an integral, cross-cutting component in public health emergency 
+responses (for example, to COVID-19 and Ebola virus disease) as part of a range of pillars or domains, such as case 
+management, risk communication and community engagement, continuation of services, response coordination, and 
+operations (for instance, staff support). 
+• Use emergencies as an opportunity to build or rebuild sustainable community-based mental health and social care 
+systems, and to demonstrate the feasibility and effectiveness of community models of care that address the long-term 
+increase in mental disorders in emergency-affected populations.
+Resource planning
+Actions
+Build the knowledge and skills of general and specialized health workers to deliver evidence-based, culturally-appropriate 
+and human rights-oriented mental health and social care services, for children and adolescents, inter alia, by introducing 
+mental health into undergraduate and graduate curricula and through training and mentoring health workers in the field, 
+particularly in non-specialized settings, to identify and offer treatment and support to people with mental disorders as well 
+as to refer people, as appropriate, to other levels of care.
+Options for implementation
+• Develop and implement a strategy for building and retaining human resource capacity to deliver mental health and 
+social care services across the life-course in health, social and educational settings, such as primary health care, general 
+hospitals and schools. 
+• Support pre-service and in-service training of health workers in WHO’s Mental Health Gap Action Programme’s Intervention 
+Guide for the identification and management of mental, neurological and substance use disorders in non-specialized 
+26
+Comprehensive Mental Health Action Plan 2013–2030settings, evidence-based psychological interventions and associated training and supervision materials for prioritized 
+expanded care.1
+• Ensure that health and social care workers have access to a cadre of supervisors with experience in evidence-based 
+interventions who can provide continued mentoring and support. 
+• Collaborate with universities, colleges, other relevant educational entities and professional associations to define and 
+incorporate a mental health component in undergraduate and postgraduate curricula, to offer continued education and 
+knowledge exchange on mental health and to ensure accreditation and oversight of mental health professionals. 
+• Ensure an enabling service context for training health, education and social care workers that focuses on the ongoing 
+development, monitoring and evaluation of competencies and that includes clear task definitions, referral structures, 
+supervision and mentoring. 
+• Improve the capacity of health, education and social care workers in all areas of their work (for example, covering clinical, 
+human rights and public health domains), including eLearning methods where appropriate. 
+• Ensure inclusion of human rights and person-centred recovery-oriented approaches in the curricula of undergraduate 
+and graduate courses, continuing professional development opportunities and professional accreditation mechanisms, 
+and offer internships and learning placements in services that promote such approaches.
+• Establish or strengthen supervised clinical training for prospective mental health professionals, including psychologists, 
+social workers, psychiatric nurses and psychiatrists.
+• Improve working conditions, financial remuneration and career progression opportunities for mental health professionals 
+and others, including lay workers, in order to attract and retain the mental health workforce. 
+• Collaborate with educational institutions and places of employment to improve recruitment and retention of persons from 
+various backgrounds (including persons with lived experience of mental health conditions and psychosocial disabilities) 
+to amplify their voices and diversify the mental health workforce and leadership.
+Address disparities
+Actions
+Proactively identify and provide appropriate support for groups at particular risk of mental illness who have poor access 
+to services.
+Options for implementation
+• Identify and assess the mental health needs and determinants of different sociodemographic groups in the community 
+and also of vulnerable people who may not be using services (such as people living with homelessness, children, older 
+people, persons in the criminal justice system, persons in detention, internally displaced persons, asylum seekers, refugees, 
+migrants, minority ethnic groups, persons who identify as Lesbian, Gay, Bisexual, Transgender, Intersex or Questioning 
+(LGBTIQ+), indigenous populations, people with physical and intellectual disabilities, and people affected by emergency 
+situations) and address the barriers that they face in accessing treatment, care and support. 
+• Develop a proactive strategy for targeting these people and groups and provide services that meet their needs. 
+• Build competencies of health and social care workers to better understand the needs of vulnerable people and the social 
+determinants of mental health, including poverty, inequality, discrimination and violence, and to respond adequately to 
+these factors when providing care and support.
+1 See Menu of policy options and cost-effective interventions to promote mental health and well-being. In: Follow-up to the high-level meetings of 
+the United Nations General Assembly on health-related issues: political declaration of the third high-level meeting of the General Assembly on the 
+prevention and control of non-communicable diseases. Report by the Director-General. Geneva: World Health Organization; 2019: Annex1 (EB146/7; 
+https://apps.who.int/gb//ebwha/pdf_files/EB146/B146_7-en.pdf ).
+27Annex 2
+Objective 3. To implement strategies for promotion and prevention in mental health
+Mental health promotion and prevention 
+Actions
+Lead and coordinate a multisectoral strategy that combines universal and targeted interventions for promoting mental 
+health and preventing mental disorders and for reducing stigmatization, discrimination and human rights violations, and 
+which is responsive to specific vulnerable groups across the lifespan and integrated within the national mental health and 
+health promotion strategies.
+Options for implementation
+• Develop and implement national, multisectoral mental health promotion and prevention programmes. 
+• Increase public knowledge and understanding about mental health, how to stop discrimination and how to access services, 
+through media awareness campaigns and initiatives that involve persons with lived experience of mental disorders and 
+psychosocial disabilities. 
+• Include mental health care and support as part of home- and health facility-based antenatal and postnatal care for new 
+parents and/or carers including skills training for carers. 
+• Provide early childhood programmes that address the cognitive, sensory-motor and psychosocial development of 
+children as well as promote healthy child-caregiver relationships. 
+• Reduce the harmful use of alcohol by implementation of measures included in WHO’s Global strategy to reduce the 
+harmful use of alcohol.
+• Introduce brief interventions for hazardous and harmful substance use.
+• Implement programmes to prevent and address domestic violence, including attention to violence related to alcohol use.
+• Protect children and adults from abuse by introducing or strengthening community protection networks and systems. 
+• Address the needs of children with parents with chronic mental disorders within promotion and prevention programmes. 
+• Develop universal and indicated (targeted) school-based promotion and prevention, including for instance socioemotional 
+life and skills programmes, programmes to counter bullying and violence, programmes to counter stigmatization and 
+discrimination of persons with mental disorders and psychosocial disabilities, raising awareness of the benefits of a healthy 
+lifestyle and the risks of substance use and early detection and intervention for children and adolescents with emotional 
+or behavioural problems (including disordered eating) or neurodevelopmental disorders. 
+• Address discrimination in educational institutions and the workplace and promote full access to educational opportunities, 
+work participation and return-to-work programmes for people with mental disorders and psychosocial disabilities. 
+• Promote safe, supportive and decent working conditions for all (including informal workers), with attention to organizational 
+improvements in the workplace; implement evidence-based programmes to promote mental well-being and prevent mental 
+health conditions, including training managers in order to benefit employees mental well-being; introduce interventions for 
+stress management and workplace well-being programmes; and address stigmatization and discrimination. 
+• Enhance self-help groups, social support, community networks and community participation opportunities for people with 
+mental disorders and psychosocial disabilities and other vulnerable people, using digital interventions where possible. 
+• Encourage the use of evidence-based traditional and cultural practices for promotion and prevention in mental health 
+(such as yoga and meditation). 
+• Enhance the use of social media in promotion and prevention strategies. 
+• Implement preventive and control strategies for neglected tropical diseases (for instance, taeniasis and cysticercosis) in 
+order to prevent neurological and associated mental health consequences. 
+• Develop policies and measures to be implemented by relevant ministries (for example, finance, labour and social welfare) 
+for the protection of vulnerable populations during financial and economic crises.
+28
+Comprehensive Mental Health Action Plan 2013–2030Suicide prevention
+Actions
+Develop and implement comprehensive national strategies for the prevention of suicide, with special attention to groups 
+identified as at increased risk of suicide, including lesbian, gay, bisexual and transgender persons, youth and other vulnerable 
+groups of all ages based on local context.
+Options for implementation
+• Develop, keep up-to-date, implement and evaluate national suicide prevention strategies that guide governments and 
+stakeholders to implement effective preventive interventions, raise public awareness, increase help-seeking and reduce 
+stigmatization of suicidal thoughts and behaviours. 
+• Increase public, political and media awareness of the magnitude of the problem and the availability of evidence-based 
+effective suicide-prevention strategies. 
+• Ban highly hazardous pesticides and restrict access to other means of self-harm and suicide (for instance, high places, 
+medicines and firearms). 
+• Promote responsible media reporting in relation to cases of suicide by training media professionals and others producing 
+content for screen or stage on how to cover suicide. 
+• Implement universal and indicated school-based socioemotional learning programmes and other interventions to 
+support adolescents in their problem-solving and coping skills. 
+• Promote workplace, school-based and other community-based initiatives for suicide prevention that are tailored to 
+groups at risk including adolescents and older persons. 
+• Improve responses in the health system and other sectors to self-harm and suicide, including training of staff (for example, 
+non-specialized health workers, social workers, teachers, police, persons working in the criminal justice system, firefighters, 
+other first responders and faith leaders) in the assessment, management and follow-up of self-harm and suicide. 
+• Engage communities in suicide prevention and optimize psychosocial support from available community resources for 
+both those who self-harmed or who attempted suicide and families of people who died by suicide. 
+• Develop community-level strategies for suicide prevention including access to formal and informal services, volunteer 
+social support groups and other culturally-appropriate programmes. 
+• Ensure financing of suicide prevention by allocating adequate resources. 
+• Ensure all relevant groups at risk of suicide, including indigenous people, are involved in developing suicide prevention 
+strategies. 
+• Conduct a situation analysis (for instance, rates of suicide and self-harm, specific populations at risk, common methods of 
+suicide, existing suicide prevention activities and gaps) to inform the planning of suicide prevention activities.
+29Annex 2
+Objective 4. To strengthen information systems, evidence and research for mental health
+Information systems
+Actions
+Integrate mental health into the routine health information system and identify, collate, routinely report and use core 
+mental health data disaggregated by sex and age (including on completed and attempted suicides) to improve mental 
+health service delivery, promotion and prevention strategies and to feed into the Global Mental Health Observatory (as part 
+of WHO’s Global Health Observatory).
+Options for implementation
+• Establish a surveillance system for monitoring mental health and self-harm and/or suicide and suicide attempts, ensuring 
+that records are disaggregated by facility, gender, age, disability, method and other relevant variables. 
+• Embed mental health and self-harm and/or suicide information needs and indicators, including risk factors and disabilities, 
+within national population-based surveys and health information systems. 
+• Collect detailed data from secondary and tertiary services in addition to routine data collected through the national 
+health information system. 
+• Include mental health indicators within information systems of other sectors. 
+• Analyse and publish data collected on the availability, financing and evaluation of mental health and social care services 
+and programmes to improve services and population-based interventions.
+Evidence and research
+Actions
+Improve research capacity and academic collaboration on national priorities for research in mental health, particularly 
+operational research with direct relevance to service development and implementation and the exercise of human rights by 
+persons with mental disorders, including the establishment of centres of excellence with clear standards, with the inputs of 
+all relevant stakeholders including persons with mental disorders and psychosocial disabilities.
+Options for implementation
+• Develop and promote a prioritized and funded national research agenda in the area of mental health, based on consultation 
+with all stakeholders. 
+• Improve research capacity to assess needs and to evaluate the effectiveness, implementation and scale up of services and 
+programmes, including human rights and recovery-oriented approaches. 
+• Enable strengthened cooperation between universities, institutes, and health and social services and other relevant 
+settings (such as educational) in the field of mental health research. 
+• Conduct research, in different cultural contexts, on local understandings and expressions of mental distress, practices 
+that are harmful (for instance, human rights violations and discrimination) or protective (for instance, social supports and 
+traditional customs) and ways of help-seeking (for instance, traditional healers), as well as the efficacy, acceptability and 
+feasibility of interventions for treatment and recovery, prevention and promotion. 
+• Develop methods for characterizing mental health disparities that occur among diverse subpopulations in countries, 
+including factors such as race and/or ethnicity, sex, socioeconomic status and geography (urban versus rural), and evaluate 
+interventions that are responsive to the needs of specific groups and address social determinants. 
+30
+Comprehensive Mental Health Action Plan 2013–2030• Strengthen collaboration between national, subnational and international research centres for mutual interdisciplinary 
+exchange of research and resources between countries. 
+• Promote high ethical standards in mental health research, ensuring that: research is conducted only with the free and 
+informed consent of the person concerned; researchers do not receive any privileges, compensation or remuneration in 
+exchange for encouraging or recruiting people to participate in the research; research is not undertaken if it is potentially 
+harmful or dangerous; all research is approved by an independent ethics committee functioning according to national 
+and international norms and standards; and research is carried out with meaningful involvement of local collaborators 
+and stakeholders in the design, implementation and dissemination of research findings.
+• Ensure that people with mental health conditions and psychosocial disabilities and their organizations contribute to 
+mental health research, for instance through setting the research agenda, advising on the research methods and design, 
+and in informing about their lived experience. 
+• Ensure the translation of results from research to practice and the transfer of knowledge from academic to service settings 
+by training stakeholders, including policy-makers and mental health professionals, in critical appraisal of evidence and 
+providing open access to unbiased and easy-to-understand information.
+For more information, please contact:
+Department of Mental Health and Substance Use
+World Health Organization
+Avenue Appia 20
+CH-1211 Geneva 27 
+Switzerland
+https://www.who.int/teams/mental-health-and-
+substance-use

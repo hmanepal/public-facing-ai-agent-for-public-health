@@ -2,8 +2,8 @@
 Stage 1: Text Extraction
 ========================
 Extracts text from:
-  - Wikipedia articles (via the `wikipedia` library)
-  - arXiv PDFs (via PyPDF2)
+  - Wikipedia articles (via the `wikipedia-api` library)
+  - All PDFs found in PDF_DIR (drop files in, they're picked up automatically)
 
 Saves raw text to .txt files in the `raw_text/` directory.
 
@@ -12,7 +12,6 @@ Install deps:
 """
 
 import os
-import re
 import wikipediaapi
 import PyPDF2
 
@@ -24,11 +23,8 @@ WIKIPEDIA_ARTICLES = {
     "wikipedia_who.txt": "World Health Organization",
 }
 
-# Local arXiv PDFs to extract  →  {output_filename: "path/to/file.pdf"}
-ARXIV_PDFS = {
-    "arxiv_paper1.txt": "data/arxiv_paper1.pdf",
-}
-
+# Directory to scan for PDFs — all .pdf files here will be extracted automatically
+PDF_DIR    = "data"
 OUTPUT_DIR = "raw_text"
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -85,15 +81,23 @@ def main():
         except Exception as e:
             print(f"  ✗  Failed ({title}): {e}")
 
-    # --- arXiv PDFs ---
-    print("\n📄  Extracting arXiv PDFs...")
-    for filename, pdf_path in ARXIV_PDFS.items():
-        print(f"  Extracting: '{pdf_path}'")
-        try:
-            text = extract_pdf_text(pdf_path)
-            save_text(text, filename)
-        except Exception as e:
-            print(f"  ✗  Failed ({pdf_path}): {e}")
+    # --- PDFs (auto-scan PDF_DIR) ---
+    print(f"\n📄  Scanning '{PDF_DIR}' for PDFs...")
+    pdf_files = sorted([f for f in os.listdir(PDF_DIR) if f.lower().endswith(".pdf")]) if os.path.isdir(PDF_DIR) else []
+
+    if not pdf_files:
+        print(f"  No PDFs found in '{PDF_DIR}'. Drop .pdf files there and re-run.")
+    else:
+        print(f"  Found {len(pdf_files)} PDF(s): {', '.join(pdf_files)}")
+        for pdf_filename in pdf_files:
+            pdf_path   = os.path.join(PDF_DIR, pdf_filename)
+            out_name   = os.path.splitext(pdf_filename)[0] + ".txt"
+            print(f"  Extracting: '{pdf_filename}'")
+            try:
+                text = extract_pdf_text(pdf_path)
+                save_text(text, out_name)
+            except Exception as e:
+                print(f"  ✗  Failed ({pdf_filename}): {e}")
 
     print("\n✅  Extraction complete. Raw text files saved to:", OUTPUT_DIR)
 

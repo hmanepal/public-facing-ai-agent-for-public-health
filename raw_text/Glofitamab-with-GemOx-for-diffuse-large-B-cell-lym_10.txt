@@ -1,0 +1,46 @@
+Correspondence1726  www.thelancet.com   Vol 406   October 18, 2025Germany (PB, RDJ); Department of Haematology and 
+Stem Cell Transplantation, West German Cancer Center and German Cancer Consortium, University Hospital Essen, University of Duisburg-Essen, Essen, Germany (BvT); Max Planck Institute for Biology of Ageing, Cologne, Germany (RJ)
+1 Abramson JS, Ku M, Hertzberg M, et al. 
+Glofitamab plus gemcitabine and oxaliplatin (GemOx) versus rituximab-GemOx for relapsed or refractory diffuse large B-cell lymphoma (STARGLO): a global phase 3, randomised, open-label trial. Lancet 2024; 
+404: 1940–54.
+2 Kamdar M, Solomon SR, Arnason J, et al. Lisocabtagene maraleucel versus standard of care with salvage chemotherapy followed by autologous stem cell transplantation as second-line treatment in patients with relapsed or refractory large B-cell lymphoma (TRANSFORM): results from an interim analysis of an open-label, randomised, phase 3 trial. Lancet 2022; 399: 2294–308.
+3 Locke FL, Miklos DB, Jacobson CA, et al. 
+Axicabtagene ciloleucel as second-line therapy for large B-cell lymphoma. N Engl J Med 2022; 386: 640–54.B-cell lymphoma is 10.2 months 
+versus 25.5 months for all patients. We thus encourage Abramson and colleagues to provide treatment-specific Kaplan–Meier analyses of OS and progression-free survival for patients with primary refractory diffuse large B-cell lymphoma. Given the study’s median follow-up of 20 months—twice the median OS in this cohort—such exploratory Kaplan–Meier analyses could yield valuable insights without additional follow-up and would allow estimation of survival outcomes beyond the median time-to-event and potential levels of plateauing. These analyses are urgently needed to help physicians and patients in search of a cure to make informed decisions about the treatment options for diffuse large B-cell lymphoma.
+PB reports research funding from Incyte, Merck Sharp 
+& Dohme, Miltenyi Biotec, and Takeda Oncology; consulting fees from Bristol Myers Squibb/Celgene, Gilead Kite, Merck Sharp & Dohme, Miltenyi Biotec, Roche, and Takeda Oncology; honoraria for lectures or presentations from AstraZeneca, AbbVie, Bristol Myers Squibb/Celgene, Gilead Kite, Incyte, Merck Sharp & Dohme, Miltenyi Biomedicine, Roche, Beigene, and Takeda Oncology; and travel grants from Bristol Myers Squibb/Celgene, Gilead Kite, Incyte, Merck Sharp & Dohme, Miltenyi Biotec, Roche, and Takeda Oncology. BvT reports research funding from Esteve, Merck Sharp & Dohme, Novartis, and Takeda; consulting fees from AbbVie, Allogene, Amgen, Bristol Myers Squibb/Celgene, Cerus, Gilead Kite, Incyte, IQVIA, Janssen-Cilag, Lilly, Merck Sharp & Dohme, Miltenyi, Novartis, Noscendo, Pentixapharm, Pfizer, Pierre Fabre, Qualworld, Regeneron, Roche, Serb, Sobi, and Takeda; honoraria for lectures or presentations from AbbVie, AstraZeneca, Bristol Myers Squibb/Celgene, Gilead Kite, Incyte, Janssen-Cilag, Lilly, Merck Sharp & Dohme, Novartis, Roche, Serb, and Takeda; travel grants from AbbVie, AstraZeneca, Gilead Kite, Janssen-Cilag, Lilly, Merck Sharp & Dohme, Pierre Fabre, Roche, Takeda, and Novartis; and participation on steering committees for Regeneron and Takeda. RDJ reports payment or 
+honoraria for lectures and presentations from AstraZeneca, BeOne, Janssen, and Roche; support for attending meetings and travel from Lilly, BeOne, and Janssen; and participation on an advisory board for BeOne.
+*Peter Borchmann, 
+Ron D Jachimowicz, Bastian von Tresckow
+peter.borchmann@uk-koeln.de
+Faculty of Medicine, University of Cologne, Cologne, 
+Germany (PB, RDJ); Department I of Internal Medicine, University Hospital of Cologne, Cologne 50937, Germany (PB, RDJ); Center for Integrated Oncology Aachen Bonn Cologne Düsseldorf, Düsseldorf, 2 Li J-X, Hsu S-B. RETRACTED: Taiwan’s national 
+health care on the brink of systemic collapse. 
+Lancet 2025; 405: 1460–61.
+3 Tsuei SH-T. Reflection on 30 years of Taiwanese 
+national health insurance: analysis of Taiwanese health system progress, challenges, and opportunities. J Formos Med Assoc 2024; 
+123: S180-87 .
+4 Tung Y-C, Chou Y-Y, Chang Y-H, Chung K-P. 
+Association of intrinsic and extrinsic motivating factors with physician burnout and job satisfaction: a nationwide cross-sectional survey in Taiwan. BMJ Open 2020; 10: e035948.
+5 Hsu AY, Lin C-J. The Taiwan health-care system: 
+approaching a crisis point? Lancet 2024; 404: 745–46.
+Jeremy S  Abramson and colleagues 
+reported that glofitamab plus 
+gemcitabine and oxaliplatin (GemOx) significantly improved overall survival (OS) in transplant-ineligible patients with relapsed or refractory diffuse large B-cell lymphoma compared with rituximab plus GemOx.
+1
+Interestingly, progression-free 
+survival (PFS) within the first 3 months of treatment was markedly improved with glofitamab plus GemOx (figure 2B of the original Article), but the 3-month OS was similar between the groups (figure 2A of the original Article).
+1 This discrepancy 
+between improved PFS and similar OS at 3 months  suggests that early 
+progression in the rituximab plus GemOx group was offset by effective salvage therapy, a pattern that was observed throughout the study period. Conversely, PFS and OS were closely aligned in the glofitamab plus GemOx group, indicating a limited benefit from salvage treatments after relapse. Although glofitamab plus GemOx improved overall outcomes, the high proportion of non-responders highlights the importance of early identification of responders.
+Subgroup analysis also revealed 
+significantly better outcomes in Asian patients treated with glofitamab plus Glofitamab with GemOx 
+for diffuse large B-cell lymphoma
+We commend Jeremy S Abramson and 
+colleagues for their study showing a relevant overall survival (OS) benefit for glofitamab plus gemcitabine and oxaliplatin (GemOx) over rituximab plus GemOx in patients with relapsed or refractory diffuse large B-cell lymphoma (the STARGLO trial).
+1 Abramson and colleagues 
+acknowledge that “due to the evolving global treatment standards for CAR [chimeric antigen receptor] T-cell therapies during the period of study enrolment, patients who were candidates for CAR T-cell therapy at study entry were not excluded from STARGLO”.
+1 Notably, 58% of patients 
+in the STARGLO trial were treated for primary refractory diffuse large B-cell lymphoma. For these patients at high risk of second-line failure, CAR T-cell therapy is approved irrespective of transplant eligibility and has shown curative potential, as evidenced by a plateau in the survival curves.
+1,2 The 
+presented Kaplan–Meier analyses illustrate outcomes for treatment groups but not for relevant risk factors within each group. However, the presented univariate analysis of risk factors suggests a highly relevant effect of refractoriness on survival outcomes with glofitamab plus GemOx: the median OS for patients with primary refractory diffuse large 

@@ -1,0 +1,65 @@
+Correspondence
+Submissions should be 
+made  via our electronic 
+submission system at 
+http://ees.elsevier.com/thelancet/www.thelancet.com   Vol 406   October 18, 2025  1723Ebola virus in Kasai 
+revives 50-year-old questions on viral latency
+On Sept 4, 2025,  DR Congo declared 
+its 16th Ebola virus outbreak. The 
+epicentre of this outbreak occurred in the Kasai province—the first resurgence in this region since 2008.
+1 
+Genomic analysis identified an Ebola virus with more than 99·5% identity to the lineage that was responsible for the first outbreak in Yambuku in 1976.
+2 Instead of clustering with 
+more recent outbreaks, a pathogen assumed to evolve steadily appears, in part, unchanged for half a century.
+Antibodies and RNA fragments 
+have been found in fruit bats, yet no reservoir species has yielded a live virus.
+3 The Kasai strain’s proximity to 
+the 1976 outbreak, therefore, narrows the plausible explanations of where, and under what circumstances, Ebola endures between epidemics.
+One explanation is persistence, 
+in which Ebola virus hibernates in tissue, alternating between replication and dormancy. This has not been shown in wild animals, but the virus has re-emerged in humans 5 years after apparent recovery.
+4 Lassa virus 
+provides an analogue, causing chronic infection in rodents with shedding that sustains transmission.
+5 The Kasai 
+sequences raise the possibility that Ebola persists similarly. 
+A second explanation is slow 
+circulation at a very low prevalence. Here, the virus never truly disappears but transmits so rarely that minimal transmission chains survive. With so few opportunities to replicate, it accumulates mutations glacially, as with the Marburg virus in fruit bats. However, the extraordinary stability of the Kasai strain pushes this model to its limits.
+A third possibility is ecological 
+equilibrium, in which the virus replicates continuously in hosts that tolerate infection without mounting a strong immune response. Mutations arise but rarely persist, creating the appearance of stability. This explanation  appears less convincing, 
+as it requires a stable reservoir host and constant purging of mutations, which have yet to be supported by evidence.
+Each explanation predicts distinct 
+patterns: persistence would produce near-identical genomes from the same host populations years apart; slow circulation would show gradual genetic drift; and equilibrium would reveal year-round virus with limited diversity. The obstacle is not a lack of hypotheses, but the absence of systematic, long-term ecological fieldwork to test them.
+The Kasai outbreak emphasises the 
+case that genomic stasis might be a recurring feature of Ebola virus ecology. A lineage that is virtually unchanged since 1976 challenges assumptions about Ebola’s evolution and exposes the blind spots of surveillance. Successes with the Marburg and Bombali viruses show that a One Health approach of monitoring human survivors, wildlife, and ecological change together offers the best chance of detecting persistence before spillover. Until these mechanisms are understood, countermeasures will remain reactive, and Ebola virus will continue to resurface.
+VM is supported by the Intramural Research Program 
+of the National Institutes of Health (NIH). SDJ reports receipt of a K08 award (AI190125) from the National Institute of Allergy and Infectious Diseases (NIAID) for yellow fever outbreak detection research, administered via Johns Hopkins University and the University of California, Los Angeles. TWG reports grants and contracts from NIAID, including U19AI142785 for the advancement of vaccines and treatments for Ebola and Marburg virus infections; and is an inventor on the following US patents: 
+patent number 7  635  485 (“Method of accelerated 
+vaccination against Ebola viruses,” issued 
+Dec 22, 2009); patent number 7  838  658 (“siRNA 
+silencing of filovirus gene expression,” issued 
+Nov 23, 2010); patent number 8  017 130 (“Method of 
+accelerated vaccination against Ebola viruses,” issued 
+Sept 13, 2011); patent number 8  716  464 
+(“Compositions and methods for silencing Ebola virus gene expression,” issued May 6, 2014); and patent 
+number 8  796  013 (“Pre- or post-exposure treatment 
+for filovirus or arenavirus infection,” issued Aug 5, 2014). All other authors declare no competing interests. The contributions of the NIH authors were made as part of their official duties as NIH federal employees, in compliance with agency policy requirements, and are considered works of the US Government. However, the findings and conclusions presented in this Correspondence are those of the authors and do not necessarily reflect the views of the NIH or the US Department of Health and Human Services.
+*Michael E Bryan, 
+Bives Mutume Nzanzu Vivalya, Thomas W Geisbert, Seth D Judson, Vincent Munster
+Michael.Bryan@new.ox.ac.uk
+Nuffield Department of Medicine, University of 
+Oxford, Oxford OX3 7DQ, UK (MEB); Broad Institute of MIT and Harvard, Cambridge, MA, USA (MEB); Department of Health Sciences, Official University of Ruwenzori, Butembo, DR Congo (BMNV); Galveston National Laboratory, University of Texas Medical Branch, Galveston, TX, USA (TWG); Division of Infectious Diseases, Department of Medicine, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA (SDJ); Laboratory of Virology, Rocky Mountain Laboratories, National Institute of Allergy and Infectious Diseases, National Institutes of Health, Hamilton, MO, USA (VM)
+1 WHO. Ebola virus disease—Democratic Republic 
+of the Congo. Sept 5, 2025. https://www.who.
+int/emergencies/disease-outbreak-news/item/2025-DON580#:~:text=This%20is%20the%2016,outbreak%20was%20recorded%20in%202007 (accessed Sept 8, 2025).
+2 Amuri-Aziza, A, Luakanda-Ndelemo G, 
+Makangara-Cigolo J-C, et al. The 16th Ebola virus disease outbreak in Bulape Health Zone, Kasai, Democratic Republic of the Congo: a new spillover event from an unknown reservoir host. Virological.org. Sept 4, 2025. https://virological.org/t/the-16th-ebola-virus-disease-outbreak-in-bulape-health-zone-kasai-democratic-republic-of-the-congo-a-new-spillover-event-from-an-unknown-reservoir-host/1003/1 (accessed Sept 8, 2025).
+3 Leendertz SAJ, Gogarten JF , Düx A, Calvignac-
+Spencer S, Leendertz FH. Assessing the evidence supporting fruit bats as the primary reservoirs for Ebola viruses. Ecohealth 2016; 13: 18–25.
+4 Keita AK, Koundouno FR, Faye M, et al. 
+Resurgence of Ebola virus in 2021 in Guinea suggests a new paradigm for outbreaks. Nature 2021; 597: 539–43.
+5 Madueme P-GU, Chiro ve F. Understanding the 
+transmission pathways of Lassa fever: a mathematical modeling approach. Infect Dis Model 2023; 8: 27–57 .
+Drug-facilitated sexual 
+assault—changing the language 
+Legal definitions of sexual violence 
+vary globally. In some legislations, rape constitutes a form of aggravated sexual assault, whereas others differentiate between rape, assault Published Online 
+October 10, 2025 https://doi.org/10.1016/S0140-6736(25)01973-7

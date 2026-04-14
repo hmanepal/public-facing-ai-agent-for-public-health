@@ -1,0 +1,117 @@
+Correspondence1728  www.thelancet.com   Vol 406   October 18, 2025The authors indicated that the low 
+number of intracranial bleeding events 
+in the control group (n=2) precluded detailed subgroup analyses. However, understanding the distribution of recurrent intracerebral haemorrhage based on sex and age could provide valuable insights for clinical decision making if patterns align with previous works. Therefore, we respectfully request that the authors share the number of recurrent intracranial bleeding events among females and younger adults (aged <75 years). Having a knowledge of the age-based and sex-based distribution of intracerebral haemorrhage events could greatly enhance clinical understanding and guide tailored therapeutic approaches in this high-risk patient population.
+MGN reports research support from the American 
+College of Cardiology Foundation, Patient-Centered Outcomes Research Institute, Yale Claude D Pepper Older Americans Independence Center (P30AG021342), and National Institute on Ageing (K76AG088428); and is a consultant for Novo Nordisk, Merck, and HeartFlow. All other authors declare no competing interests. 
+Editorial note: The Lancet Group takes a neutral 
+position with respect to territorial claims in institutional affiliations.
+Kuan-Yu Chi, Yu Chang, Pei-Lun Lee, 
+Yu-Shiuan Lin,*Michael G Nanna
+michael.nanna@yale.edu
+Department of Medicine, Jacobi Medical Center, Albert 
+Einstein College of Medicine, New York, NY, USA (K-YC, P-LL); Department of Surgery, Section of Neurosurgery, National Cheng Kung University Hospital, College of Medicine, National Cheng Kung University, Tainan, Taiwan (YC); Department of 
+Education, Center for Evidence-Based Medicine, Taipei Medical University Hospital, Taipei, Taiwan (Y-SL); Section of Cardiovascular Medicine, Yale School of Medicine, New Haven, CT 06510, USA (MGN)
+1 Veltkamp R, Korompoki E, Harvey KH, et al. 
+Direct oral anticoagulants versus no 
+anticoagulation for the prevention of stroke in survivors of intracerebral haemorrhage with atrial fibrillation (PRESTIGE-AF): a multicentre, open-label, randomised, phase 3 trial. Lancet 2025; 405: 927–36.
+2 Fang MC, Go AS, Hylek EM, et al. Age and the 
+risk of warfarin-associated hemorrhage: the anticoagulation and risk factors in atrial fibrillation study. J Am Geriatr Soc 2006; 54:
+ 1231–36.  
+3 Pancholy SB, Sharma PS, Pancholy DS, Patel TM, 
+Callans DJ, Marchlinski FE. Meta-analysis of gender differences in residual stroke risk and major bleeding in patients with nonvalvular atrial fibrillation treated with oral anticoagulants. Am J Cardiol 2014; 113: 485–90.Intracranial 
+haemorrhage: sex, age, and treatment considerations
+We read with great interest the  
+Article on the PRESTIGE-AF trial,1 
+which explored post-intracerebral haemorrhage anticoagulation using direct oral anticoagulants (DOACs) for patients with non-valvular atrial fibrillation. Although DOACs significantly reduced the risk of ischaemic stroke, they did not show an overall net clinical benefit due to a marked increase in recurrent intracerebral haemorrhage, perpetuating a challenging therapeutic dilemma in this patient population. 
+Previous studies have highlighted 
+important sex-based and age-based differences in anticoagulation outcomes, which could meaningfully inform clinical decisions.
+2,3 Women 
+have significantly lower rates of major bleeding and intracerebral haemorrhage compared with men receiving DOACs.
+3 This 
+observation was reinforced by the 
+numerically lower recurrent intra -
+cerebral haemorrhage rates among women who survived intracerebral haemorrhage compared with men in the APACHE-AF (0 [0%] of 23 females vs 4 [15%] of 27 males) and SoSTART (2 [5%] of 38 females vs 6 [10%] 
+of 62 males) trials.
+4 Additionally, 
+advanced age was associated with an intrinsically higher risk of bleeding.
+5 Lower rates of recurrent 
+intracerebral haemorrhage were seen in intracerebral haemorrhage survivors younger than 75 years compared with those aged 75 years or older in both the APACHE-AF (0 [0%] of 14 younger patients vs 4 [11%] of 36 older 
+patients) and SoSTART (1 [3%] of 29 younger patients vs 7 [10%] 
+of 71 older patients) trials.
+4 These 
+patterns suggest that sex and age might affect the risk–benefit profile of DOAC therapy among intracerebral haemorrhage survivors.Group. GPG reports support from Roche for 
+manuscript writing and article processing charges of 
+the STARGLO trial; consulting fees from AbbVie, Amgen, AstraZeneca, Clinigen, Kite, Merck, Novartis, Roche, and Prelude Therapeutics; honoraria from AbbVie, Bristol Myers Squibb, Kite, Novartis, and Roche; payment for expert testimony from Johnson & Johnson and Roche; support for travel from Novartis; research grants (to institution) from AbbVie, BeOne, and Merck; participation on advisory boards for Roche, AbbVie, Merck, Kite, Prelude Therapeutics, Clinigen, Amgen, AstraZeneca, and Novartis; and leadership roles in the Australasian Leukaemia and Lymphoma Group and Haematology Society of Australia & New Zealand. CPF reports consulting fees from AbbVie, Arvinas, AstraZeneca, Autolus, Bristol Myers Squibb, GenMab, Gilead/Kite, Janssen, Incyte, Ono, Roche, SERB, and SOBI; honoraria from AbbVie, Kite/Gilead, Janssen, and Roche; travel support from Roche; and research grants from AbbVie/Genmab, Beigene, and Incyte.
+*Jeremy S Abramson, Matthew Ku, 
+Gareth P Gregory, Christopher P Fox 
+jabramson@mgh.harvard.edu
+Massachusetts General Cancer Center, Massachusetts 
+General Hospital, Boston, MA 02114, USA (JSA); St Vincent’s Hospital, University of Melbourne, Melbourne, VIC, Australia (MK); School of Clinical Sciences at Monash Health, Monash University, Melbourne, VIC, Australia (GPG); School of Medicine, University of Nottingham, Nottingham, UK (CPF)
+1 Abramson JS, Ku M, Hertzberg M, et al. 
+Glofitamab plus gemcitabine and oxaliplatin 
+(GemOx) versus rituximab-GemOx for relapsed or refractory diffuse large B-cell lymphoma (STARGLO): a global phase 3, randomised, open-label trial. Lancet 2024; 
+404: 1940–54.
+2 Abramson JS, Solomon SR, Arnason J, et al. 
+Lisocabtagene maraleucel as second-line therapy for large B-cell lymphoma: primary analysis of the phase 3 TRANSFORM study. Blood 2023; 141: 1675–84.
+3 Locke FL, Miklos DB, Jacobson CA, et al. 
+Axicabtagene ciloleucel as second-line therapy for large B-cell lymphoma. N Engl J Med 2022; 386: 640–54.
+4 Sehgal A, Hoda D, Riedell PA, et al. 
+Lisocabtagene maraleucel for R/R LBCL in patients not intended for HSCT: final results of the phase 2 PILOT study. Blood Adv 2025; 9: 3694–705.
+5 Abramson JS, Ku M, Hertzberg M, Fox CP, et al. 
+Glofitamab plus gemcitabine and 
+oxaliplatin  (Glofit-GemOx) in patients with 
+relapsed/refractory (R/R) diffuse large B-cell lymphoma (DLBCL): 2-year follow-up of STARGLO. International Conference of Malignant Lymphoma; May 28, 2025 (abstr 7015).
+6 Iacoboni G, Serna S, Navarro Garces V, et al. 
+Impact of prior bendamustine exposure on bispecific antibody treatment outcomes for patients with B-cell lymphoma. Blood 2023; 142: 310.
+7 Haynes E, Ediriwickrema K, Lawless S, et al. 
+Glofitamab and epcoritamab in the real world: a UK multicentre retrospective analysis of efficacy, tolerability and practical implications. Blood 2024; 144(suppl 1): 3100.
+Correspondencewww.thelancet.com   Vol 406   October 18, 2025  1729Authors’ reply
+We appreciate the Correspondence by 
+Kuan-Yu Chi and colleagues regarding the PRESTIGE-AF trial,
+1 which 
+addresses potential age-related and sex-related differences in the bleeding risk of direct oral anticoagulants (DOACs) in patients with intracerebral haemorrhage and atrial fibrillation. Two pilot-phase, randomised controlled trials reported numerically higher rates of intracranial bleeding in men than in women.
+2,3 In PRESTIGE-AF, 
+7 (6%) of 113 females versus 9 (4%) of 206 males had intracranial bleeding. In addition, the risk of intracerebral haemorrhage increases with age. We agree that predictors of bleeding and ischaemic events are desirable to improve the selection of patients for anticoagulation. The ongoing trials ENRICH-AF (NCT03950076) and ASPIRE (NCT03907046) and the pre-planned COCROACH individual participant data meta-analysis (PROSPERO, CRD42021246133) might provide more evidence. 
+We also thank Joshua Kandiah and 
+Joshua Solomon for raising the question 4 Al-Shahi Salman R, Stephen J, Tierney JF, et al. 
+Effects of oral anticoagulation in people with 
+atrial fibrillation after spontaneous intracranial haemorrhage (COCROACH): prospective, individual participant data meta-analysis of randomised trials. Lancet Neurol 2023; 
+22: 1140–49.
+5 Hayes KN, Zhang T, Kim DH, et al. Benefits and 
+harms of standard versus reduced -dose direct 
+oral anticoagulant therapy for older adults with multiple morbidities and atrial fibrillation. J Am Heart Assoc 2023; 12: e029865.that might  benefit from cardioembolic 
+protective therapy?
+We thank the authors for their 
+contributions in investigating novel 
+management strategies in adults with atrial fibrillation and intracerebral haemorrhage.
+We declare no competing interests.
+*Joshua Kandiah,   Joshua Solomon
+joshua.kandiah@mail.mcgill.ca
+  Department of Cardiology, Faculty of Medicine, McGill 
+University, Montreal, QC H4A 3T2, Canada (JK, JS)
+1 Veltkamp R, Korompoki E, Harvey KH, et al, and 
+the PRESTIGE-AF Consortium. Direct oral 
+anticoagulants versus no anticoagulation for the 
+prevention of stroke in survivors of intracerebral haemorrhage with atrial fibrillation (PRESTIGE-AF): a multicentre, open-label, randomised, phase 3 trial. Lancet 2025; 405: 927–36.
+2 Gabet A, Olié V , Béjot Y. Atrial fibrillation in 
+spontaneous intracerebral hemorrhage, Dijon Stroke Registry (2006–2017). J Am Heart Assoc 2021; 10: e020040.
+3 Seiffge DJ, Cancelloni V , Räber L, et al. 
+Secondary stroke prevention in people with atrial fibrillation: treatments and trials. Lancet Neurol 2024; 23: 404–17 .We commend Roland Veltkamp 
+and colleagues for addressing a knowledge gap in the  PRESTIGE-AF trial
+1 by assessing the 
+effects of oral anticoagulants in adults with atrial fibrillation who have survived intracerebral haemorrhage. A quarter of patients who have had intracerebral haemorrhage have atrial fibrillation and have an ongoing risk of ischaemic stroke, but have historically been excluded in oral anticoagulant trials.
+2,3 The PRESTIGE-AF trial design 
+was pragmatic and represent s clinical 
+practice well. Still, the Article raises some questions.
+First, we wonder if the severity and 
+volume of an intracerebral haemorrhage might be important in identifying those who would benefit from antithrombotic therapy. Would stratifying based on  
+intracerebral haemorrhage volume or neurological disability better guide clinicians in patient selection for antithrombotic therapy? Furthermore, given the spectrum of disabling sequelae from ischaemic and haemorrhagic strokes, we ask the authors if a post-hoc analysis of events based on  
+neurological disability might  provide 
+a more meaningful understanding of the effects of oral anticoagulants in this population?
+Second, a substantial number 
+of patients who did not receive therapeutic anticoagulants received antiplatelet therapy, raising a concern that a protective effect could have biased harm in this trial, namely via the fixed sequence hierarchical analysis. Do the authors expect that a three-armed trial (oral anticoagulants vs antiplatelet therapy vs no therapy) 
+could better identify at-risk patients of whether the severity and volume of an intracerebral haemorrhage is important for selection of patients for anticoagulation. In PRESTIGE-AF, there was a similar risk of ischaemic stroke after smaller and larger haemorrhages. The risk of recurrent intracerebral haemorrhage was higher in participants with smaller haematoma volumes compared to those with larger volumes. In view of the opposing effects of anticoagulation on ischaemic and haemorrhagic outcomes in patients with intracerebral haemorrhage in PRESTIGE-AF, Kandiah and Solomon suggest to weigh the putatively different effects of ischaemic stroke and intracerebral haemorrhage on disability. Unfortunately, this information was not captured systematically at a defined timepoint after incident events in PRESTIGE-AF. Kandiah and Solomon are concerned that the heterogeneity of antithrombotic therapy in the control group (antiplatelet or no antiplatelet) in PRESTIGE-AF might have biased harm. A systematic review of observational studies investigating the effects of antiplatelet medication versus no antithrombotic therapy in patients with intracerebral haemorrhage and atrial fibrillation found no reduction of ischaemic events in patients receiving antiplatelets compared with no antithrombotic therapy, and the rate ratio for intracerebral haemorrhage recurrence did not differ statistically significantly.
+4 In PRESTIGE-AF, only 
+one first recurrent intracerebral haemorrhage occurred in the control group. There was no evidence for a better preventive effect of antiplatelets compared with no antiplatelet in an exploratory analysis. Therefore, we do not think that the available evidence suggests a strong preventive effect of antiplatelets that would warrant a three-armed trial comparing DOACs versus antiplatelets versus no antiplatelet.
+RV reports research support from Bayer, BMS/Pfizer, 
+Boehringer Ingelheim, Daiichi Sankyo, and Medtronic (institutional); consulting fees from Bayer and AstraZeneca; personal honoraria from AstraZeneca; stocks in Bayer and Novartis; and participation on a data safety monitoring board or advisory board for 
